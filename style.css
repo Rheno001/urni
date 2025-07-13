@@ -213,7 +213,7 @@
 
 .fact-item p {
   font-size: 1.2rem;
-  color: #004225;
+  color: #000;
   line-height: 1.5;
 }
 
@@ -235,10 +235,6 @@
   font-size: 16px;
   border: 1px solid #004225;
 }
-.learn-arrow{
-    width: 10px;
-}
-
 .cta-button:hover {
   background-color: #004225;
   color: white;
