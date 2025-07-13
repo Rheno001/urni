@@ -111,7 +111,7 @@
  }
 
  .hero-content h1 {
-     font-size: 3rem;
+     font-size: 4rem;
      font-weight: 700;
      line-height: 1.2;
  }
@@ -121,14 +121,16 @@
  }
 
  .hero-content p {
-     font-size: 1.5rem;
+     font-size: 2rem;
      margin: 20px 0;
      line-height: 1.4;
+     font-weight: 500;
  }
 
  .hero-button {
      display: inline-flex;
      align-items: center;
+     justify-content: center;
      background: white;
      height: 56px;
      color: #004225;
@@ -143,43 +145,46 @@
      background: #f3f3f3;
  }
 
- .hero-button .arrow {
-     margin-left: 8px;
-     font-size: 2rem;
+ .hero-button .arrow img {
+    margin-left: 8px;
+    margin-top: 5px;
+    height: 1.2rem;
+
  }
  /*Facts section*/
  .facts-section {
-  background-color: #ffffff;
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: 40px auto;
-  border-radius: 12px;
+  background-color: #F3F3F3;
+  padding: 60px 5%;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
 .facts-header {
   text-align: center;
-  max-width: 700px;
-  margin: 0 auto 40px;
+  max-width: 1000px;
+  margin: 0 auto 45px;
 }
 
 .facts-header h2 {
   color: #006644;
-  font-size: 28px;
+  font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
 .facts-header p {
   color: #333;
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 .facts-grid {
   display: flex;
+  background-color: #fff;
   flex-wrap: wrap;
+  border-radius: 8px;
   gap: 30px;
   justify-content: center;
+  padding: 4rem;
+  gap: 3.75rem;
 }
 
 .fact-item {
@@ -189,29 +194,26 @@
 }
 
 .icon-placeholder {
-  width: 60px;
-  height: 60px;
-  background-color: #e0e0e0;
   margin: 0 auto 15px;
-  border-radius: 8px;
 }
 
 .fact-item h3 {
-  font-size: 18px;
+  font-size: 1.2rem;
+  font-weight: 600;
   margin-bottom: 8px;
   color: #222;
 }
 
 .highlight {
-  font-size: 16px;
+  font-size: 1.5rem;
   font-weight: bold;
-  color: #006644;
+  color: #004225;
   margin-bottom: 6px;
 }
 
 .fact-item p {
-  font-size: 14px;
-  color: #444;
+  font-size: 1.2rem;
+  color: #004225;
   line-height: 1.5;
 }
 
@@ -232,6 +234,9 @@
   gap: 8px;
   font-size: 16px;
   border: 1px solid #004225;
+}
+.learn-arrow{
+    width: 10px;
 }
 
 .cta-button:hover {
@@ -295,21 +300,7 @@
      transform: scale(1.03);
  }
 
- .map svg path {
-     fill: #5DBA91;
-     stroke: white;
-     stroke-width: 1;
-     transition: fill 0.3s ease;
- }
 
- .map svg path:hover {
-     fill: #31845f;
- }
-
- .map {
-     max-width: 600px;
-     width: 100%;
- }
 
  .volunteer {
      padding: 60px 5%;
