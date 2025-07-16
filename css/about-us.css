@@ -1,0 +1,128 @@
+
+body, main, .container, .row {
+    overflow-x: hidden !important;
+}
+
+.image-container-main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* min-height: 350px; */
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(2, 88, 54, 0.8), rgba(2, 88, 54, 0.8)), url("../assets/About-us.png") center center/cover no-repeat;
+    padding: 2rem 1rem;
+}
+
+.image-container-main h3 {
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.image-container-main h4 {
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.btn-outline-light {
+    background: transparent !important;
+    border: 2px solid #fff !important;
+    color: #fff !important;
+    font-weight: 500;
+    border-radius: 30px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-outline-light:hover, .btn-outline-light:focus {
+    background: #fff !important;
+    color: #025836 !important;
+}
+
+.image-container-main .row.justify-content-center.gap-2.flex-wrap {
+    flex-wrap: nowrap !important;
+    gap: 1rem !important;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.image-container-second {
+    width: 100% !important;
+    max-width: 100vw;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 1200px) {
+    .image-container-main .row.justify-content-center.gap-2.flex-wrap {
+        flex-wrap: wrap !important;
+        gap: 0.75rem !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .image-container-main .row.justify-content-center.gap-2.flex-wrap {
+        flex-wrap: wrap !important;
+        gap: 0.5rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-container-main .row.justify-content-center.gap-2.flex-wrap {
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+        align-items: stretch;
+        gap: 0.5rem !important;
+    }
+    .image-container-main .btn-outline-light {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .image-container-main h3 {
+        font-size: 1.5rem;
+    }
+    .image-container-main h4 {
+        font-size: 0.95rem;
+    }
+    .btn-outline-light {
+        font-size: 0.95rem;
+        padding: 0.5rem 1rem;
+    }
+    .mt-5, .mb-5, .px-5, .py-5, .p-5, .container {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .text-justify {
+        text-align: left !important;
+    }
+}
+
+.large {
+    font-size: 20px !important;
+    line-height: 1.4;
+}
+
+@media (max-width: 576px) {
+    .large {
+        font-size: 18px !important;
+    }
+}
+
+.text-justify {
+    text-align: justify !important;
+}
+
+.mt-4 > .large,
+.mb-4.large {
+    margin-bottom: 2rem !important;
+    margin-top: 1.5rem !important;
+} 
