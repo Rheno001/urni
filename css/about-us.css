@@ -126,3 +126,177 @@ body, main, .container, .row {
     margin-bottom: 2rem !important;
     margin-top: 1.5rem !important;
 } 
+
+/* Overlay for About Us image section */
+.about-overlay {
+  background: none !important;
+  color: #000;
+  border-radius: 0;
+  box-shadow: none !important;
+  max-width: 100%;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1.5rem;
+  padding: 0;
+  margin-bottom: 0 !important;
+}
+
+.fadedurnicolor{
+    background-color: #CBFFA8;
+}
+
+.about-section {
+  background: none;
+  color: #000;
+  border-radius: 0;
+  min-width: 200px;
+  max-width: 300px;
+  flex: 1 1 200px;
+  padding: 1.5rem 1rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.about-section h2 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+.about-section p, .about-section ul {
+  font-size: 1.05rem;
+  margin-bottom: 0;
+  font-weight: 400;
+  color: #222;
+}
+
+.about-section ul {
+  list-style: disc inside;
+  padding-left: 1rem;
+}
+
+.about-section img {
+  margin-bottom: 0.5rem;
+}
+
+.about-banner{
+    padding: 30px;
+}
+
+/* About Banner Styles */
+.about-banner {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  /* background: #f8f9fa; */
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 12px rgba(2,88,54,0.06);
+}
+
+.about-banner-text {
+  color: #025836;
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.about-banner-btn {
+  background: #025836;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: background 0.2s;
+}
+.about-banner-btn:hover, .about-banner-btn:focus {
+  background: #013d25;
+  color: #fff;
+}
+
+/* Remove space between about-overlay and about-banner */
+.about-overlay {
+  margin-bottom: 0 !important;
+}
+.about-banner {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  /* background: #f8f9fa; */
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 12px rgba(2,88,54,0.06);
+}
+
+/* Remove bottom margin from the parent row if present */
+.my-4, .mb-4 {
+  margin-bottom: 0 !important;
+}
+
+/* Remove top margin from about-banner if any utility class is present */
+.mt-3, .mt-4 {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 992px) {
+  .about-overlay {
+    gap: 0.5rem;
+  }
+  .about-section {
+    min-width: 160px;
+    max-width: 220px;
+    padding: 1rem 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-overlay {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+  .about-section {
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    padding: 1rem 0.5rem;
+  }
+  .about-section h2 {
+    font-size: 1.25rem;
+  }
+  .about-section p, .about-section ul {
+    font-size: 0.98rem;
+  }
+  .about-banner {
+    border-radius: 0.5rem;
+    box-shadow: none;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .about-banner-text {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .about-banner-btn {
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-section img {
+    height: 32px !important;
+  }
+  .about-section h2 {
+    font-size: 1.1rem;
+  }
+} 
