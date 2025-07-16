@@ -1,516 +1,540 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script
-      src="https://kit.fontawesome.com/29a8691164.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
+    <script src="https://kit.fontawesome.com/29a8691164.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="mapdata.js"></script>
+    <script type="text/javascript" src="countrymap.js"></script>
+</head>
 
-  <body>
-    <nav class="navbar navbar-expand-lg bg-white py-3 px-4">
-  <div class="container-fluid">
-    <!-- Logo -->
-    <a class="navbar-brand" href="#">
-      <img src="assets/URNI-logo.png" alt="URNI-logo" class="logo-img" />
-    </a>
+<body>
+    <nav class="navbar navbar-expand-lg py-3 px-4">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <!--Logo-->
+            <a class="navbar-brand me-auto" href="#">
+                <img src="assets/URNI-logo.png" alt="URNI-logo" class="logo-img" />
+            </a>
 
-    <!-- Toggle -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#urniNavbar" aria-controls="urniNavbar" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+            <!--Toggle for mobile-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#urniNavbar"
+                aria-controls="urniNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <!-- Nav Items -->
-    <div class="collapse navbar-collapse" id="urniNavbar">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-5 gap-lg-4">
-        <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
-        </li>
+            <!--Nav/Buttons Container-->
+            <div class="collapse navbar-collapse justify-content-between align-items-center" id="urniNavbar">
+                <!--Nav Items-->
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="exploreDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Explore Nigeria
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
+                            <li><a class="dropdown-item" href="#">Culture</a></li>
+                            <li><a class="dropdown-item" href="#">Tourism</a></li>
+                            <li><a class="dropdown-item" href="#">People</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="newsDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            News & Events
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="newsDropdown">
+                            <li><a class="dropdown-item" href="#">Latest News</a></li>
+                            <li><a class="dropdown-item" href="#">Events</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="mediaDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Multimedia
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="mediaDropdown">
+                            <li><a class="dropdown-item" href="#">Photos</a></li>
+                            <li><a class="dropdown-item" href="#">Videos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="exploreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Explore Nigeria
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
-            <li><a class="dropdown-item" href="#">Culture</a></li>
-            <li><a class="dropdown-item" href="#">Tourism</a></li>
-            <li><a class="dropdown-item" href="#">People</a></li>
-          </ul>
-        </li>
+                <!--Buttons-->
+                <div class="d-flex gap-2 ms-lg-3">
+                    <button class="btn-volunteer">Volunteer</button>
+                    <button class="btn-donate">Donate</button>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="newsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            News & Events
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="newsDropdown">
-            <li><a class="dropdown-item" href="#">Latest News</a></li>
-            <li><a class="dropdown-item" href="#">Events</a></li>
-          </ul>
-        </li>
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+    <div class="carousel-inner">
+        <!--Slide 1: With gradient-->
+        <div class="carousel-item active">
+            <section class="hero" style="background-image: url('assets/hero-image.jpg');">
+                <div class="hero-overlay">
+                    <div class="hero-content">
+                        <h1>Change begins<br /><span>with us.</span></h1>
+                        <p>Together, we're shaping<br />Nigeria's narrative.</p>
+                        <a href="#" class="hero-button">
+                            Learn More
+                            <span class="arrow"><img src="assets/Vector.png" alt="" /></span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="mediaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Multimedia
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="mediaDropdown">
-            <li><a class="dropdown-item" href="#">Photos</a></li>
-            <li><a class="dropdown-item" href="#">Videos</a></li>
-          </ul>
-        </li>
+        <!--Slide 2: No gradient-->
+        <div class="carousel-item">
+            <section class="hero" style="background-image: url('assets/FOP-hero-bg.png');">
+                <div class="hero-content no-overlay">
+                    <h1>Celebrating<br> Outstanding<br /><span>Nigerians and<br>patriots.</span></h1>
+                    <a href="#" class="hero-button">
+                        Get Involved
+                        <span class="arrow"><img src="assets/Vector.png" alt="" /></span>
+                    </a>
+                </div>
+            </section>
+        </div>
 
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
-        </li>
-      </ul>
+        <!--Slide 3: With gradient-->
+        <div class="carousel-item">
+            <section class="hero" style="background-image: url('assets/waterfall.png');">
+                <div class="hero-overlay">
+                    <div class="hero-content">
+                        <h1>Untold Beauty<br /><span>Unseen Wonders</span></h1>
+                        <p>Discover Nigeria like never before</p>
+                        <a href="#" class="hero-button">
+                            Discover More
+                            <span class="arrow"><img src="assets/Vector.png" alt="" /></span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
 
-      <!-- Buttons -->
-      <div class="d-flex gap-2 mt-3 mt-lg-0">
-        <button class="btn-volunteer">Volunteer</button>
-        <button class="btn-donate">Donate</button>
-      </div>
+        <!--Slide 4: No gradient-->
+        <div class="carousel-item">
+            <section class="hero" style="background-image: url('assets/TRIBES.png');">
+                <div class="hero-content no-overlay">
+                    <h1>We are one people<br /><span>Many tribes</span><span>One Nation</span></h1>
+                    <a href="#" class="hero-button">
+                        Join Us
+                        <span class="arrow"><img src="assets/Vector.png" alt="" /></span>
+                    </a>
+                </div>
+            </section>
+        </div>
     </div>
-  </div>
-</nav>
-    <section class="hero">
-      <div class="hero-overlay">
-        <div class="hero-content">
-          <h1>Change begins<br /><span>with us.</span></h1>
-          <p>Together, we're shaping<br />Nigeria's narrative.</p>
-          <a href="#" class="hero-button">
-            Learn More
-            <span class="arrow"><img src="assets/Vector.png" alt="" /></span>
-          </a>
-        </div>
-      </div>
-    </section>
-    <section class="explore-section">
-      <div class="explore-text">
-        <h2>Explore Nigeria</h2>
-        <p>Find interesting facts about Nigeria <br> and her people.</p>
-        <div class="explore-buttons">
-          <a href="#" class="btn btn-primary">Explore Places →</a>
-          <a href="#" class="btn btn-outline">Explore People →</a>
-        </div>
-      </div>
 
-      <div class="map">
-        <img src="./assets/map.png" class="map-img" alt="" />
-      </div>
+    <!--Controls-->
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev"></button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next"></button>
+</div>
+
+
+    <section class="explore-section">
+        <div class="explore-text">
+            <h2>Explore Nigeria</h2>
+            <p>Find interesting facts about Nigeria <br> and her people.</p>
+            <div class="explore-buttons">
+                <a href="#" class="btn btn-primary">Explore Places →</a>
+                <a href="#" class="btn btn-outline">Explore People →</a>
+            </div>
+        </div>
+        <div class="map">
+            <div id="map"></div>
+        </div>
     </section>
 
     <section class="program-section">
-      <div class="program-header">
-        <h2 class="program-title">Our Programs & Events</h2>
-        <p class="program-subtitle">
-          Our outline of innovative program and impact-driven events designed to
-          promote national pride, digital storytelling, economic empowerment,
-          and patriotism in Nigeria.
-        </p>
-      </div>
-
-      <div class="program-content">
-        <div class="program-left">
-          <h2 class="program-project-title">
-            Faces of Patriotism Book Distribution Project
-          </h2>
-          <p class="program-description">
-            Nigeria is a land of rich culture, rapid growth, and remarkable
-            achievements. Explore these fascinating facts and figures that make
-            Nigeria truly unique. Nigeria is a land of rich culture, rapid
-            growth, and remarkable achievements. Explore these fascinating facts
-            and figures that make Nigeria truly unique.
-          </p>
-
-          <div class="program-button-wrapper">
-            <a href="#" class="program-view-more">
-              View more <span class="program-arrow">&#8594;</span>
-            </a>
-          </div>
+        <div class="program-header">
+            <h2 class="program-title">Our Programs & Events</h2>
+            <p class="program-subtitle">
+                Our outline of innovative program and impact-driven events designed to
+                promote national pride, digital storytelling, economic empowerment,
+                and patriotism in Nigeria.
+            </p>
         </div>
 
-        <div class="program-right">
-          <img
-            src="./assets/flier.png"
-            alt="Faces of Patriotism"
-            class="program-image"
-          />
+        <div class="program-content">
+            <div class="program-left">
+                <h2 class="program-project-title">
+                    Faces of Patriotism Book Distribution Project
+                </h2>
+                <p class="program-description">
+                    Nigeria is a land of rich culture, rapid growth, and remarkable
+                    achievements. Explore these fascinating facts and figures that make
+                    Nigeria truly unique. Nigeria is a land of rich culture, rapid
+                    growth, and remarkable achievements. Explore these fascinating facts
+                    and figures that make Nigeria truly unique.
+                </p>
+
+                <div class="program-button-wrapper">
+                    <a href="#" class="program-view-more">
+                        View more <span class="program-arrow">&#8594;</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="program-right">
+                <img src="./assets/flier.png" alt="Faces of Patriotism" class="program-image" />
+            </div>
         </div>
-      </div>
     </section>
     <div class="newsletter-cta">
-      <div class="text">
-        <p class="donation-text">
-          Are you passionate about Nigeria’s progress and you want to <br />
-          support any of our projects?.
-        </p>
-      </div>
-      <div class="Buttons">
-        <a href="#" class="btn btn-primary">Make a donation</a>
-      </div>
+        <div class="text">
+            <p class="donation-text">
+                Are you passionate about Nigeria’s progress and you want to <br />
+                support any of our projects?.
+            </p>
+        </div>
+        <div class="Buttons">
+            <a href="#" class="btn btn-primary">Make a donation</a>
+        </div>
     </div>
 
     <section class="featured-section">
-      <div class="featured-top-section">
-        <h2 class="featured-section-title">Featured News & Events</h2>
-        <span class="featured-recent-published">Recently Published</span>
-      </div>
-
-      <div class="featured-news-grid">
-        <div class="featured-news-card featured-card-1">
-          <img src="./assets/news1.png" alt="News 1" />
-          <div class="featured-news-content">
-            <div class="featured-meta">NEWS | 30 🕘 | 👁️ 30</div>
-            <div class="featured-news-title">
-              URNI Engages NOA on Strengthening National Patriotism and Youth
-              Development.
-            </div>
-            <div class="featured-news-description">
-              URNI Engages NOA on Strengthening National Patriotism and Youth
-              Development.
-            </div>
-          </div>
+        <div class="featured-top-section">
+            <h2 class="featured-section-title">Featured News & Events</h2>
+            <span class="featured-recent-published">Recently Published</span>
         </div>
 
-        <div class="featured-news-card">
-          <img src="./assets/news2.png" alt="News 2" />
-          <div class="featured-news-content">
-            <div class="featured-meta">NEWS | 30 🕘 | 👁️ 30</div>
-            <div class="featured-news-title">
-              URNI Engages NOA on Strengthening National.
+        <div class="featured-news-grid">
+            <div class="featured-news-card featured-card-1">
+                <img src="./assets/news1.png" alt="News 1" />
+                <div class="featured-news-content">
+                    <div class="featured-meta">NEWS | 30 🕘 | 👁️ 30</div>
+                    <div class="featured-news-title">
+                        URNI Engages NOA on Strengthening National Patriotism and Youth
+                        Development.
+                    </div>
+                    <div class="featured-news-description">
+                        URNI Engages NOA on Strengthening National Patriotism and Youth
+                        Development.
+                    </div>
+                </div>
             </div>
-            <div class="featured-news-description">
-              URNI Engages NOA on Strengthening National Patriotism and Youth.
+
+            <div class="featured-news-card">
+                <img src="./assets/news2.png" alt="News 2" />
+                <div class="featured-news-content">
+                    <div class="featured-meta">NEWS | 30 🕘 | 👁️ 30</div>
+                    <div class="featured-news-title">
+                        URNI Engages NOA on Strengthening National.
+                    </div>
+                    <div class="featured-news-description">
+                        URNI Engages NOA on Strengthening National Patriotism and Youth.
+                    </div>
+                </div>
             </div>
-          </div>
+
+            <div class="featured-news-card">
+                <img src="./assets/news3.png" alt="News 3" />
+                <div class="featured-news-content">
+                    <div class="featured-meta">NEWS | 30 🕘 | 👁️ 30</div>
+                    <div class="featured-news-title">
+                        URNI Engages NOA on Strengthening National.
+                    </div>
+                    <div class="featured-news-description">
+                        URNI Engages NOA on Strengthening National Patriotism and Youth.
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="featured-news-card">
-          <img src="./assets/news3.png" alt="News 3" />
-          <div class="featured-news-content">
-            <div class="featured-meta">NEWS | 30 🕘 | 👁️ 30</div>
-            <div class="featured-news-title">
-              URNI Engages NOA on Strengthening National.
-            </div>
-            <div class="featured-news-description">
-              URNI Engages NOA on Strengthening National Patriotism and Youth.
-            </div>
-          </div>
-        </div>
-      </div>
+        <div class="featured-divider"></div>
 
-      <div class="featured-divider"></div>
-
-      <div class="featured-mini-news">
-        <div class="featured-mini-card">
-          <img src="./assets/news4.png" />
-          <div class="featured-mini-content">
-            <div class="featured-meta">ARTICLE | 6 MAR, 2025 | 👁️ 30</div>
-            <div class="featured-news-title">
-              URNI Engages NOA on Strengthening National Patriotism and Youth
-              Development.
+        <div class="featured-mini-news">
+            <div class="featured-mini-card">
+                <img src="./assets/news4.png" />
+                <div class="featured-mini-content">
+                    <div class="featured-meta">ARTICLE | 6 MAR, 2025 | 👁️ 30</div>
+                    <div class="featured-news-title">
+                        URNI Engages NOA on Strengthening National Patriotism and Youth
+                        Development.
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
 
-        <div class="featured-mini-card">
-          <img src="./assets/news4.png" />
-          <div class="featured-mini-content">
-            <div class="featured-meta">ARTICLE | 6 MAR, 2025 | 👁️ 30</div>
-            <div class="featured-news-title">
-              URNI Engages NOA on Strengthening National Patriotism and Youth
-              Development.
+            <div class="featured-mini-card">
+                <img src="./assets/news4.png" />
+                <div class="featured-mini-content">
+                    <div class="featured-meta">ARTICLE | 6 MAR, 2025 | 👁️ 30</div>
+                    <div class="featured-news-title">
+                        URNI Engages NOA on Strengthening National Patriotism and Youth
+                        Development.
+                    </div>
+                </div>
             </div>
-          </div>
+
+            <div class="featured-mini-card">
+                <img src="./assets/news4.png" />
+                <div class="featured-mini-content">
+                    <div class="featured-meta">ARTICLE | 6 MAR, 2025 | 👁️ 30</div>
+                    <div class="featured-news-title">
+                        URNI Engages NOA on Strengthening National Patriotism and Youth
+                        Development.
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="featured-mini-card">
-          <img src="./assets/news4.png" />
-          <div class="featured-mini-content">
-            <div class="featured-meta">ARTICLE | 6 MAR, 2025 | 👁️ 30</div>
-            <div class="featured-news-title">
-              URNI Engages NOA on Strengthening National Patriotism and Youth
-              Development.
-            </div>
-          </div>
+        <div class="featured-btn-container">
+            <a href="#" class="featured-btn">All News & Events</a>
         </div>
-      </div>
-
-      <div class="featured-btn-container">
-        <a href="#" class="featured-btn">All News & Events</a>
-      </div>
     </section>
 
     <section class="facts-section">
-      <div class="facts-header">
-        <h2>Interesting Facts & Figures About Nigeria</h2>
-        <p>
-          Nigeria is a land of rich culture, rapid growth, and remarkable
-          achievements. Explore these fascinating facts and figures that make
-          Nigeria truly unique.
-        </p>
-      </div>
-
-      <div class="facts-grid">
-        <div class="fact-item">
-          <div class="icon-placeholder">
-            <img src="assets/independence.png" alt="Independence icon" />
-          </div>
-          <h3>Independence</h3>
-          <p class="highlight">1st of October, 1960</p>
-          <p>
-            Nigeria gained her independence from Britain on the 1st of October,
-            1960.
-          </p>
+        <div class="facts-header">
+            <h2>Interesting Facts & Figures About Nigeria</h2>
+            <p>
+                Nigeria is a land of rich culture, rapid growth, and remarkable
+                achievements. Explore these fascinating facts and figures that make
+                Nigeria truly unique.
+            </p>
         </div>
 
-        <div class="fact-item">
-          <div class="icon-placeholder">
-            <img src="assets/ethnic-group.png" alt="Independence icon" />
-          </div>
-          <h3>Ethnic Groups</h3>
-          <p class="highlight">250+</p>
-          <p>
-            Nigeria has over 250 ethnic groups, including the Hausa, Yoruba, and
-            Igbo, each contributing to the country’s rich cultural identity and
-            heritage.
-          </p>
+        <div class="facts-grid">
+            <div class="fact-item">
+                <div class="icon-placeholder">
+                    <img src="assets/independence.png" alt="Independence icon" />
+                </div>
+                <h3>Independence</h3>
+                <p class="highlight">1st of October, 1960</p>
+                <p>
+                    Nigeria gained her independence from Britain on the 1st of October,
+                    1960.
+                </p>
+            </div>
+
+            <div class="fact-item">
+                <div class="icon-placeholder">
+                    <img src="assets/ethnic-group.png" alt="Independence icon" />
+                </div>
+                <h3>Ethnic Groups</h3>
+                <p class="highlight">250+</p>
+                <p>
+                    Nigeria has over 250 ethnic groups, including the Hausa, Yoruba, and
+                    Igbo, each contributing to the country’s rich cultural identity and
+                    heritage.
+                </p>
+            </div>
+
+            <div class="fact-item">
+                <div class="icon-placeholder">
+                    <img src="assets/Population 1.png" alt="Independence icon" />
+                </div>
+                <h3>Population</h3>
+                <p class="highlight">230 Million</p>
+                <p>
+                    Nigeria has a population of over 230 Million, making her the
+                    <strong>most populous country in Africa</strong>, and
+                    <strong>4th most populous in the world</strong>.
+                </p>
+            </div>
+
+            <div class="fact-item">
+                <div class="icon-placeholder">
+                    <img src="assets/squarekm.png" alt="Independence icon" />
+                </div>
+                <h3>Size</h3>
+                <p class="highlight">923,768 square km</p>
+                <p>
+                    This makes Nigeria the
+                    <strong>10th largest country in Africa by landmass</strong>.
+                </p>
+            </div>
+
+            <div class="fact-item">
+                <div class="icon-placeholder">
+                    <img src="assets/languages.png" alt="Independence icon" />
+                </div>
+                <h3>Languages</h3>
+                <p class="highlight">500+</p>
+                <p>
+                    Nigeria is home to over 500 languages, making her one of the most
+                    linguistically diverse countries in the world, reflecting its rich
+                    culture and heritage.
+                </p>
+            </div>
         </div>
 
-        <div class="fact-item">
-          <div class="icon-placeholder">
-            <img src="assets/Population 1.png" alt="Independence icon" />
-          </div>
-          <h3>Population</h3>
-          <p class="highlight">230 Million</p>
-          <p>
-            Nigeria has a population of over 230 Million, making her the
-            <strong>most populous country in Africa</strong>, and
-            <strong>4th most populous in the world</strong>.
-          </p>
+        <div class="cta-container">
+            <a href="#" class="cta-button">Learn more about Nigeria <span>&rarr;</span></a>
         </div>
-
-        <div class="fact-item">
-          <div class="icon-placeholder">
-            <img src="assets/squarekm.png" alt="Independence icon" />
-          </div>
-          <h3>Size</h3>
-          <p class="highlight">923,768 square km</p>
-          <p>
-            This makes Nigeria the
-            <strong>10th largest country in Africa by landmass</strong>.
-          </p>
-        </div>
-
-        <div class="fact-item">
-          <div class="icon-placeholder">
-            <img src="assets/languages.png" alt="Independence icon" />
-          </div>
-          <h3>Languages</h3>
-          <p class="highlight">500+</p>
-          <p>
-            Nigeria is home to over 500 languages, making her one of the most
-            linguistically diverse countries in the world, reflecting its rich
-            culture and heritage.
-          </p>
-        </div>
-      </div>
-
-      <div class="cta-container">
-        <a href="#" class="cta-button"
-          >Learn more about Nigeria <span>&rarr;</span></a
-        >
-      </div>
     </section>
 
     <section class="story-section">
         <div class="story-header">
-          <h2 class="story-title">Our Impact Stories</h2>
-          <div class="story-controls">
-            <button class="story-arrow">&#8249;</button>
-            <div class="story-dots">
-              <span class="story-dot active"></span>
-              <span class="story-dot"></span>
-              <span class="story-dot"></span>
+            <h2 class="story-title">Our Impact Stories</h2>
+            <div class="story-controls">
+                <button class="story-arrow">&#8249;</button>
+                <div class="story-dots">
+                    <span class="story-dot active"></span>
+                    <span class="story-dot"></span>
+                    <span class="story-dot"></span>
+                </div>
+                <button class="story-arrow">&#8250;</button>
             </div>
-            <button class="story-arrow">&#8250;</button>
-          </div>
         </div>
-      
-        <div class="story-content">
-          <div class="story-text">
-            <p class="story-paragraph">
-                I used to think my voice didn’t matter, until this movement showed me how to use it. They gave us tools to tell our own stories.
-            </p>
-            <p class="story-paragraph">
-                Now, I’m helping change how the world sees Nigeria — with truth, pride, and purpose.
-            </p>
-      
-            <div class="story-person">
-              <div class="story-line"></div>
-              <div class="story-name">Maxwell Ujeh</div>
-              <div class="story-role">Business Owner</div>
-            </div>
-          </div>
-      
-          <div class="story-image-wrapper">
-            <img
-              src="./assets//story.png"
-              alt="Impact Story Person"
-              class="story-image"
-            />
-          </div>
-        </div>
-      </section>
 
-      
+        <div class="story-content">
+            <div class="story-text">
+                <p class="story-paragraph">
+                    I used to think my voice didn’t matter, until this movement showed me how to use it. They gave us
+                    tools to tell our own stories.
+                </p>
+                <p class="story-paragraph">
+                    Now, I’m helping change how the world sees Nigeria — with truth, pride, and purpose.
+                </p>
+
+                <div class="story-person">
+                    <div class="story-line"></div>
+                    <div class="story-name">Maxwell Ujeh</div>
+                    <div class="story-role">Business Owner</div>
+                </div>
+            </div>
+
+            <div class="story-image-wrapper">
+                <img src="./assets//story.png" alt="Impact Story Person" class="story-image" />
+            </div>
+        </div>
+    </section>
+
+
     <div class="newsletter-cta">
-      <div class="text">
-        <p>
-          Subscribe to the newsletter for news, events and articles <br />
-          from URNI and our partners.
-        </p>
-        <span>
-          By clicking the button, you agree to the Terms and Conditions .
-        </span>
-      </div>
-      <div class="Buttons">
-        <input
-          class="email-field"
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Enter your Email Address"
-        />
-        <a href="#" class="btn btn-primary">Subscribe</a>
-      </div>
+        <div class="text">
+            <p>
+                Subscribe to the newsletter for news, events and articles <br />
+                from URNI and our partners.
+            </p>
+            <span>
+                By clicking the button, you agree to the Terms and Conditions .
+            </span>
+        </div>
+        <div class="Buttons">
+            <input class="email-field" type="email" name="email" id="email" placeholder="Enter your Email Address" />
+            <a href="#" class="btn btn-primary">Subscribe</a>
+        </div>
     </div>
     <section class="volunteer">
-      <div class="title">
-        <h2>Join Our Volunteer Network</h2>
-      </div>
-      <div class="details">
-        <p>
-          Our passionate volunteers use their skills to drive meaningful change
-          and create lasting impact across Nigeria. <br />
+        <div class="title">
+            <h2>Join Our Volunteer Network</h2>
+        </div>
+        <div class="details">
+            <p>
+                Our passionate volunteers use their skills to drive meaningful change
+                and create lasting impact across Nigeria. <br />
 
-          If you believe Nigeria's true story deserves to be told; one of hope,
-          pride, and endless potential, then stand with us and let’s change the
-          narrative together. <br />
+                If you believe Nigeria's true story deserves to be told; one of hope,
+                pride, and endless potential, then stand with us and let’s change the
+                narrative together. <br />
 
-          Join us to give back to the society, grow, and connect with
-          like-minded individuals.
-        </p>
-        <img src="./assets/Frame 4551.png" alt="Image of URNI Volunteers" />
-      </div>
-      <div class="volunteer-btn">
-        <a href="#" class="btn btn-primary">Become a Volunteer</a>
-      </div>
+                Join us to give back to the society, grow, and connect with
+                like-minded individuals.
+            </p>
+            <img src="./assets/Frame 4551.png" alt="Image of URNI Volunteers" />
+        </div>
+        <div class="volunteer-btn">
+            <a href="#" class="btn btn-primary">Become a Volunteer</a>
+        </div>
     </section>
     <section class="partners">
-      <div class="title">
-        <h2>Our Partners</h2>
-        <p>
-          Through the gracious support and commitment of our partners, we are
-          able to spotlight Nigeria’s true <br />
-          story as we empower communities, celebrate culture, and reshape
-          perceptions across the nation.
-        </p>
-      </div>
-      <div class="partner-logos">
-        <img src="assets/Wema-Bank-Logo.png" alt="Wema bank logo" />
-        <img src="assets/CHANNELS-logo.png" alt="Channels logo" />
-        <img src="assets/Nikon-logo.png" alt="Nikon Logo" />
-        <img src="assets/MTN-logo.png" alt="MTN logo" />
-        <img src="assets/CGS-logo.png" alt="CGS logo" />
-        <img src="assets/FirstBank-Logo.png" alt="Firstbank logo" />
-      </div>
+        <div class="title">
+            <h2>Our Partners</h2>
+            <p>
+                Through the gracious support and commitment of our partners, we are
+                able to spotlight Nigeria’s true <br />
+                story as we empower communities, celebrate culture, and reshape
+                perceptions across the nation.
+            </p>
+        </div>
+        <div class="partner-logos">
+            <img src="assets/Wema-Bank-Logo.png" alt="Wema bank logo" />
+            <img src="assets/CHANNELS-logo.png" alt="Channels logo" />
+            <img src="assets/Nikon-logo.png" alt="Nikon Logo" />
+            <img src="assets/MTN-logo.png" alt="MTN logo" />
+            <img src="assets/CGS-logo.png" alt="CGS logo" />
+            <img src="assets/FirstBank-Logo.png" alt="Firstbank logo" />
+        </div>
     </section>
     <div class="newsletter-cta">
-      <div class="text">
-        <p>
-          Subscribe to the newsletter for news, events and articles <br />
-          from URNI and our partners.
-        </p>
-        <span>
-          By clicking the button, you agree to the Terms and Conditions .
-        </span>
-      </div>
-      <div class="Buttons">
-        <input
-          class="email-field"
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Enter your Email Address"
-        />
-        <a href="#" class="btn btn-primary">Subscribe</a>
-      </div>
+        <div class="text">
+            <p>
+                Subscribe to the newsletter for news, events and articles <br />
+                from URNI and our partners.
+            </p>
+            <span>
+                By clicking the button, you agree to the Terms and Conditions .
+            </span>
+        </div>
+        <div class="Buttons">
+            <input class="email-field" type="email" name="email" id="email" placeholder="Enter your Email Address" />
+            <a href="#" class="btn btn-primary">Subscribe</a>
+        </div>
     </div>
     <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <img src="assets/Footer-logo.png" alt="" />
-          <div class="mission-text">
-            We project the positive image of Nigeria through technology and
-            community engagement.
-          </div>
-          <div class="mission-text">
-            We inspire patriotism and love for Nigeria.
-          </div>
-        </div>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="assets/Footer-logo.png" alt="" />
+                <div class="mission-text">
+                    We project the positive image of Nigeria through technology and
+                    community engagement.
+                </div>
+                <div class="mission-text">
+                    We inspire patriotism and love for Nigeria.
+                </div>
+            </div>
 
-        <div class="footer-nav">
-          <h3 class="footer-nav-heading">Sections</h3>
-          <div class="footer-nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About Us</a>
-            <a href="#explore">Explore Nigeria</a>
-            <a href="#news">News & Events</a>
-            <a href="#multimedia">Multimedia</a>
-            <a href="#contact">Contact</a>
-            <a href="#faq">FAQ</a>
-          </div>
-        </div>
+            <div class="footer-nav">
+                <h3 class="footer-nav-heading">Sections</h3>
+                <div class="footer-nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#explore">Explore Nigeria</a>
+                    <a href="#news">News & Events</a>
+                    <a href="#multimedia">Multimedia</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+            </div>
 
-        <div class="footer-social">
-          <h3 class="social-title">Connect with us on social media</h3>
-          <div class="social-icons">
-            <a href="#" class="social-icon" title="Facebook"
-              ><i class="fa-brands fa-facebook-f"></i
-            ></a>
-            <a href="#" class="social-icon" title="Instagram"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
-            <a href="#" class="social-icon" title="Twitter"
-              ><i class="fa-brands fa-x-twitter"></i
-            ></a>
-            <a href="#" class="social-icon" title="WhatsApp"
-              ><i class="fa-brands fa-whatsapp"></i
-            ></a>
-            <a href="#" class="social-icon" title="TikTok"
-              ><i class="fa-brands fa-tiktok"></i
-            ></a>
-          </div>
-          <div class="volunteer-section">
-            <h3 class="volunteer-title">Become a Volunteer</h3>
-            <a href="#" class="btn btn-primary volunteer-btn">Join us</a>
-          </div>
+            <div class="footer-social">
+                <h3 class="social-title">Connect with us on social media</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-icon" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="social-icon" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" class="social-icon" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+                <div class="volunteer-section">
+                    <h3 class="volunteer-title">Become a Volunteer</h3>
+                    <a href="#" class="btn btn-primary volunteer-btn">Join us</a>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="footer-bottom">
-        Copyright © 2025 Unveiling and Rebranding Nigeria Initiative. All Rights
-        Reserved.
-      </div>
+        <div class="footer-bottom">
+            Copyright © 2025 Unveiling and Rebranding Nigeria Initiative. All Rights
+            Reserved.
+        </div>
     </footer>
-  </body>
+</body>
+
 </html>
