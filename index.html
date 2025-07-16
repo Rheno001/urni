@@ -82,70 +82,72 @@
     </nav>
 
     <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
-    <div class="carousel-inner">
-        <!--Slide 1: With gradient-->
-        <div class="carousel-item active">
-            <section class="hero" style="background-image: url('assets/hero-image.jpg');">
-                <div class="hero-overlay">
-                    <div class="hero-content">
-                        <h1>Change begins<br /><span>with us.</span></h1>
-                        <p>Together, we're shaping<br />Nigeria's narrative.</p>
+        <div class="carousel-inner">
+            <!--Slide 1: With gradient-->
+            <div class="carousel-item active">
+                <section class="hero" style="background-image: url('assets/hero-image.jpg');">
+                    <div class="hero-overlay">
+                        <div class="hero-content">
+                            <h1>Change begins<br /><span>with us.</span></h1>
+                            <p>Together, we're shaping<br />Nigeria's narrative.</p>
+                            <a href="#" class="hero-button">
+                                Learn More
+                                <span><img src="assets/Vector.png" alt="" class="arrow" /></span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!--Slide 2: No gradient-->
+            <div class="carousel-item">
+                <section class="hero" style="background-image: url('assets/FOP-hero-bg.png');">
+                    <div class="hero-content no-overlay">
+                        <h1>Celebrating<br> Outstanding<br /><span>Nigerians and<br>patriots.</span></h1>
                         <a href="#" class="hero-button">
                             Learn More
-                            <span class="arrow"><img src="assets/Vector.png" alt="" /></span>
+                            <span><img src="assets/Vector.png" alt="" class="arrow" /></span>
                         </a>
                     </div>
-                </div>
-            </section>
-        </div>
+                </section>
+            </div>
 
-        <!--Slide 2: No gradient-->
-        <div class="carousel-item">
-            <section class="hero" style="background-image: url('assets/FOP-hero-bg.png');">
-                <div class="hero-content no-overlay">
-                    <h1>Celebrating<br> Outstanding<br /><span>Nigerians and<br>patriots.</span></h1>
-                    <a href="#" class="hero-button">
-                        Get Involved
-                        <span class="arrow"><img src="assets/Vector.png" alt="" /></span>
-                    </a>
-                </div>
-            </section>
-        </div>
+            <!--Slide 3: With gradient-->
+            <div class="carousel-item">
+                <section class="hero" style="background-image: url('assets/waterfall.png');">
+                    <div class="hero-overlay">
+                        <div class="hero-content">
+                            <h1>Untold Beauty<br /><span>Unseen Wonders</span></h1>
+                            <p>Discover Nigeria like never before</p>
+                            <a href="#" class="hero-button">
+                                Learn More
+                                <span><img src="assets/Vector.png" alt="" class="arrow" /></span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
 
-        <!--Slide 3: With gradient-->
-        <div class="carousel-item">
-            <section class="hero" style="background-image: url('assets/waterfall.png');">
-                <div class="hero-overlay">
-                    <div class="hero-content">
-                        <h1>Untold Beauty<br /><span>Unseen Wonders</span></h1>
-                        <p>Discover Nigeria like never before</p>
+            <!--Slide 4: No gradient-->
+            <div class="carousel-item">
+                <section class="hero" style="background-image: url('assets/TRIBES.png');">
+                    <div class="hero-content no-overlay">
+                        <h1>We are one<br />people. Many<br>tribes.<span class="red-span">One Nation</span></h1>
                         <a href="#" class="hero-button">
-                            Discover More
-                            <span class="arrow"><img src="assets/Vector.png" alt="" /></span>
+                            Learn More
+                            <span><img src="assets/Vector.png" alt="" class="arrow" /></span>
                         </a>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
         </div>
 
-        <!--Slide 4: No gradient-->
-        <div class="carousel-item">
-            <section class="hero" style="background-image: url('assets/TRIBES.png');">
-                <div class="hero-content no-overlay">
-                    <h1>We are one people<br /><span>Many tribes</span><span>One Nation</span></h1>
-                    <a href="#" class="hero-button">
-                        Join Us
-                        <span class="arrow"><img src="assets/Vector.png" alt="" /></span>
-                    </a>
-                </div>
-            </section>
-        </div>
+        <!--Controls-->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel"
+            data-bs-slide="prev"></button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel"
+            data-bs-slide="next"></button>
     </div>
-
-    <!--Controls-->
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev"></button>
-    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next"></button>
-</div>
 
 
     <section class="explore-section">
@@ -296,7 +298,10 @@
         </div>
 
         <div class="featured-btn-container">
-            <a href="#" class="featured-btn">All News & Events</a>
+             <a href="#" class="featured-button">
+                All News & Events
+                <span><img src="assets/Vector.png" alt="" class="arrow" /></span>
+            </a>
         </div>
     </section>
 
@@ -376,7 +381,10 @@
         </div>
 
         <div class="cta-container">
-            <a href="#" class="cta-button">Learn more about Nigeria <span>&rarr;</span></a>
+            <a href="#" class="facts-button">
+                Learn More About Nigeria
+                <span><img src="assets/Vector.png" alt="" class="arrow" /></span>
+            </a>
         </div>
     </section>
 
@@ -456,24 +464,43 @@
         </div>
     </section>
     <section class="partners">
-        <div class="title">
-            <h2>Our Partners</h2>
-            <p>
-                Through the gracious support and commitment of our partners, we are
-                able to spotlight Nigeria’s true <br />
-                story as we empower communities, celebrate culture, and reshape
-                perceptions across the nation.
-            </p>
-        </div>
-        <div class="partner-logos">
-            <img src="assets/Wema-Bank-Logo.png" alt="Wema bank logo" />
-            <img src="assets/CHANNELS-logo.png" alt="Channels logo" />
-            <img src="assets/Nikon-logo.png" alt="Nikon Logo" />
-            <img src="assets/MTN-logo.png" alt="MTN logo" />
-            <img src="assets/CGS-logo.png" alt="CGS logo" />
-            <img src="assets/FirstBank-Logo.png" alt="Firstbank logo" />
+        <div class="container text-center">
+            <div class="title mb-5">
+                <h2>Our Partners</h2>
+                <p>
+                    Through the gracious support and commitment of our partners, we are
+                    able to spotlight Nigeria’s true <br />
+                    story as we empower communities, celebrate culture, and reshape
+                    perceptions across the nation.
+                </p>
+            </div>
+
+            <div class="logo-carousel-wrapper overflow-hidden position-relative">
+                <div class="logo-carousel d-flex align-items-center">
+                    <!-- Repeat logos at least twice for seamless loop -->
+                    <img src="assets/Wema-Bank-Logo.png" alt="Wema bank logo" />
+                    <img src="assets/MODERN SHELTER.png" alt="MODERN SHELTER logo" />
+                    <img src="assets/NOA 1.png" alt="Noa Logo" />
+                    <img src="assets/IPNX.png" alt="IPNX logo" />
+                    <img src="assets/CGS-logo.png" alt="CGS logo" />
+                    <img src="assets/DE MIPOS LUXURY SUITE.png" alt="De mipos logo" />
+                    <img src="assets/EAGLENET LOGISTICS.png" alt="EAGLENET logo" />
+                    <img src="assets/ARISE NEWS.png" alt="Arise News logo" />
+
+                    <!-- Duplicate for infinite effect -->
+                    <img src="assets/Wema-Bank-Logo.png" alt="Wema bank logo" />
+                    <img src="assets/MODERN SHELTER.png" alt="MODERN SHELTER logo" />
+                    <img src="assets/NOA 1.png" alt="Noa Logo" />
+                    <img src="assets/IPNX.png" alt="IPNX logo" />
+                    <img src="assets/CGS-logo.png" alt="CGS logo" />
+                    <img src="assets/DE MIPOS LUXURY SUITE.png" alt="De mipos logo" />
+                    <img src="assets/EAGLENET LOGISTICS.png" alt="EAGLENET logo" />
+                    <img src="assets/ARISE NEWS.png" alt="Arise News logo" />
+                </div>
+            </div>
         </div>
     </section>
+
     <div class="newsletter-cta">
         <div class="text">
             <p>
@@ -526,7 +553,10 @@
                 </div>
                 <div class="volunteer-section">
                     <h3 class="volunteer-title">Become a Volunteer</h3>
-                    <a href="#" class="btn btn-primary volunteer-btn">Join us</a>
+                    <a href="#" class="volunteer-btn">
+                        Join Us
+                        <span><img src="assets/Vector.png" alt="" class="arrow" /></span>
+                    </a>
                 </div>
             </div>
         </div>
