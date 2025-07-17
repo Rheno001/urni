@@ -13,6 +13,7 @@
     <script src="https://kit.fontawesome.com/29a8691164.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="mapdata.js"></script>
     <script type="text/javascript" src="countrymap.js"></script>
+
 </head>
 
 <body>
@@ -102,12 +103,14 @@
             <!--Slide 2: No gradient-->
             <div class="carousel-item">
                 <section class="hero" style="background-image: url('assets/FOP-hero-bg.png');">
-                    <div class="hero-content no-overlay">
+                    <div class="no-overlay">
+                    <div class="hero-content">
                         <h1>Celebrating<br> Outstanding<br /><span>Nigerians and<br>patriots.</span></h1>
                         <a href="#" class="hero-button">
                             Learn More
                             <span><img src="assets/Vector.png" alt="" class="arrow" /></span>
                         </a>
+                    </div>
                     </div>
                 </section>
             </div>
@@ -131,12 +134,14 @@
             <!--Slide 4: No gradient-->
             <div class="carousel-item">
                 <section class="hero" style="background-image: url('assets/TRIBES.png');">
-                    <div class="hero-content no-overlay">
+                     <div class="no-overlay">
+                    <div class="hero-content">
                         <h1>We are one<br />people. Many<br>tribes.<span class="red-span">One Nation</span></h1>
                         <a href="#" class="hero-button">
                             Learn More
                             <span><img src="assets/Vector.png" alt="" class="arrow" /></span>
                         </a>
+                    </div>
                     </div>
                 </section>
             </div>
@@ -438,44 +443,48 @@
 </section>
 -->
 <section class="impact-section">
-  <div class="impact-container">
-    <!-- Left: Text Section -->
-    <div class="impact-left">
-      <h2 class="impact-title">Our Impact Stories</h2>
-      <p class="impact-paragraph">
-        I used to think my voice didn’t matter, until this movement showed me how to use it.
-        They gave us tools to tell our own stories.
-      </p>
-      <p class="impact-paragraph">
-        Now, I’m helping change how the world sees Nigeria — with truth, pride, and purpose.
-      </p>
+        <div class="impact-container">
+            <!-- Left: Text Section -->
+            <div class="impact-left">
+                <h2 class="impact-title">Our Impact Stories</h2>
+                <p class="impact-paragraph" id="impact-paragraph-1">
+                    I used to think my voice didn't matter, until this movement showed me how to use it.
+                    They gave us tools to tell our own stories.
+                </p>
+                <p class="impact-paragraph" id="impact-paragraph-2">
+                    Now, I'm helping change how the world sees Nigeria — with truth, pride, and purpose.
+                </p>
 
-      <div class="impact-person">
-        <div class="impact-line"></div>
-        <div class="impact-name">Maxwell Ujeh</div>
-        <div class="impact-role">Business Owner</div>
-      </div>
-    </div>
+                <div class="impact-person">
+                    <div class="impact-line"></div>
+                    <div class="impact-name" id="impact-name">Maxwell Ujeh</div>
+                    <div class="impact-role" id="impact-role">Business Owner</div>
+                </div>
+            </div>
 
-    <!-- Right: Video + Controls -->
-    <div class="impact-right">
-      <div class="impact-controls">
-        <button class="impact-arrow"><img src="assets/larrw.png" alt="" class="larrw"></button>
-        <div class="impact-dots">
-          <span class="dot active"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
+            <!-- Right: Video + Controls -->
+            <div class="impact-right">
+                <div class="impact-controls">
+                    <button class="impact-arrow" id="prevBtn">
+                        <span ><img src="assets/larrw.png" alt="" class="larrw"></span>
+                    </button>
+                    <div class="impact-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="impact-arrow" id="nextBtn">
+                        <span><img src="assets/rarrw.png" alt="" class="rarrw"></span>
+                    </button>
+                </div>
+
+                <div class="impact-video">
+                    <img src="assets/story.png" alt="Video thumbnail" id="impact-img" />
+                </div>
+            </div>
         </div>
-        <button class="impact-arrow"><img src="assets/rarrw.png" alt="" class="rarrw"></button>
-      </div>
+    </section>
 
-      <div class="impact-video">
-        <!-- Replace with YouTube thumbnail or iframe -->
-        <img src="assets/story.png" alt="Video thumbnail" />
-      </div>
-    </div>
-  </div>
-</section>
 
 
     <div class="newsletter-cta">
@@ -619,4 +628,103 @@
     </footer>
 </body>
 
+
+<script>
+        // Slider data
+        const sliderData = [
+            {
+                paragraph1: "I used to think my voice didn't matter, until this movement showed me how to use it. They gave us tools to tell our own stories.",
+                paragraph2: "Now, I'm helping change how the world sees Nigeria — with truth, pride, and purpose.",
+                name: "Maxwell Ujeh",
+                role: "Business Owner",
+                image: "assets/story.png"
+            },
+            {
+                paragraph1: "The support I received transformed not just my business, but my entire outlook on what's possible for young entrepreneurs in Nigeria.",
+                paragraph2: "Today, I'm creating jobs and opportunities for others in my community, proving that with the right support, we can build something meaningful.",
+                name: "Adaora Okafor",
+                role: "Tech Entrepreneur",
+                 image: "assets/waterfall.png"
+            },
+            {
+                paragraph1: "Education was my dream, but financial barriers seemed insurmountable. This program didn't just provide funding — it gave me hope.",
+                paragraph2: "I'm now pursuing my master's degree and working as a mentor for other students facing similar challenges.",
+                name: "Ibrahim Suleiman",
+                role: "Graduate Student",
+                 image: "assets/story.png"
+            }
+        ];
+
+        let currentSlide = 0;
+        const totalSlides = sliderData.length;
+
+        // Get DOM elements
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dots = document.querySelectorAll('.dot');
+        const paragraph1 = document.getElementById('impact-paragraph-1');
+        const paragraph2 = document.getElementById('impact-paragraph-2');
+        const name = document.getElementById('impact-name');
+        const role = document.getElementById('impact-role');
+        const image = document.getElementById('impact-img');
+
+        // Update slide content
+        function updateSlide(index) {
+            const slide = sliderData[index];
+            
+            paragraph1.textContent = slide.paragraph1;
+            paragraph2.textContent = slide.paragraph2;
+            name.textContent = slide.name;
+            role.textContent = slide.role;
+            image.src = slide.image;
+            image.alt = `${slide.name} - ${slide.role}`;
+            
+            // Update dots
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        // Go to next slide
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlide(currentSlide);
+        }
+
+        // Go to previous slide
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlide(currentSlide);
+        }
+
+        // Go to specific slide
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlide(currentSlide);
+        }
+
+        // Event listeners
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        // Dot navigation
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => goToSlide(index));
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                prevSlide();
+            } else if (e.key === 'ArrowRight') {
+                nextSlide();
+            }
+        });
+
+        // Auto-play functionality (optional - uncomment to enable)
+        // setInterval(nextSlide, 5000); // Auto-advance every 5 seconds
+
+        // Initialize with first slide
+        updateSlide(currentSlide);
+    </script>
 </html>
