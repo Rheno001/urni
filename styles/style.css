@@ -169,7 +169,7 @@ body {
 }
 
 .facts-header h2 {
-    color: #006644;
+    color: #025836;
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 10px;
@@ -270,7 +270,7 @@ body {
 .explore-text h2 {
     font-size: 3rem;
     font-weight: 700;
-    color: #015734;
+    color: #025836;
     margin-bottom: 20px;
 }
 
@@ -909,7 +909,7 @@ body {
 .impact-title {
   font-size: 3rem;
   font-weight: 700;
-  color: #004225;
+  color: #025836;
   margin-bottom: 20px;
 }
 
@@ -995,7 +995,7 @@ body {
   object-fit: cover;
 }
 .volunteer{
-    padding: 60px 8%;
+    padding: 6.25rem 8%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1003,7 +1003,7 @@ body {
 .title h2{
     font-size: 3rem;
   font-weight: 700;
-  color: #004225;
+  color: #025836;
   margin-bottom: 30px;
 }
 .details{
