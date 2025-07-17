@@ -6,6 +6,7 @@
 
 body {
     font-family: "Montserrat", Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 .btn-volunteer {
