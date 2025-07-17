@@ -7,7 +7,7 @@
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/style.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/29a8691164.js" crossorigin="anonymous"></script>
@@ -155,8 +155,14 @@
             <h2>Explore Nigeria</h2>
             <p>Find interesting facts about Nigeria <br> and her people.</p>
             <div class="explore-buttons">
-                <a href="#" class="btn btn-primary">Explore Places →</a>
-                <a href="#" class="btn btn-outline">Explore People →</a>
+                <a href="#" class="places-btn">
+                    Explore Places
+                    <span><img src="assets/white-arrow.png" alt="" class="arrow" /></span>
+                </a>
+                <a href="#" class="people-btn">
+                    Explore People
+                    <span><img src="assets/Vector.png" alt="" class="arrow" /></span>
+                </a>
             </div>
         </div>
         <div class="map">
@@ -166,7 +172,7 @@
 
     <section class="program-section">
         <div class="program-header">
-            <h2 class="program-title">Our Programs & Events</h2>
+            <h2 class="program-title">Our Projects</h2>
             <p class="program-subtitle">
                 Our outline of innovative program and impact-driven events designed to
                 promote national pride, digital storytelling, economic empowerment,
@@ -199,7 +205,7 @@
             </div>
         </div>
     </section>
-    <div class="newsletter-cta">
+    <div class="passion-cta">
         <div class="text">
             <p class="donation-text">
                 Are you passionate about Nigeria’s progress and you want to <br />
@@ -207,7 +213,9 @@
             </p>
         </div>
         <div class="Buttons">
-            <a href="#" class="btn btn-primary">Make a donation</a>
+            <a href="#" class="donation-btn">
+                Make a Donation
+            </a>
         </div>
     </div>
 
@@ -298,7 +306,7 @@
         </div>
 
         <div class="featured-btn-container">
-             <a href="#" class="featured-button">
+            <a href="#" class="featured-button">
                 All News & Events
                 <span><img src="assets/Vector.png" alt="" class="arrow" /></span>
             </a>
@@ -388,42 +396,86 @@
         </div>
     </section>
 
-    <section class="story-section">
-        <div class="story-header">
-            <h2 class="story-title">Our Impact Stories</h2>
-            <div class="story-controls">
-                <button class="story-arrow">&#8249;</button>
-                <div class="story-dots">
-                    <span class="story-dot active"></span>
-                    <span class="story-dot"></span>
-                    <span class="story-dot"></span>
-                </div>
-                <button class="story-arrow">&#8250;</button>
-            </div>
+
+<!--
+    <section class="story-section py-[12.5rem]">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Column 
+      <div class="left col-md-6">
+        <h2 class="story-title">Our Impact Stories</h2>
+        <p class="story-paragraph">
+          I used to think my voice didn’t matter, until this movement showed me how to use it. They gave us
+          tools to tell our own stories.
+        </p>
+        <p class="story-paragraph">
+          Now, I’m helping change how the world sees Nigeria — with truth, pride, and purpose.
+        </p>
+        <div class="story-person d-flex flex-column gap-1 mt-4">
+          <div class="story-line bg-success" style="height: 1px; width: 90%;"></div>
+          <div class="story-name">Maxwell Ujeh</div>
+          <div class="story-role">Business Owner</div>
         </div>
+      </div>
 
-        <div class="story-content">
-            <div class="story-text">
-                <p class="story-paragraph">
-                    I used to think my voice didn’t matter, until this movement showed me how to use it. They gave us
-                    tools to tell our own stories.
-                </p>
-                <p class="story-paragraph">
-                    Now, I’m helping change how the world sees Nigeria — with truth, pride, and purpose.
-                </p>
-
-                <div class="story-person">
-                    <div class="story-line"></div>
-                    <div class="story-name">Maxwell Ujeh</div>
-                    <div class="story-role">Business Owner</div>
-                </div>
-            </div>
-
-            <div class="story-image-wrapper">
-                <img src="./assets//story.png" alt="Impact Story Person" class="story-image" />
-            </div>
+      <!-- Right Column 
+      <div class="right col-md-6">
+        <div class="story-controls d-flex align-items-center justify-content-center gap-3 mb-3">
+          <button class="story-arrow px-3">&#8249;</button>
+          <div class="story-dots d-flex gap-2">
+            <span class="story-dot active rounded-circle bg-dark" style="width: 10px; height: 10px;"></span>
+            <span class="story-dot rounded-circle" style="width: 10px; height: 10px;"></span>
+            <span class="story-dot rounded-circle" style="width: 10px; height: 10px;"></span>
+          </div>
+          <button class="story-arrow px-3">&#8250;</button>
         </div>
-    </section>
+        <div class="story-image-wrapper text-center">
+          <img src="./assets/story.png" alt="Impact Story Person" class="story-image img-fluid" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+<section class="impact-section">
+  <div class="impact-container">
+    <!-- Left: Text Section -->
+    <div class="impact-left">
+      <h2 class="impact-title">Our Impact Stories</h2>
+      <p class="impact-paragraph">
+        I used to think my voice didn’t matter, until this movement showed me how to use it.
+        They gave us tools to tell our own stories.
+      </p>
+      <p class="impact-paragraph">
+        Now, I’m helping change how the world sees Nigeria — with truth, pride, and purpose.
+      </p>
+
+      <div class="impact-person">
+        <div class="impact-line"></div>
+        <div class="impact-name">Maxwell Ujeh</div>
+        <div class="impact-role">Business Owner</div>
+      </div>
+    </div>
+
+    <!-- Right: Video + Controls -->
+    <div class="impact-right">
+      <div class="impact-controls">
+        <button class="impact-arrow"><img src="assets/larrw.png" alt="" class="larrw"></button>
+        <div class="impact-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <button class="impact-arrow"><img src="assets/rarrw.png" alt="" class="rarrw"></button>
+      </div>
+
+      <div class="impact-video">
+        <!-- Replace with YouTube thumbnail or iframe -->
+        <img src="assets/story.png" alt="Video thumbnail" />
+      </div>
+    </div>
+  </div>
+</section>
 
 
     <div class="newsletter-cta">
@@ -433,12 +485,11 @@
                 from URNI and our partners.
             </p>
             <span>
-                By clicking the button, you agree to the Terms and Conditions .
-            </span>
+                By clicking the button, you agree to the <span class="terms">Terms and Conditions</span> 
         </div>
         <div class="Buttons">
             <input class="email-field" type="email" name="email" id="email" placeholder="Enter your Email Address" />
-            <a href="#" class="btn btn-primary">Subscribe</a>
+            <a href="#" class="subscribe-btn">Subscribe</a>
         </div>
     </div>
     <section class="volunteer">
@@ -459,10 +510,11 @@
             </p>
             <img src="./assets/Frame 4551.png" alt="Image of URNI Volunteers" />
         </div>
-        <div class="volunteer-btn">
-            <a href="#" class="btn btn-primary">Become a Volunteer</a>
+        <div class="volunteer-button">
+            <a href="#" class="vln-btn">Become a Volunteer</a>
         </div>
     </section>
+
     <section class="partners">
         <div class="container text-center">
             <div class="title">
@@ -508,12 +560,12 @@
                 from URNI and our partners.
             </p>
             <span>
-                By clicking the button, you agree to the Terms and Conditions .
+                By clicking the button, you agree to the <span class="terms">Terms and Conditions</span> .
             </span>
         </div>
         <div class="Buttons">
             <input class="email-field" type="email" name="email" id="email" placeholder="Enter your Email Address" />
-            <a href="#" class="btn btn-primary">Subscribe</a>
+            <a href="#" class="subscribe-btn">Subscribe</a>
         </div>
     </div>
     <footer class="footer">
