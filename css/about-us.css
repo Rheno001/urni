@@ -355,40 +355,36 @@ body, main, .container, .row {
     font-weight: 400;
 }
 
+.leadership-img {
+  width: 100%;
+  /* height: auto; */
+  background-color: #02583633;
+  width: 574px;
+  height: 563px;
+  border-radius: 4px;
+}
+
 @media (max-width: 1200px) {
-    .patron-img {
-        max-width: 100%;
-        height: 400px;
-    }
+  .leadership-img {
+    max-width: 400px;
+    max-height: 350px;
+  }
 }
 @media (max-width: 992px) {
-    .patron-img {
-        max-width: 100%;
-        height: 300px;
-    }
-    .patron-title {
-        font-size: 32px;
-    }
-    .patron-name {
-        font-size: 18px;
-    }
+  .leadership-img {
+    max-width: 300px;
+    max-height: 250px;
+  }
 }
 @media (max-width: 768px) {
-    .patron-section {
-        padding: 1.5rem 0.5rem !important;
-        margin: 0 !important;
-    }
-    .patron-title {
-        font-size: 26px;
-    }
-    .patron-name {
-        font-size: 16px;
-    }
-    .patron-role {
-        font-size: 14px;
-    }
-    .patron-img {
-        height: 200px;
-        max-width: 100%;
-    }
+  .leadership-img {
+    max-width: 220px;
+    max-height: 180px;
+  }
+}
+@media (max-width: 576px) {
+  .leadership-img {
+    max-width: 100%;
+    height: auto;
+  }
 } 
