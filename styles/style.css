@@ -14,7 +14,7 @@ body {
     color: white;
     border: none;
     padding: 0.5rem 1rem;
-    border-radius: 2px;
+    border-radius: 4px;
     cursor: pointer;
 }
 
@@ -28,7 +28,7 @@ body {
     background: none;
     color: #014421;
     padding: 0.5rem 1rem;
-    border-radius: 2px;
+    border-radius: 4px;
     cursor: pointer;
 }
 
@@ -75,7 +75,7 @@ body {
 }
 .carousel-fade .carousel-item {
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 4s ease-in-out;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -84,7 +84,7 @@ body {
 }
 
 .carousel-fade .carousel-item.active {
-    opacity: 1;
+    opacity: 0;
     position: relative;
     z-index: 1;
 }
@@ -137,7 +137,7 @@ body {
     height: 56px;
     color: #004225;
     padding: 12px 24px;
-    border-radius: 2px;
+    border-radius: 4px;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -245,6 +245,7 @@ body {
     transition: all 0.3s ease;
     margin: 20px 0 0 0;
     border: 1px solid #004225;
+    border-radius: 4px;
 }
 .facts-button:hover {
     background-color: white;
@@ -300,6 +301,7 @@ body {
     transition: all 0.3s ease;
     margin: 20px 0 0 0;
     border: 1px solid #004225;
+    border-radius: 4px;
 }
 .places-btn .arrow{
      width: 1.5rem;
@@ -323,6 +325,7 @@ body {
     transition: all 0.3s ease;
     margin: 20px 0 0 0;
     border: 1px solid #004225;
+    border-radius: 4px;
 }
 .people-btn .arrow{
      width: 1.5rem;
@@ -440,6 +443,7 @@ body {
     height: 2.7rem;
     width: 293px;
     padding: 0 10px;
+    border-radius: 4px;
 }
 
 .email-field::placeholder {
@@ -453,7 +457,7 @@ body {
     height: 2.7rem;
     color: white;
     padding: 10px 24px;
-    border-radius: 2px;
+    border-radius: 4px;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -561,7 +565,7 @@ body {
     margin: 5px 0;
     padding: 10px;
     border: none;
-    border-radius: 2px;
+    border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -1037,5 +1041,6 @@ body {
     text-decoration: none;
     transition: all 0.3s ease;
     margin: 20px 0 0 0;
+    border-radius: 4px;
     border: 1px solid #004225;
 }
