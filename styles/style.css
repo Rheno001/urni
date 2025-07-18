@@ -1288,7 +1288,7 @@ body {
 
 /* footer styling */
 .footer {
-    background: linear-gradient(rgba(0, 53, 30, 0.9), rgba(0, 53, 30, 0.9)),
+    background: linear-gradient(rgba(2, 88, 54, 0.9), rgba(2, 88, 54, 0.9)),
         url("../assets/URNI-eagle.png");
     background-size: contain;
     background-position: center;
