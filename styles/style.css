@@ -8,7 +8,9 @@ body {
     font-family: "Montserrat", Arial, sans-serif;
     overflow-x: hidden;
 }
-
+.navbar-brand:hover{
+    cursor: pointer;
+}
 .btn-volunteer {
     background-color: #014421;
     color: white;
@@ -204,6 +206,9 @@ body {
 .icon-placeholder img {
     width: 5.2rem;
     height: 3.784rem;
+}
+.ip-1 img{
+    width: 4rem;
 }
 
 .fact-item h3 {
