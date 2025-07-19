@@ -1769,6 +1769,13 @@ body {
     }
     .impact-video{
         width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .impact-image{
+        width: 400px;
     }
     
     .volunteer {
