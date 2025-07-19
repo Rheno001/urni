@@ -1310,7 +1310,7 @@ body {
 }
 .impact-img {
     transition: opacity 0.2s ease-in-out;
-    max-width: 37.75rem;
+    width: 37.75rem;
     border-radius: 4px;
     cursor: pointer;
 }
@@ -1766,6 +1766,9 @@ body {
     
     .impact-role {
         font-size: 1rem;
+    }
+    .impact-image{
+        width: 400px;
     }
     
     .volunteer {
