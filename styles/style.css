@@ -1305,6 +1305,9 @@ body {
 .video-thumbnail {
     transition: opacity 0.3s ease-in-out;
 }
+.impact-video{
+    overflow: hidden;
+}
 .impact-img {
     transition: opacity 0.2s ease-in-out;
     max-width: 37.75rem;
