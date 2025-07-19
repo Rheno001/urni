@@ -268,11 +268,15 @@ body {
 
 .explore-section {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     justify-content: space-between;
     align-items: center;
     padding: 60px 5%;
     width: 100%;
+    background: url("../assets/explore-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .explore-text {
@@ -312,6 +316,7 @@ body {
     margin: 20px 0 0 0;
     border: 1px solid #004225;
 }
+
 
 .places-btn .arrow {
     width: 1.5rem;
@@ -1265,10 +1270,11 @@ body {
 }
 
 .volunteer {
-    padding: 6.25rem 8%;
+    padding: 6.25rem 0%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .title h2 {
@@ -1290,14 +1296,14 @@ body {
     font-weight: 400;
     margin-right: 70px;
     text-align: justify;
-    line-height: 1.6;
+    line-height: 1.4;
     padding: 0;
     max-width: 500px;
 }
 
 .details img {
     width: 34.375rem;
-    height: 19.875rem;
+    height: 19.938rem;
 }
 
 .vln-btn {
@@ -1447,6 +1453,9 @@ body {
     .explore-buttons {
         flex-wrap: wrap;
     }
+    .places-btn, .people-btn{
+    margin: 10px 0 0 0;
+}
     
     .newsletter-cta {
         flex-direction: column;
@@ -1696,6 +1705,9 @@ body {
     .explore-text h2 {
         font-size: 1.6rem;
     }
+    .places-btn, .people-btn{
+    margin: 10px 0 0 0;
+}
     
     .impact-paragraph {
         font-size: 1.1rem;
