@@ -13,7 +13,7 @@
     <script src="https://kit.fontawesome.com/29a8691164.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="mapdata.js"></script>
     <script type="text/javascript" src="countrymap.js"></script>
-    
+
 
 </head>
 
@@ -187,61 +187,67 @@
         </div>
 
         <div class="pSliderContainer">
-        <div class="pSlide active">
-            <div class="pContentSection">
-                <h1 class="pTitle">Faces of Patriotism Book Distribution Project</h1>
-                <p class="pDescription">
-                    Nigeria is a land of rich culture, rapid growth, and remarkable achievements. Explore these fascinating facts and figures that make Nigeria truly unique. Nigeria is a land of rich culture, rapid growth, and remarkable achievements. Explore these fascinating facts and figures that make Nigeria truly unique.
-                </p>
-                <a href="#" class="pViewButton">
-                    View more 
-                    <img src="assets/white-arrow.png" alt="" class="pArrowIcon">
-                </a>
+            <div class="pSlide active">
+                <div class="pContentSection">
+                    <h1 class="pTitle">Faces of Patriotism Book Distribution Project</h1>
+                    <p class="pDescription">
+                        Nigeria is a land of rich culture, rapid growth, and remarkable achievements. Explore these
+                        fascinating facts and figures that make Nigeria truly unique. Nigeria is a land of rich culture,
+                        rapid growth, and remarkable achievements. Explore these fascinating facts and figures that make
+                        Nigeria truly unique.
+                    </p>
+                    <a href="#" class="pViewButton">
+                        View more
+                        <img src="assets/white-arrow.png" alt="" class="pArrowIcon">
+                    </a>
+                </div>
+                <div><img src="assets/fop-flyer.png" alt="" class="prog-img"></div>
             </div>
-            <div><img src="assets/fop-flyer.png" alt="" class="prog-img"></div>
-        </div>
 
-        <div class="pSlide">
-            <div class="pContentSection">
-                <h1 class="pTitle">Education Excellence</h1>
-                <p class="pDescription">
-                    Empowering Nigerian youth through quality education and patriotic values. This comprehensive program reaches across all geopolitical zones to inspire the next generation of leaders. Building strong foundations for a prosperous Nigeria through education and national pride.
-                </p>
-                <a href="#" class="pViewButton">
-                    View more 
-                   <img src="assets/white-arrow.png" alt="" class="pArrowIcon">
-                </a>
+            <div class="pSlide">
+                <div class="pContentSection">
+                    <h1 class="pTitle">Education Excellence</h1>
+                    <p class="pDescription">
+                        Empowering Nigerian youth through quality education and patriotic values. This comprehensive
+                        program reaches across all geopolitical zones to inspire the next generation of leaders.
+                        Building strong foundations for a prosperous Nigeria through education and national pride.
+                    </p>
+                    <a href="#" class="pViewButton">
+                        View more
+                        <img src="assets/white-arrow.png" alt="" class="pArrowIcon">
+                    </a>
+                </div>
+                <div><img src="assets/novelty.png" alt="" class="prog-img"></div>
+
             </div>
-            <div><img src="assets/novelty.png" alt="" class="prog-img"></div>
-            
-        </div>
 
-        <div class="pSlide">
-            <div class="pContentSection">
-                <h1 class="pTitle">The URNI Novelty Match</h1>
-                <p class="pDescription">
-                    Strengthening communities across Nigeria through targeted outreach and development programs. We focus on sustainable growth, community empowerment, and creating lasting positive change in every locality we serve.
-                </p>
-                <a href="#" class="pViewButton">
-                    View more 
-                    <img src="assets/white-arrow.png" alt="" class="pArrowIcon">
-                </a>
+            <div class="pSlide">
+                <div class="pContentSection">
+                    <h1 class="pTitle">The URNI Novelty Match</h1>
+                    <p class="pDescription">
+                        Strengthening communities across Nigeria through targeted outreach and development programs. We
+                        focus on sustainable growth, community empowerment, and creating lasting positive change in
+                        every locality we serve.
+                    </p>
+                    <a href="#" class="pViewButton">
+                        View more
+                        <img src="assets/white-arrow.png" alt="" class="pArrowIcon">
+                    </a>
+                </div>
+                <div><img src="assets/fop-flyer.png" alt="" class="prog-img"></div>
+
             </div>
-            <div><img src="assets/fop-flyer.png" alt="" class="prog-img"></div>
-            
+
+            <div class="pDots">
+                <div class="pDot active" data-slide="0"></div>
+                <div class="pDot" data-slide="1"></div>
+                <div class="pDot" data-slide="2"></div>
+            </div>
+            <button class="pNavButton" id="pPrevBtn"><img src="assets/wlarrw.png" alt="" class="larrw"></button>
+            <button class="pNavButton" id="pNextBtn"><img src="assets/wrarrw.png" alt="" class="larrw"></button>
         </div>
 
-        <div class="pDots">
-            <div class="pDot active" data-slide="0"></div>
-            <div class="pDot" data-slide="1"></div>
-            <div class="pDot" data-slide="2"></div>
-        </div>
 
-        <button class="pNavButton" id="pPrevBtn">‹</button>
-        <button class="pNavButton" id="pNextBtn">›</button>
-    </div>
-
-       
     </section>
     <div class="passion-cta">
         <div class="text">
@@ -621,7 +627,7 @@
 </body>
 
 
-    <script>
+<script>
     const sliderData = [
         {
             paragraph1: "I used to think my voice didn't matter, until this movement showed me how to use it. They gave us tools to tell our own stories.",
@@ -719,94 +725,94 @@
     updateSlide(currentSlide);
 </script>
 <script>
-        const pSlides = document.querySelectorAll('.pSlide');
-        const pDots = document.querySelectorAll('.pDot');
-        const pPrevBtn = document.getElementById('pPrevBtn');
-        const pNextBtn = document.getElementById('pNextBtn');
-        
-        let pCurrentSlide = 0;
-        const pTotalSlides = pSlides.length;
+    const pSlides = document.querySelectorAll('.pSlide');
+    const pDots = document.querySelectorAll('.pDot');
+    const pPrevBtn = document.getElementById('pPrevBtn');
+    const pNextBtn = document.getElementById('pNextBtn');
 
-        function pShowSlide(pIndex) {
-            // Hide all slides
-            pSlides.forEach(slide => slide.classList.remove('active'));
-            pDots.forEach(dot => dot.classList.remove('active'));
-            
-            // Show current slide
-            pSlides[pIndex].classList.add('active');
-            pDots[pIndex].classList.add('active');
-        }
+    let pCurrentSlide = 0;
+    const pTotalSlides = pSlides.length;
 
-        function pNextSlide() {
-            pCurrentSlide = (pCurrentSlide + 1) % pTotalSlides;
+    function pShowSlide(pIndex) {
+        // Hide all slides
+        pSlides.forEach(slide => slide.classList.remove('active'));
+        pDots.forEach(dot => dot.classList.remove('active'));
+
+        // Show current slide
+        pSlides[pIndex].classList.add('active');
+        pDots[pIndex].classList.add('active');
+    }
+
+    function pNextSlide() {
+        pCurrentSlide = (pCurrentSlide + 1) % pTotalSlides;
+        pShowSlide(pCurrentSlide);
+    }
+
+    function pPrevSlide() {
+        pCurrentSlide = (pCurrentSlide - 1 + pTotalSlides) % pTotalSlides;
+        pShowSlide(pCurrentSlide);
+    }
+
+    // Event listeners
+    pNextBtn.addEventListener('click', pNextSlide);
+    pPrevBtn.addEventListener('click', pPrevSlide);
+
+    // Dot navigation
+    pDots.forEach((pDot, pIndex) => {
+        pDot.addEventListener('click', () => {
+            pCurrentSlide = pIndex;
             pShowSlide(pCurrentSlide);
-        }
-
-        function pPrevSlide() {
-            pCurrentSlide = (pCurrentSlide - 1 + pTotalSlides) % pTotalSlides;
-            pShowSlide(pCurrentSlide);
-        }
-
-        // Event listeners
-        pNextBtn.addEventListener('click', pNextSlide);
-        pPrevBtn.addEventListener('click', pPrevSlide);
-
-        // Dot navigation
-        pDots.forEach((pDot, pIndex) => {
-            pDot.addEventListener('click', () => {
-                pCurrentSlide = pIndex;
-                pShowSlide(pCurrentSlide);
-            });
         });
+    });
 
-        // Auto-play functionality
-        const pAutoPlay = setInterval(pNextSlide, 5000);
+    // Auto-play functionality
+    const pAutoPlay = setInterval(pNextSlide, 5000);
 
-        // Pause auto-play on hover
-        const pSliderContainer = document.querySelector('.pSliderContainer');
-        pSliderContainer.addEventListener('mouseenter', () => {
-            clearInterval(pAutoPlay);
-        });
+    // Pause auto-play on hover
+    const pSliderContainer = document.querySelector('.pSliderContainer');
+    pSliderContainer.addEventListener('mouseenter', () => {
+        clearInterval(pAutoPlay);
+    });
 
-        // Keyboard navigation
-        document.addEventListener('keydown', (pEvent) => {
-            if (pEvent.key === 'ArrowLeft') {
-                pPrevSlide();
-            } else if (pEvent.key === 'ArrowRight') {
-                pNextSlide();
+    // Keyboard navigation
+    document.addEventListener('keydown', (pEvent) => {
+        if (pEvent.key === 'ArrowLeft') {
+            pPrevSlide();
+        } else if (pEvent.key === 'ArrowRight') {
+            pNextSlide();
+        }
+    });
+
+    // Touch/swipe support for mobile
+    let pStartX = null;
+    let pEndX = null;
+
+    pSliderContainer.addEventListener('touchstart', (pEvent) => {
+        pStartX = pEvent.touches[0].clientX;
+    });
+
+    pSliderContainer.addEventListener('touchend', (pEvent) => {
+        pEndX = pEvent.changedTouches[0].clientX;
+        pHandleSwipe();
+    });
+
+    function pHandleSwipe() {
+        if (!pStartX || !pEndX) return;
+
+        const pDiffX = pStartX - pEndX;
+        const pMinSwipeDistance = 50;
+
+        if (Math.abs(pDiffX) > pMinSwipeDistance) {
+            if (pDiffX > 0) {
+                pNextSlide(); // Swipe left - next slide
+            } else {
+                pPrevSlide(); // Swipe right - previous slide
             }
-        });
-
-        // Touch/swipe support for mobile
-        let pStartX = null;
-        let pEndX = null;
-
-        pSliderContainer.addEventListener('touchstart', (pEvent) => {
-            pStartX = pEvent.touches[0].clientX;
-        });
-
-        pSliderContainer.addEventListener('touchend', (pEvent) => {
-            pEndX = pEvent.changedTouches[0].clientX;
-            pHandleSwipe();
-        });
-
-        function pHandleSwipe() {
-            if (!pStartX || !pEndX) return;
-            
-            const pDiffX = pStartX - pEndX;
-            const pMinSwipeDistance = 50;
-            
-            if (Math.abs(pDiffX) > pMinSwipeDistance) {
-                if (pDiffX > 0) {
-                    pNextSlide(); // Swipe left - next slide
-                } else {
-                    pPrevSlide(); // Swipe right - previous slide
-                }
-            }
-            
-            pStartX = null;
-            pEndX = null;
         }
-    </script>
+
+        pStartX = null;
+        pEndX = null;
+    }
+</script>
 
 </html>
