@@ -1189,7 +1189,7 @@ body {
 
 .impact-line {
     height: 1px;
-    width: 90%;
+    width: 100%;
     background-color: #000;
     margin-bottom: 10px;
 }
@@ -1738,6 +1738,7 @@ body {
     align-items: flex-start;
     text-align: flex-start;
     margin-left: 70px;
+    padding-left: 40px;
 }
 
 .footer-nav-heading {
@@ -1765,6 +1766,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    padding-left: 56px;
 }
 .footer h3{
     font-size: 1.25rem;
@@ -1830,6 +1832,10 @@ body {
         gap: 40px;
         padding: 20px 0 0px 0;
     }
+    .footer-social, .footer-nav{
+         padding-left: 0;
+        
+    }
 }
 
 @media (max-width: 600px) {
@@ -1845,6 +1851,7 @@ body {
     .footer-social {
         align-items: center;
         text-align: center;
+        padding-left: 0;
     }
     .footer-nav {
     margin-left: 0;
