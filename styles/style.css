@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: "Montserrat", Arial, sans-serif;
 }
 
 body {
@@ -365,7 +368,6 @@ body {
 .logo-carousel-wrapper {
     height: 100px;
     display: flex;
-    overflow: hidden;
 }
 
 .logo-carousel {
@@ -611,7 +613,7 @@ body {
 }
 
 .program-section {
-    background-color: rgba(241, 255, 239, 1);
+    background-color: rgba(241, 255, 239, 1); 
     color: white;
     padding-top: 40px;
 }
@@ -637,81 +639,215 @@ body {
     color: black;
 }
 
-.program-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 60px;
-    align-items: center;
-    background: #025836;
-}
+ .pSliderContainer {
+            position: relative;
+            width: auto;
+            margin: 0 auto;
+            overflow: hidden;
+        }
 
-.program-left {
-    width: 45%;
-    padding-left: 96px;
-}
+        .pSlide {
+            display: none;
+            position: relative;
+            background: #025836;
+            min-height: 400px;
+            color: white;
+        }
 
-.program-project-title {
-    font-size: 32px;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
+        .pSlide.active {
+            display: flex;
+            align-items: center;
+        }
 
-.program-description {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-}
+        .pContentSection {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 60px;
+            z-index: 2;
+            height: 28.625rem;
+            background-color: #025836;
+        }
 
-.program-button-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
+        .pTitle {
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            color: #fff;
+        }
 
-.program-prev-btn {
-    background-color: transparent;
-    border: 2px solid white;
-    color: white;
-    font-size: 1.5rem;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    border-radius: 50%;
-}
+        .pSubtitle {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #a8d4b8;
+        }
 
-.program-view-more {
-    display: inline-flex;
-    align-items: center;
-    border: 2px solid white;
-    padding: 10px 20px;
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
+        .pDescription {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 500px;
+        }
 
-.program-view-more:hover {
-    background-color: white;
-    color: #004225;
-}
+        .pViewButton {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.363rem .5rem;
+            width: 10.926rem;
+            height: 3.5rem;
+            background: none;
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
 
-.program-arrow {
-    margin-left: 10px;
-}
+        .pViewButton:hover {
+            background: #a8d4b8;
+            color: #2d5a3d;
+        }
 
-.program-right {
-    flex: 1;
-    width: 55%;
-    text-align: center;
-}
+        .pArrowIcon {
+            margin-left: 8px;
+            width: 1.5rem;
+            transition: transform 0.3s ease;
+        }
 
-.program-image {
-    width: 100%;
-    height: auto;
-}
+        .pViewButton:hover .pArrowIcon {
+            transform: translateX(5px);
+        }
 
+        .pMainTitle {
+            position: absolute;
+            top: 80px;
+            right: 30px;
+            font-size: 3rem;
+            font-weight: 900;
+            color: #2d5a3d;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 0.9;
+            text-align: right;
+        }
+
+        .pMainSubtitle {
+            position: absolute;
+            top: 160px;
+            right: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #2d5a3d;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .prog-img{
+            height: 28.625rem;
+        }
+        .pNavButton {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            z-index: 3;
+        }
+
+        .pNavButton:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .pNavButton:active {
+            transform: translateY(-50%) scale(0.95);
+        }
+
+        #pPrevBtn {
+            left: 20px;
+        }
+
+        #pNextBtn {
+            right: 20px;
+        }
+
+        .pDots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 3;
+        }
+
+        .pDot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #025836;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .pDot.active {
+            background: #a8d4b8;
+            transform: scale(1.2);
+        }
+
+            @media (max-width: 768px) {
+            .pSlide {
+                flex-direction: column;
+                min-height: 600px;
+            }
+
+            .pContentSection {
+                padding: 30px;
+            }
+
+            .pTitle {
+                font-size: 1.8rem;
+            }
+
+            .pMainTitle {
+                font-size: 2rem;
+                top: 40px;
+                right: 20px;
+            }
+
+            .pMainSubtitle {
+                top: 100px;
+                right: 20px;
+            }
+
+            .pDots {
+                bottom: 15px;
+            }
+
+            #pPrevBtn {
+                left: 10px;
+            }
+
+            #pNextBtn {
+                right: 10px;
+            }
+        }
 .passion-cta {
     background-color: rgba(241, 255, 239, 1);
     padding: 1.25rem 12%;
@@ -1246,6 +1382,7 @@ body {
     
     .logo-carousel-wrapper {
         height: 80px;
+        background-color: red;
     }
 }
 
@@ -1288,7 +1425,7 @@ body {
 
 /* footer styling */
 .footer {
-    background: linear-gradient(rgba(2, 88, 54, 0.9), rgba(2, 88, 54, 0.9)),
+    background: linear-gradient(rgba(0, 53, 30, 0.9), rgba(0, 53, 30, 0.9)),
         url("../assets/URNI-eagle.png");
     background-size: contain;
     background-position: center;

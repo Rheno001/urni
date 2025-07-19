@@ -13,6 +13,7 @@
     <script src="https://kit.fontawesome.com/29a8691164.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="mapdata.js"></script>
     <script type="text/javascript" src="countrymap.js"></script>
+    
 
 </head>
 
@@ -104,13 +105,13 @@
             <div class="carousel-item">
                 <section class="hero" style="background-image: url('assets/FOP-hero-bg.png');">
                     <div class="no-overlay">
-                    <div class="hero-content">
-                        <h1>Celebrating<br> Outstanding<br /><span>Nigerians and<br>patriots.</span></h1>
-                        <a href="#" class="hero-button">
-                            Learn More
-                            <span><img src="assets/Vector.png" alt="" class="arrow" /></span>
-                        </a>
-                    </div>
+                        <div class="hero-content">
+                            <h1>Celebrating<br> Outstanding<br /><span>Nigerians and<br>patriots.</span></h1>
+                            <a href="#" class="hero-button">
+                                Learn More
+                                <span><img src="assets/Vector.png" alt="" class="arrow" /></span>
+                            </a>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -134,14 +135,14 @@
             <!--Slide 4: No gradient-->
             <div class="carousel-item">
                 <section class="hero" style="background-image: url('assets/TRIBES.png');">
-                     <div class="no-overlay">
-                    <div class="hero-content">
-                        <h1>We are one<br />people. Many<br>tribes.<span class="red-span">One Nation</span></h1>
-                        <a href="#" class="hero-button">
-                            Learn More
-                            <span><img src="assets/Vector.png" alt="" class="arrow" /></span>
-                        </a>
-                    </div>
+                    <div class="no-overlay">
+                        <div class="hero-content">
+                            <h1>We are one<br />people. Many<br>tribes.<span class="red-span">One Nation</span></h1>
+                            <a href="#" class="hero-button">
+                                Learn More
+                                <span><img src="assets/Vector.png" alt="" class="arrow" /></span>
+                            </a>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -185,30 +186,62 @@
             </p>
         </div>
 
-        <div class="program-content">
-            <div class="program-left">
-                <h2 class="program-project-title">
-                    Faces of Patriotism Book Distribution Project
-                </h2>
-                <p class="program-description">
-                    Nigeria is a land of rich culture, rapid growth, and remarkable
-                    achievements. Explore these fascinating facts and figures that make
-                    Nigeria truly unique. Nigeria is a land of rich culture, rapid
-                    growth, and remarkable achievements. Explore these fascinating facts
-                    and figures that make Nigeria truly unique.
+        <div class="pSliderContainer">
+        <div class="pSlide active">
+            <div class="pContentSection">
+                <h1 class="pTitle">Faces of Patriotism Book Distribution Project</h1>
+                <p class="pDescription">
+                    Nigeria is a land of rich culture, rapid growth, and remarkable achievements. Explore these fascinating facts and figures that make Nigeria truly unique. Nigeria is a land of rich culture, rapid growth, and remarkable achievements. Explore these fascinating facts and figures that make Nigeria truly unique.
                 </p>
-
-                <div class="program-button-wrapper">
-                    <a href="#" class="program-view-more">
-                        View more <span class="program-arrow">&#8594;</span>
-                    </a>
-                </div>
+                <a href="#" class="pViewButton">
+                    View more 
+                    <img src="assets/white-arrow.png" alt="" class="pArrowIcon">
+                </a>
             </div>
-
-            <div class="program-right">
-                <img src="./assets/flier.png" alt="Faces of Patriotism" class="program-image" />
-            </div>
+            <div><img src="assets/fop-flyer.png" alt="" class="prog-img"></div>
         </div>
+
+        <div class="pSlide">
+            <div class="pContentSection">
+                <h1 class="pTitle">Education Excellence</h1>
+                <p class="pDescription">
+                    Empowering Nigerian youth through quality education and patriotic values. This comprehensive program reaches across all geopolitical zones to inspire the next generation of leaders. Building strong foundations for a prosperous Nigeria through education and national pride.
+                </p>
+                <a href="#" class="pViewButton">
+                    View more 
+                   <img src="assets/white-arrow.png" alt="" class="pArrowIcon">
+                </a>
+            </div>
+            <div><img src="assets/novelty.png" alt="" class="prog-img"></div>
+            
+        </div>
+
+        <div class="pSlide">
+            <div class="pContentSection">
+                <h1 class="pTitle">The URNI Novelty Match</h1>
+                <p class="pDescription">
+                    Strengthening communities across Nigeria through targeted outreach and development programs. We focus on sustainable growth, community empowerment, and creating lasting positive change in every locality we serve.
+                </p>
+                <a href="#" class="pViewButton">
+                    View more 
+                    <img src="assets/white-arrow.png" alt="" class="pArrowIcon">
+                </a>
+            </div>
+            <div><img src="assets/fop-flyer.png" alt="" class="prog-img"></div>
+            
+        </div>
+
+        <div class="pDots">
+            <div class="pDot active" data-slide="0"></div>
+            <div class="pDot" data-slide="1"></div>
+            <div class="pDot" data-slide="2"></div>
+        </div>
+
+        <button class="pNavButton" id="pPrevBtn">‹</button>
+        <button class="pNavButton" id="pNextBtn">›</button>
+    </div>
+
+       
     </section>
     <div class="passion-cta">
         <div class="text">
@@ -401,7 +434,7 @@
         </div>
     </section>
 
-<section class="impact-section">
+    <section class="impact-section">
         <div class="impact-container">
             <!-- Left: Text Section -->
             <div class="impact-left">
@@ -425,7 +458,7 @@
             <div class="impact-right">
                 <div class="impact-controls">
                     <button class="impact-arrow" id="prevBtn">
-                        <span ><img src="assets/larrw.png" alt="" class="larrw"></span>
+                        <span><img src="assets/larrw.png" alt="" class="larrw"></span>
                     </button>
                     <div class="impact-dots">
                         <span class="dot active"></span>
@@ -588,103 +621,192 @@
 </body>
 
 
+    <script>
+    const sliderData = [
+        {
+            paragraph1: "I used to think my voice didn't matter, until this movement showed me how to use it. They gave us tools to tell our own stories.",
+            paragraph2: "Now, I'm helping change how the world sees Nigeria — with truth, pride, and purpose.",
+            name: "Maxwell Ujeh",
+            role: "Business Owner",
+            image: "assets/story.png"
+        },
+        {
+            paragraph1: "The support I received transformed not just my business, but my entire outlook on what's possible for young entrepreneurs in Nigeria.",
+            paragraph2: "Today, I'm creating jobs and opportunities for others in my community, proving that with the right support, we can build something meaningful.",
+            name: "Adaora Okafor",
+            role: "Tech Entrepreneur",
+            image: "assets/waterfall.png"
+        },
+        {
+            paragraph1: "Education was my dream, but financial barriers seemed insurmountable. This program didn't just provide funding — it gave me hope.",
+            paragraph2: "I'm now pursuing my master's degree and working as a mentor for other students facing similar challenges.",
+            name: "Ibrahim Suleiman",
+            role: "Graduate Student",
+            image: "assets/story.png"
+        }
+    ];
+
+    let currentSlide = 0;
+    const totalSlides = sliderData.length;
+
+    // Get DOM elements
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const dots = document.querySelectorAll('.dot');
+    const paragraph1 = document.getElementById('impact-paragraph-1');
+    const paragraph2 = document.getElementById('impact-paragraph-2');
+    const name = document.getElementById('impact-name');
+    const role = document.getElementById('impact-role');
+    const image = document.getElementById('impact-img');
+
+    // Update slide content
+    function updateSlide(index) {
+        const slide = sliderData[index];
+
+        paragraph1.textContent = slide.paragraph1;
+        paragraph2.textContent = slide.paragraph2;
+        name.textContent = slide.name;
+        role.textContent = slide.role;
+        image.src = slide.image;
+        image.alt = `${slide.name} - ${slide.role}`;
+
+        // Update dots
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+    }
+
+    // Go to next slide
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlide(currentSlide);
+    }
+
+    // Go to previous slide
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSlide(currentSlide);
+    }
+
+    // Go to specific slide
+    function goToSlide(index) {
+        currentSlide = index;
+        updateSlide(currentSlide);
+    }
+
+    // Event listeners
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    // Dot navigation
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => goToSlide(index));
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+            prevSlide();
+        } else if (e.key === 'ArrowRight') {
+            nextSlide();
+        }
+    });
+
+    // Auto-play functionality (optional - uncomment to enable)
+    // setInterval(nextSlide, 5000); // Auto-advance every 5 seconds
+
+    // Initialize with first slide
+    updateSlide(currentSlide);
+</script>
 <script>
-        // Slider data
-        const sliderData = [
-            {
-                paragraph1: "I used to think my voice didn't matter, until this movement showed me how to use it. They gave us tools to tell our own stories.",
-                paragraph2: "Now, I'm helping change how the world sees Nigeria — with truth, pride, and purpose.",
-                name: "Maxwell Ujeh",
-                role: "Business Owner",
-                image: "assets/story.png"
-            },
-            {
-                paragraph1: "The support I received transformed not just my business, but my entire outlook on what's possible for young entrepreneurs in Nigeria.",
-                paragraph2: "Today, I'm creating jobs and opportunities for others in my community, proving that with the right support, we can build something meaningful.",
-                name: "Adaora Okafor",
-                role: "Tech Entrepreneur",
-                 image: "assets/waterfall.png"
-            },
-            {
-                paragraph1: "Education was my dream, but financial barriers seemed insurmountable. This program didn't just provide funding — it gave me hope.",
-                paragraph2: "I'm now pursuing my master's degree and working as a mentor for other students facing similar challenges.",
-                name: "Ibrahim Suleiman",
-                role: "Graduate Student",
-                 image: "assets/story.png"
-            }
-        ];
+        const pSlides = document.querySelectorAll('.pSlide');
+        const pDots = document.querySelectorAll('.pDot');
+        const pPrevBtn = document.getElementById('pPrevBtn');
+        const pNextBtn = document.getElementById('pNextBtn');
+        
+        let pCurrentSlide = 0;
+        const pTotalSlides = pSlides.length;
 
-        let currentSlide = 0;
-        const totalSlides = sliderData.length;
-
-        // Get DOM elements
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        const dots = document.querySelectorAll('.dot');
-        const paragraph1 = document.getElementById('impact-paragraph-1');
-        const paragraph2 = document.getElementById('impact-paragraph-2');
-        const name = document.getElementById('impact-name');
-        const role = document.getElementById('impact-role');
-        const image = document.getElementById('impact-img');
-
-        // Update slide content
-        function updateSlide(index) {
-            const slide = sliderData[index];
+        function pShowSlide(pIndex) {
+            // Hide all slides
+            pSlides.forEach(slide => slide.classList.remove('active'));
+            pDots.forEach(dot => dot.classList.remove('active'));
             
-            paragraph1.textContent = slide.paragraph1;
-            paragraph2.textContent = slide.paragraph2;
-            name.textContent = slide.name;
-            role.textContent = slide.role;
-            image.src = slide.image;
-            image.alt = `${slide.name} - ${slide.role}`;
-            
-            // Update dots
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === index);
-            });
+            // Show current slide
+            pSlides[pIndex].classList.add('active');
+            pDots[pIndex].classList.add('active');
         }
 
-        // Go to next slide
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateSlide(currentSlide);
+        function pNextSlide() {
+            pCurrentSlide = (pCurrentSlide + 1) % pTotalSlides;
+            pShowSlide(pCurrentSlide);
         }
 
-        // Go to previous slide
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            updateSlide(currentSlide);
-        }
-
-        // Go to specific slide
-        function goToSlide(index) {
-            currentSlide = index;
-            updateSlide(currentSlide);
+        function pPrevSlide() {
+            pCurrentSlide = (pCurrentSlide - 1 + pTotalSlides) % pTotalSlides;
+            pShowSlide(pCurrentSlide);
         }
 
         // Event listeners
-        nextBtn.addEventListener('click', nextSlide);
-        prevBtn.addEventListener('click', prevSlide);
+        pNextBtn.addEventListener('click', pNextSlide);
+        pPrevBtn.addEventListener('click', pPrevSlide);
 
         // Dot navigation
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => goToSlide(index));
+        pDots.forEach((pDot, pIndex) => {
+            pDot.addEventListener('click', () => {
+                pCurrentSlide = pIndex;
+                pShowSlide(pCurrentSlide);
+            });
+        });
+
+        // Auto-play functionality
+        const pAutoPlay = setInterval(pNextSlide, 5000);
+
+        // Pause auto-play on hover
+        const pSliderContainer = document.querySelector('.pSliderContainer');
+        pSliderContainer.addEventListener('mouseenter', () => {
+            clearInterval(pAutoPlay);
         });
 
         // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') {
-                prevSlide();
-            } else if (e.key === 'ArrowRight') {
-                nextSlide();
+        document.addEventListener('keydown', (pEvent) => {
+            if (pEvent.key === 'ArrowLeft') {
+                pPrevSlide();
+            } else if (pEvent.key === 'ArrowRight') {
+                pNextSlide();
             }
         });
 
-        // Auto-play functionality (optional - uncomment to enable)
-        // setInterval(nextSlide, 5000); // Auto-advance every 5 seconds
+        // Touch/swipe support for mobile
+        let pStartX = null;
+        let pEndX = null;
 
-        // Initialize with first slide
-        updateSlide(currentSlide);
+        pSliderContainer.addEventListener('touchstart', (pEvent) => {
+            pStartX = pEvent.touches[0].clientX;
+        });
+
+        pSliderContainer.addEventListener('touchend', (pEvent) => {
+            pEndX = pEvent.changedTouches[0].clientX;
+            pHandleSwipe();
+        });
+
+        function pHandleSwipe() {
+            if (!pStartX || !pEndX) return;
+            
+            const pDiffX = pStartX - pEndX;
+            const pMinSwipeDistance = 50;
+            
+            if (Math.abs(pDiffX) > pMinSwipeDistance) {
+                if (pDiffX > 0) {
+                    pNextSlide(); // Swipe left - next slide
+                } else {
+                    pPrevSlide(); // Swipe right - previous slide
+                }
+            }
+            
+            pStartX = null;
+            pEndX = null;
+        }
     </script>
-    
+
 </html>
