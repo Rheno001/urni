@@ -11,9 +11,11 @@ body {
     font-family: "Montserrat", Arial, sans-serif;
     overflow-x: hidden;
 }
-.navbar-brand:hover{
+
+.navbar-brand:hover {
     cursor: pointer;
 }
+
 .btn-volunteer {
     background-color: #014421;
     color: white;
@@ -56,10 +58,11 @@ body {
 .dropdown-menu a {
     font-size: 15px;
 }
+
 .dropdown-menu a:hover {
     color: #014421;
     font-weight: bolder;
-   
+
 }
 
 .logo-img {
@@ -210,7 +213,8 @@ body {
     width: 5.2rem;
     height: 3.784rem;
 }
-.ip-1 img{
+
+.ip-1 img {
     width: 4rem;
 }
 
@@ -395,6 +399,7 @@ body {
     0% {
         transform: translateX(0%);
     }
+
     100% {
         transform: translateX(-50%);
     }
@@ -625,7 +630,7 @@ body {
 }
 
 .program-section {
-    background-color: rgba(241, 255, 239, 1); 
+    background-color: rgba(241, 255, 239, 1);
     color: white;
     padding-top: 40px;
 }
@@ -651,7 +656,7 @@ body {
     color: black;
 }
 
- .pSliderContainer {
+.pSliderContainer {
     position: relative;
     width: auto;
     margin: 0 auto;
@@ -834,15 +839,15 @@ body {
     .pContentSection {
         padding: 80px;
     }
-    
+
     .pTitle {
         font-size: 2.5rem;
     }
-    
+
     .pSubtitle {
         font-size: 1.8rem;
     }
-    
+
     .pMainTitle {
         font-size: 3.5rem;
         top: 100px;
@@ -856,25 +861,25 @@ body {
         padding: 50px;
         height: 26rem;
     }
-    
+
     .prog-img {
         height: 26rem;
     }
-    
+
     .pTitle {
         font-size: 1.8rem;
     }
-    
+
     .pSubtitle {
         font-size: 1.4rem;
     }
-    
+
     .pMainTitle {
         font-size: 2.8rem;
         top: 70px;
         right: 25px;
     }
-    
+
     .pMainSubtitle {
         top: 140px;
         right: 25px;
@@ -887,63 +892,63 @@ body {
         flex-direction: column;
         min-height: 500px;
     }
-    
+
     .pContentSection {
         padding: 40px;
         height: auto;
         min-height: 300px;
     }
-    
+
     .prog-img {
         height: 20rem;
         width: 100%;
         order: -1;
     }
-    
+
     .pTitle {
         font-size: 1.6rem;
         margin-bottom: 15px;
     }
-    
+
     .pSubtitle {
         font-size: 1.2rem;
         margin-bottom: 20px;
     }
-    
+
     .pDescription {
         font-size: 0.95rem;
         margin-bottom: 30px;
         max-width: 100%;
     }
-    
+
     .pViewButton {
         width: 9rem;
         height: 3rem;
         font-size: 0.9rem;
     }
-    
+
     .pMainTitle {
         font-size: 2.2rem;
         top: 30px;
         right: 20px;
     }
-    
+
     .pMainSubtitle {
         font-size: 0.9rem;
         top: 90px;
         right: 20px;
     }
-    
+
     .pNavButton {
         width: 45px;
         height: 45px;
         font-size: 1.3rem;
     }
-    
+
     #pPrevBtn {
         left: 15px;
     }
-    
+
     #pNextBtn {
         right: 15px;
     }
@@ -961,7 +966,7 @@ body {
         height: auto;
         min-height: 250px;
     }
-    
+
     .prog-img {
         height: 15rem;
         width: 100%;
@@ -972,25 +977,25 @@ body {
         font-size: 1.4rem;
         margin-bottom: 12px;
     }
-    
+
     .pSubtitle {
         font-size: 1.1rem;
         margin-bottom: 15px;
     }
-    
+
     .pDescription {
         font-size: 0.9rem;
         margin-bottom: 25px;
         max-width: 100%;
     }
-    
+
     .pViewButton {
         width: 8rem;
         height: 2.8rem;
         font-size: 0.85rem;
         padding: 0.3rem 0.4rem;
     }
-    
+
     .pArrowIcon {
         width: 1.2rem;
         margin-left: 6px;
@@ -1008,7 +1013,7 @@ body {
         top: 70px;
         right: 15px;
     }
-    
+
     .pNavButton {
         width: 40px;
         height: 40px;
@@ -1019,7 +1024,7 @@ body {
         bottom: 15px;
         gap: 10px;
     }
-    
+
     .pDot {
         width: 10px;
         height: 10px;
@@ -1039,65 +1044,65 @@ body {
     .pSlide {
         min-height: 400px;
     }
-    
+
     .pContentSection {
         padding: 20px 15px;
         min-height: 220px;
     }
-    
+
     .prog-img {
         height: 12rem;
     }
-    
+
     .pTitle {
         font-size: 1.2rem;
         margin-bottom: 10px;
     }
-    
+
     .pSubtitle {
         font-size: 1rem;
         margin-bottom: 12px;
     }
-    
+
     .pDescription {
         font-size: 0.85rem;
         margin-bottom: 20px;
         line-height: 1.5;
     }
-    
+
     .pViewButton {
         width: 7rem;
         height: 2.5rem;
         font-size: 0.8rem;
     }
-    
+
     .pMainTitle {
         font-size: 1.5rem;
         top: 15px;
         right: 10px;
     }
-    
+
     .pMainSubtitle {
         font-size: 0.7rem;
         top: 55px;
         right: 10px;
     }
-    
+
     .pNavButton {
         width: 35px;
         height: 35px;
         font-size: 1rem;
     }
-    
+
     .pDot {
         width: 8px;
         height: 8px;
     }
-    
+
     #pPrevBtn {
         left: 8px;
     }
-    
+
     #pNextBtn {
         right: 8px;
     }
@@ -1108,41 +1113,42 @@ body {
     .pContentSection {
         padding: 15px 10px;
     }
-    
+
     .prog-img {
         height: 10rem;
     }
-    
+
     .pTitle {
         font-size: 1.1rem;
     }
-    
+
     .pSubtitle {
         font-size: 0.9rem;
     }
-    
+
     .pDescription {
         font-size: 0.8rem;
     }
-    
+
     .pViewButton {
         width: 6.5rem;
         height: 2.3rem;
         font-size: 0.75rem;
     }
-    
+
     .pMainTitle {
         font-size: 1.3rem;
         top: 10px;
         right: 8px;
     }
-    
+
     .pMainSubtitle {
         font-size: 0.65rem;
         top: 45px;
         right: 8px;
     }
 }
+
 .passion-cta {
     background-color: rgba(241, 255, 239, 1);
     padding: 1.25rem 12%;
@@ -1242,7 +1248,8 @@ body {
     cursor: pointer;
 }
 
-.rarrw, .larrw {
+.rarrw,
+.larrw {
     width: .6rem;
 }
 
@@ -1270,8 +1277,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
 }
+
 /*
 .play-button {
     position: absolute;
@@ -1306,7 +1314,8 @@ body {
     position: relative;
     width: 100%;
     height: 0;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
 }
 
 .video-thumbnail {
@@ -1405,11 +1414,11 @@ body {
     .hero-content h1 {
         font-size: 3.5rem;
     }
-    
+
     .hero-content p {
         font-size: 1.8rem;
     }
-    
+
     .facts-header h2,
     .featured-section-title,
     .program-title,
@@ -1417,65 +1426,75 @@ body {
     .title h2 {
         font-size: 2.5rem;
     }
-    
+
     .facts-grid {
         padding: 2rem;
         gap: 2rem;
     }
-    
+
     .explore-text {
         width: 100%;
         margin-bottom: 2rem;
     }
-    
+
     .map {
         width: 100%;
     }
-    
+
     .program-left {
         width: 100%;
         padding-left: 5%;
         padding-top: 8%;
         margin-bottom: 2rem;
     }
-    
+
     .program-right {
         width: 100%;
     }
-    
+
     .details {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .details p {
         margin-right: 0;
         margin-bottom: 2rem;
     }
-    
+
     .details img {
         width: 100%;
         max-width: 34.375rem;
         height: auto;
     }
-    
+    .impact-container {
+        flex-direction: column;
+    }
+    .impact-video{
+        margin-bottom: 200px;
+    }
+    .video-thumbnail { 
+    width: 46.5rem;
+    height: 20rem;
+}
+
     .impact-left,
     .impact-right {
         max-width: 100%;
     }
-    
+
     .featured-section {
         padding: 100px 5%;
     }
-    
+
     .featured-news-grid {
         grid-template-columns: 1fr 1fr;
     }
-    
+
     .featured-card-1 {
         grid-column: 1/3;
     }
-    
+
     .featured-mini-news {
         grid-template-columns: 1fr 1fr;
     }
@@ -1486,21 +1505,21 @@ body {
     .hero {
         height: 70vh;
     }
-    
+
     .hero-overlay,
     .no-overlay {
         padding-left: 8%;
         padding-right: 8%;
     }
-    
+
     .hero-content h1 {
         font-size: 2.8rem;
     }
-    
+
     .hero-content p {
         font-size: 1.5rem;
     }
-    
+
     .facts-header h2,
     .featured-section-title,
     .program-title,
@@ -1508,88 +1527,98 @@ body {
     .title h2 {
         font-size: 2.2rem;
     }
-    
+
     .facts-grid {
         padding: 1.5rem;
         gap: 1.5rem;
     }
-    
+
     .fact-item {
         flex: 1 1 200px;
     }
-    
+
     .explore-text h2 {
         font-size: 2.2rem;
     }
-    
+
     .explore-text p {
         margin-bottom: 30px;
     }
-    
+
     .explore-buttons {
         flex-wrap: wrap;
     }
-    .places-btn, .people-btn{
-    margin: 10px 0 0 0;
-}
-    
+
+    .places-btn,
+    .people-btn {
+        margin: 10px 0 0 0;
+    }
+
     .newsletter-cta {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .passion-cta {
         flex-direction: column;
         text-align: center;
         padding: 1.25rem 5%;
     }
-    
+
     .featured-news-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .featured-card-1 {
         grid-column: 1;
     }
-    
+
     .featured-mini-news {
         grid-template-columns: 1fr;
     }
-    
+
     .program-content {
         flex-direction: column;
         gap: 30px;
     }
-    .program-left{
+
+    .program-left {
         padding-top: 8%;
     }
-    
+
     .program-project-title {
         font-size: 24px;
     }
-    
+
     .impact-container {
         flex-direction: column;
     }
-    
+
     .impact-left,
     .impact-right {
         flex: 1 1 100%;
         max-width: 100%;
     }
-    
+
     .impact-paragraph {
         font-size: 1.4rem;
     }
-    
+
     .impact-name {
         font-size: 1.4rem;
     }
-    
+    .impact-video{
+        margin-bottom: 120px;
+    }
+    .video-thumbnail { 
+    width: 43.75rem;
+    height: 15.625rem;
+}
+
     .volunteer {
         padding: 4rem 5%;
     }
-    
+
     .nav-links {
         flex-direction: column;
         align-items: flex-start;
@@ -1612,21 +1641,21 @@ body {
     .hero {
         height: 60vh;
     }
-    
+
     .hero-content h1 {
         font-size: 2.2rem;
     }
-    
+
     .hero-content p {
         font-size: 1.3rem;
     }
-    
+
     .hero-button {
         height: 48px;
         padding: 10px 20px;
         font-size: 14px;
     }
-    
+
     .facts-header h2,
     .featured-section-title,
     .program-title,
@@ -1634,35 +1663,35 @@ body {
     .title h2 {
         font-size: 1.8rem;
     }
-    
+
     .facts-grid {
         padding: 1rem;
         gap: 1rem;
     }
-    
+
     .fact-item {
         flex: 1 1 100%;
         max-width: 100%;
     }
-    
+
     .icon-placeholder img {
         width: 4rem;
         height: 3rem;
     }
-    
+
     .explore-text h2 {
         font-size: 1.8rem;
     }
-    
+
     .explore-text p {
         font-size: 1.1rem;
     }
-    
+
     .explore-buttons {
         flex-direction: column;
         gap: 10px;
     }
-    
+
     .places-btn,
     .people-btn,
     .facts-button,
@@ -1671,90 +1700,95 @@ body {
         padding: 10px 20px;
         font-size: 14px;
     }
-    
+
     .email-field {
         width: 100%;
         max-width: 250px;
     }
-    
+
     .newsletter-cta .text {
         margin-bottom: 1rem;
     }
-    
+
     .featured-section {
         padding: 60px 5%;
     }
-    
+
     .featured-top-section {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
     }
-    
+
     .featured-mini-card {
         width: 100%;
     }
-    
+
     .featured-mini-card img {
         width: 80px;
         height: 80px;
     }
-    
+
     .program-header {
         padding: 0 5%;
     }
-    
+
     .program-subtitle {
         max-width: 100%;
         font-size: 18px;
     }
-    
+
     .program-left {
         padding-left: 5%;
         padding-top: 8%;
         padding-bottom: 0;
     }
-    
+
     .program-project-title {
         font-size: 20px;
     }
-    
+
     .program-description {
         font-size: 14px;
     }
-    
+
     .impact-section {
         padding: 6rem 5%;
     }
-    
+
     .impact-paragraph {
         font-size: 1.2rem;
     }
-    
+
     .impact-name {
         font-size: 1.2rem;
     }
-    
+
     .impact-role {
         font-size: 1rem;
     }
-    
+
+    .video-thumbnail {
+        width: 20rem;
+        height: 10.625rem;
+    }
+
     .volunteer {
         padding: 3rem 5%;
     }
-    
+
     .details p {
         font-size: 1.2rem;
     }
-    
+
     .donation-text {
         font-size: 1.1rem;
     }
-    
+
     .logo-carousel img {
         height: 2rem;
     }
-    
+
     .logo-carousel-wrapper {
         height: 80px;
     }
@@ -1765,11 +1799,11 @@ body {
     .hero-content h1 {
         font-size: 1.8rem;
     }
-    
+
     .hero-content p {
         font-size: 1.1rem;
     }
-    
+
     .facts-header h2,
     .featured-section-title,
     .program-title,
@@ -1777,22 +1811,24 @@ body {
     .title h2 {
         font-size: 1.6rem;
     }
-    
+
     .explore-text h2 {
         font-size: 1.6rem;
     }
-    .places-btn, .people-btn{
-    margin: 10px 0 0 0;
-}
-    
+
+    .places-btn,
+    .people-btn {
+        margin: 10px 0 0 0;
+    }
+
     .impact-paragraph {
         font-size: 1.1rem;
     }
-    
+
     .impact-name {
         font-size: 1.1rem;
     }
-    
+
     .details p {
         font-size: 1.1rem;
     }
@@ -1854,17 +1890,20 @@ body {
 .footer-nav-links a:hover {
     color: #7dd87f;
 }
-.footer-social{
+
+.footer-social {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     padding-left: 56px;
 }
-.footer h3{
+
+.footer h3 {
     font-size: 1.25rem;
     font-weight: 600;
 }
+
 .volunteer-section {
     margin: 50px 0;
     text-align: center;
@@ -1893,7 +1932,8 @@ body {
     background-color: #b1ffa8;
     color: black;
 }
-.volunteer-btn .arrow{
+
+.volunteer-btn .arrow {
     width: 1.5rem;
     margin-left: 10px;
 }
@@ -1908,6 +1948,7 @@ body {
     margin-right: 10px;
     transition: color 0.3s ease;
 }
+
 .footer-bottom {
     display: flex;
     align-items: center;
@@ -1925,9 +1966,11 @@ body {
         gap: 40px;
         padding: 20px 0 0px 0;
     }
-    .footer-social, .footer-nav{
-         padding-left: 0;
-        
+
+    .footer-social,
+    .footer-nav {
+        padding-left: 0;
+
     }
 }
 
@@ -1946,9 +1989,11 @@ body {
         text-align: center;
         padding-left: 0;
     }
+
     .footer-nav {
-    margin-left: 0;
-}
+        margin-left: 0;
+    }
+
     .footer-social .social-icons a {
         margin-right: 15px;
     }
