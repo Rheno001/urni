@@ -476,8 +476,17 @@
                     </button>
                 </div>
 
+
                 <div class="impact-video">
-                    <img src="assets/story.png" alt="Video thumbnail" id="impact-img" />
+                    <div class="video-thumbnail" id="video-thumbnail" onclick="playCurrentVideo()">
+                        <img src="https://img.youtube.com/vi/R5Y-FU0Ykyw/maxresdefault.jpg" alt="Video thumbnail"
+                            class="impact-img" id="impact-img" />
+                        <div class="play-button">▶</div>
+                    </div>
+                    <iframe id="video-iframe" src="" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen style="display: none; width: 100%; height: 100%;">
+                    </iframe>
                 </div>
             </div>
         </div>
@@ -626,103 +635,155 @@
     </footer>
 </body>
 
+<!-- Youtube video script-->
+<script>
+    function playVideo(videoId) {
+        const thumbnail = document.querySelector('.video-thumbnail');
+        const iframe = document.getElementById('video-iframe');
+
+        // Hide thumbnail
+        thumbnail.style.display = 'none';
+
+        // Show and load video
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+        iframe.style.display = 'block';
+    }
+</script>
 
 <script>
-    const sliderData = [
-        {
-            paragraph1: "I used to think my voice didn't matter, until this movement showed me how to use it. They gave us tools to tell our own stories.",
-            paragraph2: "Now, I'm helping change how the world sees Nigeria — with truth, pride, and purpose.",
-            name: "Maxwell Ujeh",
-            role: "Business Owner",
-            image: "assets/story.png"
-        },
-        {
-            paragraph1: "The support I received transformed not just my business, but my entire outlook on what's possible for young entrepreneurs in Nigeria.",
-            paragraph2: "Today, I'm creating jobs and opportunities for others in my community, proving that with the right support, we can build something meaningful.",
-            name: "Adaora Okafor",
-            role: "Tech Entrepreneur",
-            image: "assets/waterfall.png"
-        },
-        {
-            paragraph1: "Education was my dream, but financial barriers seemed insurmountable. This program didn't just provide funding — it gave me hope.",
-            paragraph2: "I'm now pursuing my master's degree and working as a mentor for other students facing similar challenges.",
-            name: "Ibrahim Suleiman",
-            role: "Graduate Student",
-            image: "assets/story.png"
-        }
-    ];
+const sliderData = [
+    {
+        paragraph1: "I used to think my voice didn't matter, until this movement showed me how to use it. They gave us tools to tell our own stories.",
+        paragraph2: "Now, I'm helping change how the world sees Nigeria — with truth, pride, and purpose.",
+        name: "Maxwell Ujeh",
+        role: "Business Owner",
+        videoId: "R5Y-FU0Ykyw"
+    },
+    {
+        paragraph1: "The support I received transformed not just my business, but my entire outlook on what's possible for young entrepreneurs in Nigeria.",
+        paragraph2: "Today, I'm creating jobs and opportunities for others in my community, proving that with the right support, we can build something meaningful.",
+        name: "Adaora Okafor",
+        role: "Tech Entrepreneur",
+        videoId: "RhZBkID_i58"
+    },
+    {
+        paragraph1: "Education was my dream, but financial barriers seemed insurmountable. This program didn't just provide funding — it gave me hope.",
+        paragraph2: "I'm now pursuing my master's degree and working as a mentor for other students facing similar challenges.",
+        name: "Ibrahim Suleiman",
+        role: "Graduate Student",
+        videoId: "9bZkp7q19f0"
+    }
+];
 
-    let currentSlide = 0;
-    const totalSlides = sliderData.length;
+let currentSlide = 0;
+const totalSlides = sliderData.length;
 
-    // Get DOM elements
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const dots = document.querySelectorAll('.dot');
-    const paragraph1 = document.getElementById('impact-paragraph-1');
-    const paragraph2 = document.getElementById('impact-paragraph-2');
-    const name = document.getElementById('impact-name');
-    const role = document.getElementById('impact-role');
-    const image = document.getElementById('impact-img');
+// Get DOM elements
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const dots = document.querySelectorAll('.dot');
+const paragraph1 = document.getElementById('impact-paragraph-1');
+const paragraph2 = document.getElementById('impact-paragraph-2');
+const name = document.getElementById('impact-name');
+const role = document.getElementById('impact-role');
+const image = document.getElementById('impact-img');
+const videoThumbnail = document.getElementById('video-thumbnail');
+const videoIframe = document.getElementById('video-iframe');
 
-    // Update slide content
-    function updateSlide(index) {
-        const slide = sliderData[index];
+// Function to play the current slide's video
+function playCurrentVideo() {
+    const slide = sliderData[currentSlide];
+    playVideo(slide.videoId);
+}
 
+// Function to play a specific video
+function playVideo(videoId) {
+    // Hide thumbnail
+    videoThumbnail.style.display = 'none';
+    
+    // Show and load video
+    videoIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+    videoIframe.style.display = 'block';
+}
+
+// Function to reset video to thumbnail view
+function resetVideoToThumbnail() {
+    videoThumbnail.style.display = 'block';
+    videoIframe.style.display = 'none';
+    videoIframe.src = ''; // Stop the video
+}
+
+// Update slide content with smooth transition
+function updateSlide(index) {
+    const slide = sliderData[index];
+
+    // Add fade-out effect
+    videoThumbnail.style.opacity = '0';
+    
+    setTimeout(() => {
+        // Update content after fade-out
         paragraph1.textContent = slide.paragraph1;
         paragraph2.textContent = slide.paragraph2;
         name.textContent = slide.name;
         role.textContent = slide.role;
-        image.src = slide.image;
+
+        // Update image source to YouTube thumbnail
+        image.src = `https://img.youtube.com/vi/${slide.videoId}/maxresdefault.jpg`;
         image.alt = `${slide.name} - ${slide.role}`;
+
+        // Reset video to thumbnail when changing slides
+        resetVideoToThumbnail();
+
+        // Fade back in
+        videoThumbnail.style.opacity = '1';
 
         // Update dots
         dots.forEach((dot, i) => {
             dot.classList.toggle('active', i === index);
         });
-    }
+    }, 300); // Wait for fade-out to complete
+}
 
-    // Go to next slide
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        updateSlide(currentSlide);
-    }
-
-    // Go to previous slide
-    function prevSlide() {
-        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-        updateSlide(currentSlide);
-    }
-
-    // Go to specific slide
-    function goToSlide(index) {
-        currentSlide = index;
-        updateSlide(currentSlide);
-    }
-
-    // Event listeners
-    nextBtn.addEventListener('click', nextSlide);
-    prevBtn.addEventListener('click', prevSlide);
-
-    // Dot navigation
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => goToSlide(index));
-    });
-
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') {
-            prevSlide();
-        } else if (e.key === 'ArrowRight') {
-            nextSlide();
-        }
-    });
-
-    // Auto-play functionality (optional - uncomment to enable)
-    // setInterval(nextSlide, 5000); // Auto-advance every 5 seconds
-
-    // Initialize with first slide
+// Go to next slide
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
     updateSlide(currentSlide);
+}
+
+// Go to previous slide
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    updateSlide(currentSlide);
+}
+
+// Go to specific slide
+function goToSlide(index) {
+    currentSlide = index;
+    updateSlide(currentSlide);
+}
+
+// Event listeners
+nextBtn.addEventListener('click', nextSlide);
+prevBtn.addEventListener('click', prevSlide);
+
+// Dot navigation
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => goToSlide(index));
+});
+
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+        prevSlide();
+    } else if (e.key === 'ArrowRight') {
+        nextSlide();
+    }
+});
+
+setInterval(nextSlide, 5000); // Auto-advance every 5 seconds
+
+// Initialize with first slide
+updateSlide(currentSlide);
 </script>
 <script>
     const pSlides = document.querySelectorAll('.pSlide');
