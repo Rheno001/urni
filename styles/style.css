@@ -368,6 +368,7 @@ body {
 .logo-carousel-wrapper {
     height: 100px;
     display: flex;
+    overflow-x: hidden;
 }
 
 .logo-carousel {
