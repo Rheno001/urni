@@ -98,7 +98,7 @@
         <div class="row align-items-center py-4 py-lg-5" style="background-color: #F1FFEF;">
             <div
                 class="row about-leadership-header-row justify-content-center align-items-center gap-3 px-3 px-lg-5 mb-4">
-                <div class="col-6 about-leadership-header-col-left d-flex align-items-center justify-content-center">
+                <div class="col-5 about-leadership-header-col-left d-flex align-items-center justify-content-center">
                     <a href="about.html" class="me-2">
                         <img src="./assets/arrow-left.png" alt="Back button"
                             style="width: 24px; margin-right: 16px; height: 16px;">
@@ -107,12 +107,12 @@
                     </p>
                 </div>
                 <div
-                    class="col-3 about-leadership-header-col-right impact-controls d-flex align-items-center justify-content-center">
-                    <button class="impact-arrow me-2" id="prevBtn">
+                    class="col-3 about-leadership-header-col-right image-switch-controls d-flex align-items-center justify-content-center">
+                    <button class="image-switch-arrow me-2" id="prevBtn">
                         <span><img src="assets/larrw.png" alt="" class="larrw"></span>
                     </button>
-                    <div class="impact-dots d-flex align-items-center"></div>
-                    <button class="impact-arrow ms-2" id="nextBtn">
+                    <div class="image-switch-dots d-flex align-items-center"></div>
+                    <button class="image-switch-arrow ms-2" id="nextBtn">
                         <span><img src="assets/rarrw.png" alt="" class="rarrw"></span>
                     </button>
                 </div>
@@ -268,18 +268,18 @@
             document.getElementById('leadership-img').alt = profile.name;
             document.getElementById('leadership-desc').innerHTML = profile.desc;
             // Update dots
-            document.querySelectorAll('.impact-dots .dot').forEach((dot, i) => {
+            document.querySelectorAll('.image-switch-dots .image-switch-dot').forEach((dot, i) => {
                 dot.classList.toggle('active', i === idx);
             });
         }
 
         document.addEventListener('DOMContentLoaded', function () {
             // Set up dots
-            const dotsContainer = document.querySelector('.impact-dots');
+            const dotsContainer = document.querySelector('.image-switch-dots');
             dotsContainer.innerHTML = '';
             for (let i = 0; i < profiles.length; i++) {
                 const dot = document.createElement('span');
-                dot.className = 'dot' + (i === 0 ? ' active' : '');
+                dot.className = 'image-switch-dot' + (i === 0 ? ' active' : '');
                 dot.addEventListener('click', () => {
                     currentProfile = i;
                     updateProfile(i);
