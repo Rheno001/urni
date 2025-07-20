@@ -32,7 +32,7 @@ body {
     border: 2px solid #014421;
     background: none;
     color: #014421;
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 1rem;
     border-radius: 4px;
     cursor: pointer;
 }
@@ -819,7 +819,7 @@ body {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: #025836;
+    background: white;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -1270,6 +1270,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #F1FFEF;
     
 }
 /*
