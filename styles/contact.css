@@ -1,7 +1,7 @@
 .container {
             max-width: 1200px;
             margin: auto;
-            margin-bottom: 100px;
+            margin-bottom: 50px;
             background-color: none;
             padding: 6rem;
             border-radius: 8px;
@@ -151,9 +151,6 @@
             border-radius: 4px;
         }
 
-        .info-1{
-            width: 13.75rem;
-        }
 
         .phone-number,
         .email-address,
@@ -178,6 +175,47 @@
 
         .office-address {
             margin-bottom: 15px;
+        }
+
+        .map-section {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .map-section h2 {
+             color: #2d5f3f;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .map-container {
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .map-container iframe {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .map-section {
+                margin: 40px auto;
+                padding: 0 15px;
+            }
+
+            .map-section h2 {
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+            }
+
+            .map-container iframe {
+                height: 300px;
+            }
         }
 
      
