@@ -26,7 +26,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 80px;
     align-items: start;
-    padding: 60px 5%;
+    padding: 60px 1%;
 }
 
 .content-section {
@@ -48,7 +48,7 @@ h2 {
 }
 
 .description {
-    color: #333;
+    color: #0000;
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 20px;
