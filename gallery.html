@@ -72,6 +72,164 @@
     </nav>
 
 
+    <section class="hero-section" id="hero">
+        <div class="hero-content">
+            <h1>Gallery</h1>
+            <p>Get updates about happenings around us!</p>
+            
+            <div class="nav-buttons">
+                <button class="nav-btn active" onclick="showSection('photos')">Photos</button>
+                <button class="nav-btn" onclick="showSection('videos')">Videos</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Photos Section -->
+    <section class="gallery-section section active" id="photos-section">
+        <div class="gallery-header">
+            <h2>Photos</h2>
+            <div class="filter-section">
+                <span class="filter-label">Filter</span>
+                <select class="filter-dropdown">
+                    <option value="all">All</option>
+                    <option value="2017-2020">2017-2020</option>
+                    <option value="2021-2023">2021-2023</option>
+                    <option value="2024-2026">2024-2026</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="photo-grid">
+            <div class="photo-item" onclick="openModal('URNI Visit to IDP Camp, Wassa','assets/Visit to WASSSA camp.png' )">
+                <img src="assets/Visit to WASSSA camp.png"/>
+                <div class="photo-caption">
+                    <h3>URNI Visit to IDP Camp, Wassa</h3>
+                </div>
+            </div>
+
+            <div class="photo-item" onclick="openModal('URNI Launch Event', 'assets/URNI Launch event.png')">
+                <img src="assets/URNI Launch event.png" alt="URNI Launch Event">
+                <div class="photo-caption">
+                    <h3>URNI Launch Event</h3>
+                </div>
+            </div>
+
+            <div class="photo-item" onclick="openModal('URNI Press Conference', 'assets/URNI-press-conference.png')">
+                <img src="assets/URNI-press-conference.png">
+                <div class="photo-caption">
+                    <h3>URNI Press Conference</h3>
+                </div>
+            </div>
+
+            <div class="photo-item" onclick="openModal('URNI Novelty Match', 'assets/URNI-Noveltymatch.png')">
+                <img src="assets/URNI-Noveltymatch.png">
+                <div class="photo-caption">
+                    <h3>URNI Novelty Match</h3>
+                </div>
+            </div>
+
+            <div class="photo-item" onclick="openModal('Nigeria Youth Future Forum, 2024', 'image')">
+                <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='250' viewBox='0 0 320 250'><rect width='320' height='250' fill='%23e9ecef'/><text x='50%' y='50%' font-family='Arial' font-size='14' fill='%23666' text-anchor='middle' dy='0.3em'>Photo 5</text></svg>" alt="Nigeria Youth Future Forum, 2024">
+                <div class="photo-caption">
+                    <h3>Nigeria Youth Future Forum, 2024</h3>
+                </div>
+            </div>
+
+            <div class="photo-item" onclick="openModal('Donation to Citygate Sports Club, Abuja.', 'image')">
+                <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='250' viewBox='0 0 320 250'><rect width='320' height='250' fill='%23e9ecef'/><text x='50%' y='50%' font-family='Arial' font-size='14' fill='%23666' text-anchor='middle' dy='0.3em'>Photo 6</text></svg>" alt="Donation to Citygate Sports Club, Abuja">
+                <div class="photo-caption">
+                    <h3>Donation to Citygate Sports Club, Abuja.</h3>
+                </div>
+            </div>
+
+            <div class="photo-item" onclick="openModal('URNI Sponsoring the Secondary School Debate Organized by the NYSC Financial Literacy CDS, 2024', 'image')">
+                <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='250' viewBox='0 0 320 250'><rect width='320' height='250' fill='%23e9ecef'/><text x='50%' y='50%' font-family='Arial' font-size='14' fill='%23666' text-anchor='middle' dy='0.3em'>Photo 7</text></svg>" alt="URNI Sponsoring Secondary School Debate">
+                <div class="photo-caption">
+                    <h3>URNI Sponsoring the Secondary School Debate Organized by the NYSC Financial Literacy CDS, 2024</h3>
+                </div>
+            </div>
+
+            <div class="photo-item" onclick="openModal('Children\'s Day at St. Aloysius Secondary School, Garki, Abuja.', 'image')">
+                <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='250' viewBox='0 0 320 250'><rect width='320' height='250' fill='%23e9ecef'/><text x='50%' y='50%' font-family='Arial' font-size='14' fill='%23666' text-anchor='middle' dy='0.3em'>Photo 8</text></svg>" alt="Children's Day at St. Aloysius Secondary School">
+                <div class="photo-caption">
+                    <h3>Children's Day at St. Aloysius Secondary School, Garki, Abuja.</h3>
+                </div>
+            </div>
+
+            <div class="photo-item" onclick="openModal('Donation to Citygate Sports Club, Abuja.', 'image')">
+                <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='250' viewBox='0 0 320 250'><rect width='320' height='250' fill='%23e9ecef'/><text x='50%' y='50%' font-family='Arial' font-size='14' fill='%23666' text-anchor='middle' dy='0.3em'>Photo 9</text></svg>" alt="Donation to Citygate Sports Club, Abuja">
+                <div class="photo-caption">
+                    <h3>Donation to Citygate Sports Club, Abuja.</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="load-more-container">
+            <button class="load-more-btn">View More<img src="assets/down-arrw.png" class="load-more-arrw"></button>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section class="gallery-section section" id="videos-section">
+        <div class="gallery-header">
+            <h2>Videos</h2>
+            <div class="filter-section">
+                <span class="filter-label">Filter</span>
+                <select class="filter-dropdown">
+                    <option value="all">All</option>
+                    <option value="interviews">Interviews</option>
+                    <option value="events">Events</option>
+                    <option value="documentaries">Documentaries</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="photo-grid">
+            <div class="photo-item" onclick="openModal('URNI Launch Event Video', 'video')">
+                <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='250' viewBox='0 0 320 250'><rect width='320' height='250' fill='%23e9ecef'/><text x='50%' y='50%' font-family='Arial' font-size='14' fill='%23666' text-anchor='middle' dy='0.3em'>Video Thumbnail</text></svg>" alt="URNI Launch Event Video">
+                <div class="video-indicator">Video</div>
+                <div class="photo-caption">
+                    <h3>URNI Launch Event Video</h3>
+                </div>
+            </div>
+
+            <div class="photo-item" onclick="openModal('Nigeria Youth Forum Highlights', 'video')">
+                <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='250' viewBox='0 0 320 250'><rect width='320' height='250' fill='%23e9ecef'/><text x='50%' y='50%' font-family='Arial' font-size='14' fill='%23666' text-anchor='middle' dy='0.3em'>Video Thumbnail</text></svg>" alt="Nigeria Youth Forum Highlights">
+                <div class="video-indicator">Video</div>
+                <div class="photo-caption">
+                    <h3>Nigeria Youth Forum Highlights</h3>
+                </div>
+            </div>
+
+            <div class="photo-item" onclick="openModal('Community Outreach Documentary', 'video')">
+                <img src="" alt="Community Outreach Documentary">
+                <div class="video-indicator">Video</div>
+                <div class="photo-caption">
+                    <h3>Community Outreach Documentary</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="load-more-container">
+            <button class="load-more-btn">View More<img src="assets/down-arrw.png"alt=""></button>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()">&times;</button>
+            <img id="modal-img" src="" alt="" style="display: none;">
+            <video id="modal-video" controls style="display: none;">
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="modal-caption" id="modal-caption"></div>
+        </div>
+    </div>
+
+
     <div class="newsletter-cta">
         <div class="text">
             <p>
@@ -139,4 +297,89 @@
     </footer>
     
 </body>
+
+
+<script>
+        function showSection(sectionName) {
+            // Remove active class from all nav buttons
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+            
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionName + '-section').classList.add('active');
+            
+            // Scroll to gallery section
+            document.getElementById(sectionName + '-section').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        function openModal(title, src) {
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    const modalVideo = document.getElementById('modal-video');
+    const modalCaption = document.getElementById('modal-caption');
+
+    modalCaption.textContent = title;
+
+    // Check if the source is an image or video based on file extension
+    const isVideo = /\.(mp4|webm|ogg)$/i.test(src);
+
+    if (isVideo) {
+        modalImg.style.display = 'none';
+        modalVideo.style.display = 'block';
+        modalVideo.src = src;
+    } else {
+        modalImg.style.display = 'block';
+        modalVideo.style.display = 'none';
+        modalImg.src = src;
+        modalImg.alt = title;
+    }
+
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            const modalVideo = document.getElementById('modal-video');
+            
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            
+            // Pause video if it's playing
+            modalVideo.pause();
+        }
+
+        // Close modal when clicking outside the content
+        document.getElementById('modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Load more functionality
+        document.querySelectorAll('.load-more-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                alert('Load more functionality would load additional photos/videos here');
+            });
+        });
+    </script>
 </html>
