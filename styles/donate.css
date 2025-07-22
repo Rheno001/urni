@@ -14,7 +14,7 @@
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 700;
     line-height: 1.2;
     color: white;
@@ -48,7 +48,7 @@ h2 {
 }
 
 .description {
-    color: #0000;
+    color: #000;
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 20px;

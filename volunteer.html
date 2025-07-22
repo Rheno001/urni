@@ -53,15 +53,8 @@
                             <li><a class="dropdown-item" href="#">Events</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="mediaDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Multimedia
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="mediaDropdown">
-                            <li><a class="dropdown-item" href="#">Photos</a></li>
-                            <li><a class="dropdown-item" href="#">Videos</a></li>
-                        </ul>
+                     <li class="nav-item">
+                        <a class="nav-link" href="/gallery.html">Gallery</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/contact.html">Contact Us</a>
@@ -94,7 +87,7 @@
     <div class="content-section">
         <h2>Volunteer Form</h2>
         <p class="description">
-            Fields marked with an asterisk (*) are required
+            Fields marked with an asterisk <span class="required">*</span> are required
         </p>
     </div>
 
@@ -200,15 +193,7 @@
                     <input type="text" id="address" name="address" placeholder="Enter your residential address"
                         required>
                 </div>
-                <div class="form-group">
-                    <label for="nigeria-view">What is your view of Nigeria?<span class="required">*</span></label>
-                    <textarea id="nigeria-view" name="nigeria-view" placeholder="Enter your message"
-                        required></textarea>
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group">
+                 <div class="form-group">
                     <label for="occupation">Occupation<span class="required">*</span></label>
                     <input type="text" id="occupation" name="occupation" placeholder="Enter your current occupation"
                         required>
@@ -289,14 +274,6 @@
                 </div>
             </div>
 
-            <div class="form-row">
-                <div class="form-group full-width">
-                    <label for="nigeria-change">How can Nigeria's story be changed?<span
-                            class="required">*</span></label>
-                    <textarea id="nigeria-change" name="nigeria-change" placeholder="Enter your message"
-                        required></textarea>
-                </div>
-            </div>
 
             <div class="terms-section">
                 <div class="terms-item">
@@ -327,7 +304,7 @@
             </span>
         </div>
         <div class="Buttons">
-            <input class="email-field" type="email" name="email" id="email" placeholder="Enter your Email Address" />
+            <input class="email-field" type="cta-email" name="email" id="email" placeholder="Enter your Email Address" />
             <a href="#" class="subscribe-btn">Subscribe</a>
         </div>
     </div>
@@ -348,12 +325,12 @@
             <div class="footer-nav">
                 <h3 class="footer-nav-heading">Sections</h3>
                 <div class="footer-nav-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About Us</a>
+                    <a href="/index.html">Home</a>
+                    <a href="/about.html">About Us</a>
                     <a href="#explore">Explore Nigeria</a>
                     <a href="#news">News & Events</a>
-                    <a href="#multimedia">Multimedia</a>
-                    <a href="#contact">Contact</a>
+                    <a href="/gallery.html">Gallery</a>
+                    <a href="/contact.html">Contact</a>
                     <a href="#faq">FAQ</a>
                 </div>
             </div>

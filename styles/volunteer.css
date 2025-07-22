@@ -15,7 +15,7 @@
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 700;
     line-height: 1.2;
     color: white;
@@ -36,10 +36,10 @@
     color: #000;
     font-size: 16px;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 15pxpx;
 }
 .content-section{
-      padding: 60px 5%;
+      padding: 40px 5%;
 }
 
 .form-container {
@@ -243,7 +243,7 @@
 
         .submit-section {
             margin-top: 10px;
-            padding: 60px 5%;
+            padding: 40px 5%;
         }
 
         .submit-btn {
@@ -289,5 +289,10 @@
 
             .form-container {
                 padding: 20px;
+            }
+            .submit-section{
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
