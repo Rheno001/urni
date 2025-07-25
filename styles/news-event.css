@@ -54,3 +54,11 @@
 .logo-color{
     color: #025836;
 }
+
+.extra-margin{
+    margin: 0 100px 0 100px;
+}
+
+.extra-padding{
+    margin: 0 100px 0 100px;
+}
