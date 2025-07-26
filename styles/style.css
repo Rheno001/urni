@@ -121,9 +121,6 @@ body {
     padding-left: 5%;
     color: #025836;
 }
-.hero-content{
-    max-width: 1500px;
-}
 
 .hero-content h1 {
     font-size: 4rem;
@@ -170,6 +167,8 @@ body {
 .facts-section {
     background-color: #f3f3f3;
     padding: 60px 5%;
+    max-width: 1500px;
+    margin: auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
@@ -281,6 +280,7 @@ body {
     align-items: center;
     padding: 60px 5%;
     max-width: 1500px;
+    margin: auto;
     background: url("../assets/explore-bg.png");
     background-size: cover;
     background-position: center;
@@ -416,6 +416,7 @@ body {
     background-color: rgba(241, 255, 239, 1);
     padding: 1.25rem 5%;
     max-width: 1500px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1175,6 +1176,7 @@ body {
     background-color: rgba(241, 255, 239, 1);
     padding: 2.5rem 10rem;
     max-width: 1500px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1192,6 +1194,7 @@ body {
 .impact-section {
     padding: 60px 5%;
     max-width: 1500px;
+    margin: auto;
     background-color: #fff;
 }
 
