@@ -74,6 +74,7 @@ body {
 }
 
 /* Base styles remain the same */
+
 .hero {
     position: relative;
     height: 90vh;
@@ -485,7 +486,8 @@ body {
 }
 
 .featured-section {
-    padding: 60px 10%;
+    padding: 60px 5%;
+    max-width: 1500px;
 }
 
 .featured-section-title {
