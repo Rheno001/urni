@@ -85,6 +85,7 @@ body {
 }
 .carousel-inner{
     max-width: 1500px;
+    margin: auto;
 }
 
 .carousel-fade .carousel-item {
