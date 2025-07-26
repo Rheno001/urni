@@ -127,8 +127,8 @@ body {
     color: #025836;
 }
 .hero-content{
-    min-width: 100vw;
     max-width: 1500px;
+    margin: 0;
 }
 
 .hero-content h1 {
@@ -290,6 +290,8 @@ body {
     align-items: center;
     height: 100vh;
     padding: 60px 5%;
+    max-width: 1500px;
+    margin: auto;
     background: url("../assets/explore-bg.png");
     background-size: cover;
     background-position: center;
@@ -805,8 +807,8 @@ body {
     background: none;
     border: 2px solid rgba(255, 255, 255, 0.5);
     color: white;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
@@ -826,11 +828,11 @@ body {
 }
 
 #pPrevBtn {
-    left: 20px;
+    left: 35px;
 }
 
 #pNextBtn {
-    right: 20px;
+    right: 35px;
 }
 
 .pDots {
@@ -1457,12 +1459,15 @@ body {
     justify-content: space-evenly;
     margin-bottom: 20px;
     align-items: center;
+    text-align: center;
+    height: 20rem;
 }
 
 .details p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 400;
     margin-right: 70px;
+    margin-top: 10px;
     text-align: justify;
     line-height: 1.4;
     padding: 0;
