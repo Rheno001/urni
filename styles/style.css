@@ -9,7 +9,7 @@
 
 body {
     font-family: "Montserrat", Arial, sans-serif;
-    overflow-x: hidden;
+    overflow-x: hidden; 
 }
 .navbar-brand:hover{
     cursor: pointer;
@@ -79,6 +79,9 @@ body {
     position: relative;
     height: 90vh;
     background: url("assets/hero-image.jpg") center/cover no-repeat;
+}
+.carousel-inner{
+    max-width: 1500px;
 }
 
 .carousel-fade .carousel-item {
@@ -195,6 +198,7 @@ body {
     justify-content: center;
     padding: 4rem;
     gap: 3.75rem;
+    max-width: 1500px;
 }
 
 .fact-item {
@@ -244,7 +248,7 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: white;
+    background: none;
     height: 56px;
     color: #004225;
     padding: 12px 24px;
@@ -273,7 +277,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 60px 5%;
-    width: 100%;
+    max-width: 1500px;
     background: url("../assets/explore-bg.png");
     background-size: cover;
     background-position: center;
@@ -408,6 +412,7 @@ body {
 .newsletter-cta {
     background-color: rgba(241, 255, 239, 1);
     padding: 1.25rem 5%;
+    max-width: 1500px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -426,7 +431,7 @@ body {
 }
 
 .newsletter-cta span {
-    font-weight: 100;
+    font-weight: 200;
     font-style: italic;
 }
 
@@ -446,7 +451,7 @@ body {
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
-    margin: 20px 0 0 0;
+    margin: auto;
     border: 1px solid #004225;
 }
 
@@ -654,7 +659,7 @@ body {
 
  .pSliderContainer {
     position: relative;
-    width: auto;
+    max-width: 1500px;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -679,7 +684,7 @@ body {
     justify-content: center;
     padding: 60px;
     z-index: 2;
-    height: 28.625rem;
+    max-height: 100px;
     background-color: #025836;
 }
 
@@ -694,7 +699,7 @@ body {
 .pSubtitle {
     font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     color: #a8d4b8;
 }
 
@@ -710,7 +715,7 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.363rem .5rem;
+    padding: 1rem .5rem;
     width: 10.926rem;
     height: 3.5rem;
     background: none;
@@ -964,19 +969,19 @@ body {
 
     .pContentSection {
         padding: 30px 20px;
-        height: auto;
-        min-height: 250px;
     }
     
     .prog-img {
         height: 15rem;
         width: 100%;
         order: -1;
+        margin-top: 20px;
     }
 
     .pTitle {
         font-size: 1.4rem;
         margin-bottom: 12px;
+        margin-top: 20px;
     }
     
     .pSubtitle {
@@ -1165,7 +1170,8 @@ body {
 }
 .passion-cta {
     background-color: rgba(241, 255, 239, 1);
-    padding: 1.25rem 12%;
+    padding: 2.5rem 10rem;
+    max-width: 1500px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1177,10 +1183,12 @@ body {
     color: #025836;
     line-height: 25px;
     font-size: 1.25rem;
+    margin: auto;
 }
 
 .impact-section {
     padding: 60px 5%;
+    max-width: 1500px;
     background-color: #fff;
 }
 
@@ -1920,7 +1928,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding-left: 6rem;
+    margin-left: auto;
 }
 .footer-social .social-icons a:hover{
     color: #7dd87f;
