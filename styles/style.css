@@ -519,7 +519,6 @@ body {
 .featured-news-card {
     border-radius: 4px;
     overflow: hidden;
-    background: #fff;
 }
 
 .featured-news-card img {
@@ -530,7 +529,7 @@ body {
 }
 
 .featured-news-content {
-    padding: 1rem 0;
+    padding: 0;
 }
 
 .featured-meta {
