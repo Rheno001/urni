@@ -2009,7 +2009,7 @@ body {
         grid-template-columns: 1fr;
         text-align: center;
         gap: 30px;
-        padding: 20px 0 0px 0;
+        margin: auto;
     }
 
     .footer-nav,
@@ -2017,10 +2017,8 @@ body {
     .footer-social {
         align-items: center;
         text-align: center;
-        padding-left: 0;
+        margin: auto;
     }
-    .footer-nav {
-    margin-left: 0;
 }
     .footer-social .social-icons a {
         margin-right: 15px;
