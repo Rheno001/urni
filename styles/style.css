@@ -83,16 +83,14 @@ body {
     height: 90vh;
     background: url("assets/hero-image.jpg") center/cover no-repeat;
 }
-.carousel-inner{
-    max-width: 1500px;
-    margin: auto;
-}
 
 .carousel-fade .carousel-item {
     opacity: 0;
     transition: opacity 4s ease-in-out;
     position: absolute;
     width: 100%;
+    max-width: 1500px;
+    margin: auto;
     height: 100%;
     top: 0;
     left: 0;
