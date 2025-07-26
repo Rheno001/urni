@@ -11,8 +11,8 @@ body {
     font-family: "Montserrat", Arial, sans-serif;
     overflow-x: hidden; 
 }
-.max-w-1500 {
-  max-width: 1500px;
+.navbar{
+    background-color: #fff;
 }
 .navbar-brand:hover{
     cursor: pointer;
