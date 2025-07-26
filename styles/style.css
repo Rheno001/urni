@@ -519,6 +519,7 @@ body {
 .featured-news-card {
     border-radius: 4px;
     overflow: hidden;
+    padding-top: .5rem;
 }
 
 .featured-news-card img {
