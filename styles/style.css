@@ -98,6 +98,7 @@ body {
     left: 0;
 }
 
+
 .carousel-fade .carousel-item.active {
     opacity: 0;
     position: relative;
@@ -124,6 +125,10 @@ body {
     align-items: center;
     padding-left: 5%;
     color: #025836;
+}
+.hero-content{
+    min-width: 100vw;
+    max-width: 1500px;
 }
 
 .hero-content h1 {
@@ -1913,6 +1918,8 @@ body {
     background-repeat: no-repeat;
     color: white;
     padding: 60px 5%;
+    max-width: 1500px;
+    margin: auto;
 }
 
 .footer-content {
@@ -1922,7 +1929,6 @@ body {
     padding: 20px 0 40px 0;
     margin: auto;
     border-bottom: 0.5px solid white;
-    max-width: 1500px;
 }
 
 .mission-text {
