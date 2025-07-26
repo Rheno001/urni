@@ -11,6 +11,9 @@ body {
     font-family: "Montserrat", Arial, sans-serif;
     overflow-x: hidden; 
 }
+.max-w-1500 {
+  max-width: 1500px;
+}
 .navbar-brand:hover{
     cursor: pointer;
 }
@@ -2023,4 +2026,3 @@ body {
     .footer-social .social-icons a {
         margin-right: 15px;
     }
-}
