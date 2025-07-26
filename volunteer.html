@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/29a8691164.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/volunteer.css">
     <title>Volunteer Page</title>
@@ -31,7 +32,7 @@
 
                 <!--Nav/Buttons Container-->
                 <div class="collapse navbar-collapse justify-content-between align-items-center" id="urniNavbar">
-                     <a class="lg-navbar-brand d-none d-lg-block" href="index.html">
+                    <a class="lg-navbar-brand d-none d-lg-block" href="index.html">
                         <img src="assets/URNI-logo.png" alt="URNI-logo" class="logo-img" />
                     </a>
                     <!--Nav Items-->
@@ -155,47 +156,22 @@
             <div class="form-row">
                 <div class="form-group">
                     <label for="citizenship">Citizenship<span class="required">*</span></label>
-                    <select id="citizenship" name="citizenship" required>
-                        <option value="" disabled selected>Choose your country</option>
-                        <option value="nigeria">Nigeria</option>
-                        <option value="ghana">Ghana</option>
-                        <option value="kenya">Kenya</option>
-                        <option value="south-africa">South Africa</option>
-                        <option value="other">Other</option>
-                    </select>
+                    <input type="text" id="citizenship" name="citizenship" placeholder="Enter your Country" required>
                 </div>
                 <div class="form-group">
-                    <label for="state">State<span class="required">*</span></label>
-                    <select id="state" name="state" required>
-                        <option value="" disabled selected>Choose your state of residence</option>
-                        <option value="lagos">Lagos</option>
-                        <option value="abuja">Abuja (FCT)</option>
-                        <option value="kano">Kano</option>
-                        <option value="rivers">Rivers</option>
-                        <option value="oyo">Oyo</option>
-                        <option value="other">Other</option>
-                    </select>
+                    <label for="State">State<span class="required">*</span></label>
+                    <input type="text" id="state" name="state" placeholder="Enter your state" required>
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group">
                     <label for="lga">Local Government Area<span class="required">*</span></label>
-                    <select id="lga" name="lga" required>
-                        <option value="" disabled selected>Choose your local government area</option>
-                        <option value="lga1">LGA Option 1</option>
-                        <option value="lga2">LGA Option 2</option>
-                        <option value="lga3">LGA Option 3</option>
-                    </select>
+                    <input type="text" id="lga" name="lga" placeholder="Enter your local government area" required>
                 </div>
                 <div class="form-group">
-                    <label for="city">City/Town<span class="required">*</span></label>
-                    <select id="city" name="city" required>
-                        <option value="" disabled selected>Choose your city/town of residence</option>
-                        <option value="city1">City Option 1</option>
-                        <option value="city2">City Option 2</option>
-                        <option value="city3">City Option 3</option>
-                    </select>
+                    <label for="town">City/Town<span class="required">*</span></label>
+                    <input type="text" id="town" name="town" placeholder="Enter town of residence" required>
                 </div>
             </div>
 
@@ -205,7 +181,7 @@
                     <input type="text" id="address" name="address" placeholder="Enter your residential address"
                         required>
                 </div>
-                 <div class="form-group">
+                <div class="form-group">
                     <label for="occupation">Occupation<span class="required">*</span></label>
                     <input type="text" id="occupation" name="occupation" placeholder="Enter your current occupation"
                         required>
@@ -258,7 +234,7 @@
                     </div>
                     <div class="skill-item">
                         <input type="checkbox" id="community-engagement" name="skills" value="community-engagement">
-                        <label for="community-engagement">Community Engagement/Management</label>
+                        <label for="community-engagement">Community Engagement</label>
                     </div>
                     <div class="skill-item">
                         <input type="checkbox" id="graphic-design" name="skills" value="graphic-design">
@@ -275,10 +251,6 @@
                     <div class="skill-item">
                         <input type="checkbox" id="news-reporting" name="skills" value="news-reporting">
                         <label for="news-reporting">News Reporting</label>
-                    </div>
-                    <div class="skill-item">
-                        <input type="checkbox" id="others" name="skills" value="others">
-                        <label for="others">Others</label>
                     </div>
                     <div class="other-skill">
                         <input type="text" id="other-skill-input" name="other-skill" placeholder="Enter your skill">
@@ -298,11 +270,13 @@
                     </div>
                 </div>
             </div>
+            <div class="submit-section">
+                <button type="submit" class="submit-btn">Submit Application</button>
+            </div>
         </form>
+
     </div>
-    <div class="submit-section">
-        <button type="submit" class="submit-btn">Submit Application</button>
-    </div>
+
 
 
     <div class="newsletter-cta">
@@ -316,7 +290,8 @@
             </span>
         </div>
         <div class="Buttons">
-            <input class="email-field" type="cta-email" name="email" id="email" placeholder="Enter your Email Address" />
+            <input class="email-field" type="cta-email" name="email" id="email"
+                placeholder="Enter your Email Address" />
             <a href="#" class="subscribe-btn">Subscribe</a>
         </div>
     </div>
