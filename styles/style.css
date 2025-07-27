@@ -1842,13 +1842,13 @@ body {
     }
     .details{
         flex-direction: column;
-        height: 80vh;
-        padding-bottom: 0;
+        justify-content: center;
+        height: auto;
     }
 
     .details p {
-        font-size: 1.2rem;
-    }
+    font-size: 1rem;
+}
     .partners{
         padding: 2rem 5%;
     }
