@@ -27,73 +27,110 @@
 
   <body>
     <nav class="navbar navbar-expand-lg p-4 sticky-top">
-        <div class="max-w-1500 w-100 mx-auto">
-            <div class="container-fluid justify-content-between align-items-center">
-                <div class="d-flex w-100 justify-content-between align-items-center d-lg-none mb-2">
-                    <!--Logo-->
-                    <a class="navbar-brand" href="index.html">
-                        <img src="assets/URNI-logo.png" alt="URNI-logo" class="logo-img" />
-                    </a>
+      <div class="max-w-1500 w-100 mx-auto">
+        <div class="container-fluid justify-content-between align-items-center">
+          <div
+            class="d-flex w-100 justify-content-between align-items-center d-lg-none mb-2"
+          >
+            <!--Logo-->
+            <a class="navbar-brand" href="index.html">
+              <img
+                src="assets/URNI-logo.png"
+                alt="URNI-logo"
+                class="logo-img"
+              />
+            </a>
 
-                    <!--Toggle for mobile-->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#urniNavbar"
-                        aria-controls="urniNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
+            <!--Toggle for mobile-->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#urniNavbar"
+              aria-controls="urniNavbar"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
 
+          <!--Nav/Buttons Container-->
+          <div
+            class="collapse navbar-collapse justify-content-between align-items-center"
+            id="urniNavbar"
+          >
+            <a class="lg-navbar-brand d-none d-lg-block" href="index.html">
+              <img
+                src="assets/URNI-logo.png"
+                alt="URNI-logo"
+                class="logo-img"
+              />
+            </a>
+            <!--Nav Items-->
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4">
+              <li class="nav-item">
+                <a class="nav-link" href="/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about.html">About Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="exploreDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Explore Nigeria
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
+                  <li><a class="dropdown-item" href="#">Culture</a></li>
+                  <li><a class="dropdown-item" href="#">Tourism</a></li>
+                  <li><a class="dropdown-item" href="#">People</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="newsDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Media
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="newsDropdown">
+                  <li><a class="dropdown-item" href="/news.html">News</a></li>
+                  <li><a class="dropdown-item" href="#">Events</a></li>
+                  <li><a class="dropdown-item" href="#">Blogs</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/gallery.html">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact.html">Contact Us</a>
+              </li>
+            </ul>
 
-                <!--Nav/Buttons Container-->
-                <div class="collapse navbar-collapse justify-content-between align-items-center" id="urniNavbar">
-                     <a class="lg-navbar-brand d-none d-lg-block" href="index.html">
-                        <img src="assets/URNI-logo.png" alt="URNI-logo" class="logo-img" />
-                    </a>
-                    <!--Nav Items-->
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/about.html">About Us</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="exploreDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Explore Nigeria
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
-                                <li><a class="dropdown-item" href="#">Culture</a></li>
-                                <li><a class="dropdown-item" href="#">Tourism</a></li>
-                                <li><a class="dropdown-item" href="#">People</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="newsDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Media
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="newsDropdown">
-                                <li><a class="dropdown-item" href="/news.html">News</a></li>
-                                <li><a class="dropdown-item" href="#">Events</a></li>
-                                <li><a class="dropdown-item" href="#">Blogs</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/gallery.html">Gallery</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/contact.html">Contact Us</a>
-                        </li>
-                    </ul>
-
-                    <!--Buttons-->
-                    <div class="d-flex justify-content-center align-items-center gap-2 ms-lg-3">
-                        <a href="/volunteer.html"><button class="btn-volunteer">Volunteer</button></a>
-                        <a href="/donate.html"><button class="btn-donate">Donate</button></a>
-                    </div>
-                </div>
+            <!--Buttons-->
+            <div
+              class="d-flex justify-content-center align-items-center gap-2 ms-lg-3"
+            >
+              <a href="/volunteer.html"
+                ><button class="btn-volunteer">Volunteer</button></a
+              >
+              <a href="/donate.html"
+                ><button class="btn-donate">Donate</button></a
+              >
             </div>
+          </div>
         </div>
+      </div>
     </nav>
 
     <div class="row">
@@ -117,11 +154,11 @@
         </div>
       </div>
 
-      <div class="container my-5">
-        <div class="row g-5">
+      <div class="my-5">
+        <div class="row g-1">
           <div class="col-lg-8">
             <div class="bg-white margin-desktop h-100 rounded-2">
-              <div class="row g-3">
+              <div class="row g-1 custom-container">
                 <h3 class="featured-text">Featured News</h3>
                 <div class="col-md-7 lh-1">
                   <img
@@ -158,9 +195,9 @@
                     Youth.</span
                   >
                 </div>
-                <div class="col-12">
-                  <hr class="horizonal-class" />
-                </div>
+                <div class="col-12"><hr class="horizonal-class" /></div>
+
+                <!-- Additional columns -->
                 <div class="col-md-4 lh-1">
                   <img
                     src="./assets/news3.png"
@@ -203,22 +240,14 @@
               </div>
             </div>
           </div>
+
+          <!-- Sidebar column -->
           <div class="col-lg-4">
-            <div class="bg-white p-4 h-100 rounded-2">
-              <!-- <div class="col-12 lh-1">
-                <img
-                  src="./assets/news3.png"
-                  alt="Featured news image"
-                  class="img-fluid w-100 mb-3 featured-news-image-1"
-                />
-                <div class="featured-meta">
-                  NEWS | 30 | <i class="fa-regular fa-eye"></i> 30
-                </div>
-                <p class="featured-text-4">
-                  URNI Engages NOA on Strengthening National.
-                </p>
-              </div> -->
-              <div class="row gap-2 lh-1 mt-5 pt-2">
+            <div class="bg-white h-100 rounded-2 custom-container">
+              
+              <!-- Repeating news items -->
+              <h3 class="featured-text">Recent News</h3>
+              <div class="row g-1 lh-1">
                 <div class="col-md-5">
                   <img
                     src="./assets/news1.png"
@@ -237,7 +266,7 @@
                   </p>
                 </div>
               </div>
-              <div class="row gap-2 lh-1">
+              <div class="row g-1 lh-1">
                 <div class="col-md-5">
                   <img
                     src="./assets/news1.png"
@@ -256,7 +285,7 @@
                   </p>
                 </div>
               </div>
-              <div class="row gap-2 lh-1">
+              <div class="row g-1 lh-1">
                 <div class="col-md-5">
                   <img
                     src="./assets/news1.png"
@@ -275,7 +304,7 @@
                   </p>
                 </div>
               </div>
-              <div class="row gap-2 lh-1">
+              <div class="row g-1 lh-1">
                 <div class="col-md-5">
                   <img
                     src="./assets/news1.png"
@@ -294,7 +323,7 @@
                   </p>
                 </div>
               </div>
-              <div class="row gap-2 lh-1">
+              <div class="row g-1 lh-1">
                 <div class="col-md-5">
                   <img
                     src="./assets/news1.png"
@@ -313,7 +342,7 @@
                   </p>
                 </div>
               </div>
-              <div class="row gap-2 lh-1">
+              <div class="row g-1 lh-1">
                 <div class="col-md-5">
                   <img
                     src="./assets/news1.png"
@@ -334,8 +363,12 @@
               </div>
             </div>
           </div>
+
+          <!-- More News Section -->
           <div class="col-12">
-            <div class="row margin-desktop bg-white rounded-2 align-items-stretch">
+            <div
+              class="row custom-container margin-desktop bg-white rounded-2"
+            >
               <div class="col-12">
                 <h2 class="featured-text mb-4">More News</h2>
               </div>
@@ -391,14 +424,12 @@
                   URNI Engages NOA on Strengthening National.
                 </p>
               </div>
+
             </div>
-            <div class="col-">
-              <div class="text-center mt-4">
-                <button class="btn custom-outline-btn">
-                  View More
-                  <i class="fa-solid fa-chevron-down ms-2"></i>
-                </button>
-              </div>
+            <div class="col- text-center mt-4">
+              <button class="btn custom-outline-btn">
+                View More <i class="fa-solid fa-chevron-down ms-2"></i>
+              </button>
             </div>
           </div>
         </div>

@@ -34,10 +34,6 @@
     max-height: 178.68px;
 }
 
-.margin-desktop{
-    margin: 0 200px 0 100px !important;
-}
-
 .featured-text{
     font-size: 48px;
     font-weight: 600;
@@ -70,8 +66,8 @@
 
 .featured-news-image-2{
     object-fit: cover;
-    width: 120px;
-    height: 70px;
+    width: 100px;
+    height: 50px;
     border-radius: 4px;
 }
 
@@ -100,7 +96,7 @@
 }
 
 
-/* Add to your styles/news.css */
+
 .custom-outline-btn {
   border: 2px solid #025836 !important  ;
   color: #025836;
@@ -127,3 +123,22 @@
 .custom-outline-btn:focus i {
   color: #fff;
 }
+
+
+.custom-container {
+  padding: 60px 5%;
+  max-width: 1500px;
+  /* margin: auto; */
+}
+
+
+.margin-desktop {
+  margin: 0 4px !important;
+}
+
+
+.row.g-1 > [class^="col-"] {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
