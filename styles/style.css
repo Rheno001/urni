@@ -379,16 +379,6 @@ body {
     color: #fff;
 }
 
-.map {
-    width: auto;
-}
-
-.map-img {
-    width: 100%;
-    height: 80vh;
-    margin: auto;
-}
-
 .partners {
     background-color: #d9d9d9;
     padding: 60px 5%;
@@ -1321,14 +1311,6 @@ body {
 
 
 
-.volunteer {
-    padding: 6.25rem 0%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #F1FFEF;
-
-}
 
 /*
 .play-button {
@@ -1453,7 +1435,14 @@ body {
     color: #025836;
     margin-bottom: 30px;
 }
+.volunteer {
+    padding: 6.25rem 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F1FFEF;
 
+}
 .details {
     display: flex;
     justify-content: space-evenly;
@@ -1525,9 +1514,6 @@ body {
         margin-bottom: 2rem;
     }
 
-    .map {
-        width: 100%;
-    }
 
     .program-left {
         width: 100%;
@@ -1852,11 +1838,19 @@ body {
     }
 
     .volunteer {
-        padding: 3rem 5%;
+        padding: 2rem 5%;
+    }
+    .details{
+        flex-direction: column;
+        height: 80vh;
+        padding-bottom: 0;
     }
 
     .details p {
         font-size: 1.2rem;
+    }
+    .partners{
+        padding: 2rem 5%;
     }
 
     .donation-text {
@@ -1905,6 +1899,14 @@ body {
 
     .impact-name {
         font-size: 1.1rem;
+    }
+    .volunteer {
+        padding: 2rem 5%;
+    }
+    .details{
+        flex-direction: column;
+        height: 80vh;
+        padding-bottom: 0;
     }
 
     .details p {
