@@ -231,6 +231,11 @@ main,
   padding: 5px;
 }
 
+.custom-container {
+  padding: 60px 5%;
+  max-width: 1500px;
+  /* margin: auto; */
+}
 
 
 .about-banner-btn {
