@@ -135,13 +135,12 @@
 
     <div class="row">
       <div class="main-content">
-        <div
-          class="container-fluid text-white news-section d-flex align-items-center"
-          style="height: 50vh"
-        >
-          <div class="news-bg-image"></div>
-          <div class="container section-spacing">
-            <div class="row">
+        <div class="news-section text-white position-relative">
+          <div
+            class="news-bg-image position-absolute top-0 start-0 w-100 h-100 z-0"
+          ></div>
+          <div class="custom-container position-relative z-2">
+            <div class="row" style="min-height: 50vh; align-items: center">
               <div class="col-lg-7">
                 <h2 class="mb-3 fw-bold page-title">News</h2>
                 <p class="fw-semibold page-desc">
@@ -244,7 +243,6 @@
           <!-- Sidebar column -->
           <div class="col-lg-4">
             <div class="bg-white h-100 rounded-2 custom-container">
-              
               <!-- Repeating news items -->
               <h3 class="featured-text">Recent News</h3>
               <div class="row g-1 lh-1">
@@ -366,70 +364,74 @@
 
           <!-- More News Section -->
           <div class="col-12">
-            <div
-              class="row custom-container margin-desktop bg-white rounded-2"
-            >
-              <div class="col-12">
-                <h2 class="featured-text mb-4">More News</h2>
-              </div>
-              <div class="col-md-3 d-flex flex-column">
-                <img
-                  src="./assets/news3.png"
-                  alt="Featured news image"
-                  class="img-fluid w-100 mb-3 featured-news-image-3"
-                />
-                <div class="featured-meta mb-2">
-                  NEWS | 30 | <i class="fa-regular fa-eye"></i> 30
+            <div class="custom-container">
+              <div class="row bg-white rounded-2">
+                <div class="col-12 g-0">
+                  <h2 class="featured-text mb-4">More News</h2>
                 </div>
-                <p class="featured-text-2 mb-0">
-                  URNI Engages NOA on Strengthening National.
-                </p>
-              </div>
-              <div class="col-md-3 d-flex flex-column">
-                <img
-                  src="./assets/news3.png"
-                  alt="Featured news image"
-                  class="img-fluid w-100 mb-3 featured-news-image-3"
-                />
-                <div class="featured-meta mb-2">
-                  NEWS | 30 | <i class="fa-regular fa-eye"></i> 30
+
+                <div class="col-md-3 d-flex flex-column g-0">
+                  <img
+                    src="./assets/news3.png"
+                    alt="Featured news image"
+                    class="img-fluid w-100 mb-3 featured-news-image-3"
+                  />
+                  <div class="featured-meta mb-2">
+                    NEWS | 30 | <i class="fa-regular fa-eye"></i> 30
+                  </div>
+                  <p class="featured-text-2 mb-0">
+                    URNI Engages NOA on Strengthening National.
+                  </p>
                 </div>
-                <p class="featured-text-2 mb-0">
-                  URNI Engages NOA on Strengthening National.
-                </p>
-              </div>
-              <div class="col-md-3 d-flex flex-column">
-                <img
-                  src="./assets/news3.png"
-                  alt="Featured news image"
-                  class="img-fluid w-100 mb-3 featured-news-image-3"
-                />
-                <div class="featured-meta mb-2">
-                  NEWS | 30 | <i class="fa-regular fa-eye"></i> 30
+
+                <div class="col-md-3 d-flex flex-column g-1">
+                  <img
+                    src="./assets/news3.png"
+                    alt="Featured news image"
+                    class="img-fluid w-100 mb-3 featured-news-image-3"
+                  />
+                  <div class="featured-meta mb-2">
+                    NEWS | 30 | <i class="fa-regular fa-eye"></i> 30
+                  </div>
+                  <p class="featured-text-2 mb-0">
+                    URNI Engages NOA on Strengthening National.
+                  </p>
                 </div>
-                <p class="featured-text-2 mb-0">
-                  URNI Engages NOA on Strengthening National.
-                </p>
-              </div>
-              <div class="col-md-3 d-flex flex-column">
-                <img
-                  src="./assets/news3.png"
-                  alt="Featured news image"
-                  class="img-fluid w-100 mb-3 featured-news-image-3"
-                />
-                <div class="featured-meta mb-2">
-                  NEWS | 30 | <i class="fa-regular fa-eye"></i> 30
+
+                <div class="col-md-3 d-flex flex-column g-1">
+                  <img
+                    src="./assets/news3.png"
+                    alt="Featured news image"
+                    class="img-fluid w-100 mb-3 featured-news-image-3"
+                  />
+                  <div class="featured-meta mb-2">
+                    NEWS | 30 | <i class="fa-regular fa-eye"></i> 30
+                  </div>
+                  <p class="featured-text-2 mb-0">
+                    URNI Engages NOA on Strengthening National.
+                  </p>
                 </div>
-                <p class="featured-text-2 mb-0">
-                  URNI Engages NOA on Strengthening National.
-                </p>
+
+                <div class="col-md-3 d-flex flex-column g-1">
+                  <img
+                    src="./assets/news3.png"
+                    alt="Featured news image"
+                    class="img-fluid w-100 mb-3 featured-news-image-3"
+                  />
+                  <div class="featured-meta mb-2">
+                    NEWS | 30 | <i class="fa-regular fa-eye"></i> 30
+                  </div>
+                  <p class="featured-text-2 mb-0">
+                    URNI Engages NOA on Strengthening National.
+                  </p>
+                </div>
               </div>
 
-            </div>
-            <div class="col- text-center mt-4">
-              <button class="btn custom-outline-btn">
-                View More <i class="fa-solid fa-chevron-down ms-2"></i>
-              </button>
+              <div class="text-center mt-4">
+                <button class="btn custom-outline-btn">
+                  View More <i class="fa-solid fa-chevron-down ms-2"></i>
+                </button>
+              </div>
             </div>
           </div>
         </div>
