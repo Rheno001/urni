@@ -13,8 +13,8 @@
 
 }
 .hero-text{
-    max-width: 1500px;
-    display: flex;
+  width: 100%;
+  max-width: min(1500px, 55.938rem);
 }
 .hero h1 {
     font-size: 3rem;
