@@ -429,14 +429,17 @@ body {
 
 .newsletter-cta {
     background-color: rgba(241, 255, 239, 1);
-    padding: 1.25rem 5%;
-    max-width: 1500px;
-    margin: auto;
+    padding: 1.25rem 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
+}
+
+.cta-items {
+    max-width: 1500px;
+    margin: auto;
 }
 
 .newsletter-cta .text {
