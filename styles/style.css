@@ -126,7 +126,8 @@ body {
     padding-left: 5%;
     color: #025836;
 }
-.hero-content{
+
+.hero-content {
     max-width: 1500px;
     margin: 0;
 }
@@ -380,10 +381,11 @@ body {
     color: #fff;
 }
 
-.map{
+.map {
     background-color: red;
     height: 10vh;
 }
+
 .partners {
     background-color: #d9d9d9;
     padding: 60px 5%;
@@ -1440,6 +1442,7 @@ body {
     color: #025836;
     margin-bottom: 30px;
 }
+
 .volunteer {
     padding: 6.25rem 0%;
     display: flex;
@@ -1448,6 +1451,7 @@ body {
     background-color: #F1FFEF;
 
 }
+
 .details {
     display: flex;
     justify-content: space-evenly;
@@ -1845,16 +1849,18 @@ body {
     .volunteer {
         padding: 2rem 5%;
     }
-    .details{
+
+    .details {
         flex-direction: column;
         justify-content: center;
         height: auto;
     }
 
     .details p {
-    font-size: 1rem;
-}
-    .partners{
+        font-size: 1rem;
+    }
+
+    .partners {
         padding: 2rem 5%;
     }
 
@@ -1905,10 +1911,12 @@ body {
     .impact-name {
         font-size: 1.1rem;
     }
+
     .volunteer {
         padding: 2rem 5%;
     }
-    .details{
+
+    .details {
         flex-direction: column;
         height: 80vh;
         padding-bottom: 0;
@@ -1930,8 +1938,6 @@ body {
     background-repeat: no-repeat;
     color: white;
     padding: 60px 5%;
-    max-width: 1500px;
-    margin: auto;
 }
 
 .footer-content {
@@ -1941,6 +1947,8 @@ body {
     padding: 20px 0 40px 0;
     margin: auto;
     border-bottom: 0.5px solid white;
+    max-width: 1500px;
+    margin: auto;
 }
 
 .mission-text {
@@ -2049,6 +2057,7 @@ body {
     font-size: 14px;
     padding-top: 10px;
     max-width: 1500px;
+    margin: auto;
 }
 
 /* 🔁 Responsive tweaks */
