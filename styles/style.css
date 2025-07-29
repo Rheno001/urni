@@ -286,12 +286,8 @@ body {
 
 .explore-section {
     display: flex;
-    flex-wrap: wrap-reverse;
-    justify-content: space-between;
-    align-items: center;
     height: 100vh;
     padding: 60px 5%;
-    max-width: 1500px;
     margin: auto;
     background: url("../assets/explore-bg.png");
     background-size: cover;
@@ -300,12 +296,12 @@ body {
 }
 
 .explore-stuff {
+    width: 100%;
     max-width: 1500px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     margin: auto;
 }
 
@@ -382,7 +378,6 @@ body {
 }
 
 .map {
-    background-color: red;
     height: 10vh;
 }
 
@@ -429,15 +424,14 @@ body {
 
 .newsletter-cta {
     background-color: rgba(241, 255, 239, 1);
-    padding: 1.25rem 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 1.25rem 5%;
     flex-wrap: wrap;
     gap: 1rem;
 }
 
 .cta-items {
+    display: flex;
+    justify-content: space-between;
     max-width: 1500px;
     margin: auto;
 }
@@ -688,6 +682,7 @@ body {
 
 .pSlide {
     display: none;
+    overflow: hidden;
     position: relative;
     background: #025836;
     min-height: 400px;
@@ -795,7 +790,7 @@ body {
 
 .prog-img {
     height: 28.625rem;
-    width: auto;
+    width: 100%;
     object-fit: cover;
     flex-shrink: 0;
 }
@@ -1950,7 +1945,7 @@ body {
     padding: 20px 0 40px 0;
     margin: auto;
     border-bottom: 0.5px solid white;
-    max-width: 1200px;
+    max-width: 1500px;
     margin: auto;
 }
 
