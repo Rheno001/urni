@@ -45,14 +45,14 @@
     margin-bottom: 15pxpx;
 }
 .content-section{
-      padding: 60px 5%;
+      padding: 60px 5% 0 5%;
 }
 
 .form-container {
             max-width: 1500px;
             margin: 0 auto;
             background: white;
-            padding: 60px 5%;
+            padding: 20px 5%;
             border-radius: 8px;
         }
 

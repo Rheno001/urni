@@ -790,7 +790,7 @@ body {
 
 .prog-img {
     height: 28.625rem;
-    width: 100%;
+    max-width: 1500px;
     object-fit: cover;
     flex-shrink: 0;
 }
@@ -1569,6 +1569,10 @@ body {
     .featured-mini-news {
         grid-template-columns: 1fr 1fr;
     }
+    .cta-items {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 /* Tablets */
@@ -1625,7 +1629,7 @@ body {
         margin: 10px 0 0 0;
     }
 
-    .newsletter-cta {
+    .cta-items {
         flex-direction: column;
         text-align: center;
     }
@@ -2061,9 +2065,36 @@ body {
 /* 🔁 Responsive tweaks */
 @media (max-width: 992px) {
     .footer-content {
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-        padding: 20px 0 0px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .footer-nav{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .footer-nav-links{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-social{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .footer-social,
