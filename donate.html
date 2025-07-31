@@ -43,7 +43,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/about.html">About Us</a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <!--<li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="exploreDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Explore Nigeria
@@ -53,7 +53,7 @@
                                 <li><a class="dropdown-item" href="#">Tourism</a></li>
                                 <li><a class="dropdown-item" href="#">People</a></li>
                             </ul>
-                        </li>
+                        </li>-->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="newsDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -84,7 +84,7 @@
     </nav>
 
 
-   <div class="main-content">
+    <div class="main-content">
         <div class="donate-section">
             <div class="donate-bg-image"></div>
             <div class="content-wrapper">
@@ -138,12 +138,18 @@
 
                 <div class="form-group">
                     <label for="currency">Currency<span class="required">*</span></label>
-                    <select id="currency" name="currency" class="currency" required>
-                        <option value="">Select currency</option>
-                        <option value="USD">$ - Dollars</option>
-                        <option value="NGN">₦ - Naira</option>
-                        <option value="GBP">£ - Pounds</option>
-                    </select>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-secondary dropdown-toggle w-100 d-flex justify-content-between align-items-center" type="button"
+                            id="currency" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span id="currency-selected">Select currency</span>
+                        </button>
+                        <ul class="dropdown-menu w-100" aria-labelledby="currency">
+                            <li><a class="dropdown-item" href="#" data-value="USD">$ - Dollars</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="NGN">₦ - Naira</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="GBP">£ - Pounds</a></li>
+                        </ul>
+                    </div>
+                    <input type="hidden" id="currency-input" name="currency" class="currency" required>
                 </div>
 
                 <div class="form-group">
@@ -233,32 +239,26 @@
 
 </body>
 <script>
-    const currencySelect = document.getElementById("currency");
-    const amountInput = document.getElementById("amount");
-
-    function formatCurrency(value, currency) {
-        const formatter = new Intl.NumberFormat('en-US', {
-            style: 'currency',
-            currency: currency,
-            minimumFractionDigits: 0,
+    document.addEventListener('DOMContentLoaded', function() {
+    const currencyDropdownItems = document.querySelectorAll('#currency + .dropdown-menu .dropdown-item');
+    const currencySelectedSpan = document.getElementById('currency-selected');
+    const currencyHiddenInput = document.getElementById('currency-input');
+    
+    currencyDropdownItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const value = this.getAttribute('data-value');
+            const text = this.textContent;
+            currencySelectedSpan.textContent = text;
+            currencyHiddenInput.value = value;
+            
+            // Remove active class from all items
+            currencyDropdownItems.forEach(i => i.classList.remove('active'));
+            // Add active class to selected item
+            this.classList.add('active');
         });
-
-        return formatter.format(value.replace(/[^\d]/g, '') || 0);
-    }
-
-    amountInput.addEventListener("input", () => {
-        const currency = currencySelect.value || "USD";
-        const rawValue = amountInput.value.replace(/[^\d]/g, '');
-        amountInput.value = formatCurrency(rawValue, currency);
     });
-
-    currencySelect.addEventListener("change", () => {
-        // Reformat amount when currency changes
-        const rawValue = amountInput.value.replace(/[^\d]/g, '');
-        if (rawValue) {
-            amountInput.value = formatCurrency(rawValue, currencySelect.value);
-        }
-    });
+});
 </script>
 
 

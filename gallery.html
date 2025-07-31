@@ -45,7 +45,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/about.html">About Us</a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <!--<li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="exploreDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Explore Nigeria
@@ -55,7 +55,7 @@
                                 <li><a class="dropdown-item" href="#">Tourism</a></li>
                                 <li><a class="dropdown-item" href="#">People</a></li>
                             </ul>
-                        </li>
+                        </li>-->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="newsDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -85,18 +85,23 @@
         </div>
     </nav>
 
-
-    <section class="hero-section" id="hero">
-        <div class="hero-content">
-            <h1>Gallery</h1>
-            <p>Get updates about happenings around us!</p>
-
-            <div class="nav-buttons">
-                <button class="nav-btn active" onclick="showSection('photos')">Photos</button>
-                <button class="nav-btn" onclick="showSection('videos')">Videos</button>
+    <div class="main-content">
+        <div class="gall-section">
+            <div class="gall-bg-image"></div>
+            <div class="content-wrapper">
+                <div class="content-container">
+                    <div class="content-column">
+                        <h2 class="page-title">Gallery</h2>
+                        <p class="page-desc">Get updates about happenings around us!</p>
+                    </div>
+                    <div class="nav-buttons">
+                        <button class="nav-btn active" onclick="showSection('photos')">Photos</button>
+                        <button class="nav-btn" onclick="showSection('videos')">Videos</button>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
 
 
     <!-- Photos Section -->
@@ -208,8 +213,7 @@
         </div>
 
         <div class="photo-grid">
-            <div class="photo-item"
-                onclick="openModal('', 'youtube', 'https://www.youtube.com/watch?v=xIIc_Rqi6tA')">
+            <div class="photo-item" onclick="openModal('', 'youtube', 'https://www.youtube.com/watch?v=xIIc_Rqi6tA')">
                 <img src="https://img.youtube.com/vi/xIIc_Rqi6tA/hqdefault.jpg" alt="URNI Launch Event Video">
                 <div class="video-indicator">▶ Video</div>
                 <div class="photo-caption">
@@ -226,8 +230,7 @@
                 </div>
             </div>
 
-            <div class="photo-item"
-                onclick="openModal('', 'youtube', 'https://www.youtube.com/watch?v=-huWmRV_Bm4')">
+            <div class="photo-item" onclick="openModal('', 'youtube', 'https://www.youtube.com/watch?v=-huWmRV_Bm4')">
                 <img src="https://img.youtube.com/vi/-huWmRV_Bm4/hqdefault.jpg" alt="Community Outreach Documentary">
                 <div class="video-indicator">▶ Video</div>
                 <div class="photo-caption">
@@ -242,9 +245,8 @@
     </section>
 
     <!-- Modal -->
-   <div class="modal" id="modal">
-        <button class="close-modal" onclick="closeModal()" 
-                style="position: absolute; 
+    <div class="modal" id="modal">
+        <button class="close-modal" onclick="closeModal()" style="position: absolute; 
                        top: 20px; 
                        left: 20px; 
                        width: 35px; 
@@ -346,28 +348,37 @@
 
 
 <script>
-    function showSection(sectionName) {
-        // Remove active class from all nav buttons
-        document.querySelectorAll('.nav-btn').forEach(btn => {
-            btn.classList.remove('active');
-        });
-
-        // Add active class to clicked button
-        event.target.classList.add('active');
-
-        // Hide all sections
-        document.querySelectorAll('.section').forEach(section => {
-            section.classList.remove('active');
-        });
-
-        // Show selected section
-        document.getElementById(sectionName + '-section').classList.add('active');
-
-        // Scroll to gallery section
-        document.getElementById(sectionName + '-section').scrollIntoView({
-            behavior: 'smooth'
-        });
+   function showSection(section) {
+    const gallBgImage = document.querySelector('.gall-bg-image');
+    const pageTitle = document.querySelector('.page-title');
+    const pageDesc = document.querySelector('.page-desc');
+    const navButtons = document.querySelectorAll('.nav-btn');
+    
+    // Remove active class from all buttons
+    navButtons.forEach(btn => btn.classList.remove('active'));
+    
+    // Add active class to clicked button
+    event.target.classList.add('active');
+    
+    // Change background image, title, and description based on section
+    if (section === 'photos') {
+        gallBgImage.style.backgroundImage = "url('/assets/gallery-hero.png')";
+        pageTitle.textContent = "Photo Gallery";
+        pageDesc.textContent = "Get updates about happenings around us!";
+        
+        // Show photos section, hide videos section
+        document.getElementById('photos-section').style.display = 'block';
+        document.getElementById('videos-section').style.display = 'none';
+    } else if (section === 'videos') {
+        gallBgImage.style.backgroundImage = "url('/assets/video-hero.png')";
+        pageTitle.textContent = "Video Gallery";
+        pageDesc.textContent = "Watch our latest video content and stories!";
+        
+        // Show videos section, hide photos section
+        document.getElementById('photos-section').style.display = 'none';
+        document.getElementById('videos-section').style.display = 'block';
     }
+}
 
     function openModal(title, type, src) {
         const modal = document.getElementById('modal');

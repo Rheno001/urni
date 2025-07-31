@@ -177,8 +177,6 @@ body {
 .facts-section {
     background-color: #f3f3f3;
     padding: 60px 5%;
-    max-width: 1500px;
-    margin: auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
@@ -447,7 +445,7 @@ body {
 }
 
 .newsletter-cta span {
-    font-weight: 200;
+    font-weight: 400;
     font-style: italic;
 }
 
@@ -1452,11 +1450,12 @@ body {
 
 .details {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     margin-bottom: 20px;
     align-items: center;
     text-align: center;
     height: 20rem;
+    max-width: 1300px;
 }
 
 .details p {
@@ -1482,7 +1481,7 @@ body {
     background: #004225;
     height: 2.7rem;
     color: white;
-    padding: 0.363rem 1rem;
+    padding: 1.5rem 1rem;
     border-radius: 4px;
     font-weight: 600;
     text-decoration: none;

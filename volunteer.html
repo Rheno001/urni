@@ -43,7 +43,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/about.html">About Us</a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <!--<li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="exploreDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Explore Nigeria
@@ -53,7 +53,7 @@
                                 <li><a class="dropdown-item" href="#">Tourism</a></li>
                                 <li><a class="dropdown-item" href="#">People</a></li>
                             </ul>
-                        </li>
+                        </li>-->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="newsDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -139,25 +139,35 @@
             <div class="form-row">
                 <div class="form-group">
                     <label for="gender">Gender<span class="required">*</span></label>
-                    <select id="gender" name="gender" required>
-                        <option value="" disabled selected>Choose your gender</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="other">Other</option>
-                        <option value="prefer-not-to-say">Prefer not to say</option>
-                    </select>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-secondary dropdown-toggle w-100 d-flex justify-content-between align-items-center" type="button"
+                            id="gender" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span id="gender-selected">Choose your gender</span>
+                        </button>
+                        <ul class="dropdown-menu w-100" aria-labelledby="gender">
+                            <li><a class="dropdown-item" href="#" data-value="male">Male</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="female">Female</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="other">Other</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="prefer-not-to-say">Prefer not to say</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <input type="hidden" id="gender-input" name="gender" required>
                 </div>
                 <div class="form-group">
                     <label for="age">Age<span class="required">*</span></label>
-                    <select id="age" name="age" required>
-                        <option value="" disabled selected>Choose your age range</option>
-                        <option value="18-25">18-25</option>
-                        <option value="26-35">26-35</option>
-                        <option value="36-45">36-45</option>
-                        <option value="46-55">46-55</option>
-                        <option value="56-65">56-65</option>
-                        <option value="65+">65+</option>
-                    </select>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-secondary dropdown-toggle w-100 d-flex justify-content-between align-items-center" type="button" id="age"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span id="age-selected">Choose your age range</span>
+                        </button>
+                        <ul class="dropdown-menu w-100" aria-labelledby="age">
+                            <li><a class="dropdown-item" href="#" data-value="18-25">18-25</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="26-35">26-35</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="36-45">36-45</a></li>
+                        </ul>
+                    </div>
+                    <input type="hidden" id="age-input" name="age" required>
                 </div>
             </div>
 
@@ -253,10 +263,6 @@
                         <label for="ui-ux-design">UI/UX Designers</label>
                     </div>
                     <div class="skill-item">
-                        <input type="checkbox" id="teaching" name="skills" value="teaching">
-                        <label for="teaching">Teaching</label>
-                    </div>
-                    <div class="skill-item">
                         <input type="checkbox" id="news-reporting" name="skills" value="news-reporting">
                         <label for="news-reporting">News Reporting</label>
                     </div>
@@ -269,7 +275,7 @@
 
             <div class="terms-section">
                 <div class="terms-item">
-                    <input type="radio" id="agree-terms" name="terms" value="agree" required>
+                    <input type="checkbox" id="agree-terms" name="terms" value="agree" required>
                     <div class="terms-text">
                         <label for="agree-terms">
                             I agree to the <a href="#" target="_blank">terms of service</a> and <a href="#"
@@ -357,5 +363,49 @@
     </footer>
 
 </body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    // Age dropdown
+    const ageDropdownItems = document.querySelectorAll('#age + .dropdown-menu .dropdown-item');
+    const ageSelectedSpan = document.getElementById('age-selected');
+    const ageHiddenInput = document.getElementById('age-input');
+    
+    ageDropdownItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const value = this.getAttribute('data-value');
+            const text = this.textContent;
+            ageSelectedSpan.textContent = text;
+            ageHiddenInput.value = value;
+            
+            // Remove active class from all items
+            ageDropdownItems.forEach(i => i.classList.remove('active'));
+            // Add active class to selected item
+            this.classList.add('active');
+        });
+    });
+
+    // Gender dropdown
+    const genderDropdownItems = document.querySelectorAll('#gender + .dropdown-menu .dropdown-item');
+    const genderSelectedSpan = document.getElementById('gender-selected');
+    const genderHiddenInput = document.getElementById('gender-input');
+    
+    genderDropdownItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const value = this.getAttribute('data-value');
+            const text = this.textContent;
+            genderSelectedSpan.textContent = text;
+            genderHiddenInput.value = value;
+            
+            // Remove active class from all items
+            genderDropdownItems.forEach(i => i.classList.remove('active'));
+            // Add active class to selected item
+            this.classList.add('active');
+        });
+    });
+});
+</script>
 
 </html>
