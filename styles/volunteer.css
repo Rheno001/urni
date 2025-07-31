@@ -1,36 +1,63 @@
-.hero {
-    height: 50vh;
-    background: url('../assets/volunteer-hero.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 60px 5%;
-
+.main-content {
+  margin-bottom: 50px;
 }
 
-.vol-hero-text {
-    width: 100%;
-    max-width: min(1500px, 55.938rem);
-    margin: auto;
+.vol-section {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: white;
+  position: relative;
+  min-height: 400px;
+  padding: 60px 20px;
+  flex-wrap: wrap;
 }
 
-
-.hero h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 1.2;
-    color: white;
+.volunteer-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:url('/assets/volunteer-hero.png') center center / cover no-repeat;
+  z-index: 0;
 }
 
-.hero p {
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.2;
-    color: white;
+.news-bg-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
 }
+
+.content-wrapper {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.content-column {
+  flex: 0 0 58.33%;
+  position: relative;
+  z-index: 2;
+}
+
+.page-title {
+  font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.page-desc {
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 750px;
+  text-align: justify;
+}
+
 
 .content-section {
     max-width: 1500px;
