@@ -222,6 +222,7 @@
             text-align: center;
             margin-top: 10px;
             border-radius: 4px;
+            display: block;
         }
 
         .close-modal {
