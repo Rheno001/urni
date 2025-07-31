@@ -242,9 +242,25 @@
     </section>
 
     <!-- Modal -->
-    <div class="modal" id="modal">
+   <div class="modal" id="modal">
+        <button class="close-modal" onclick="closeModal()" 
+                style="position: absolute; 
+                       top: 20px; 
+                       left: 20px; 
+                       width: 35px; 
+                       height: 35px; 
+                       border-radius: 50%; 
+                       background-color: transparent; 
+                       border: 2px solid white; 
+                       color: white; 
+                       font-size: 25px; 
+                       font-weight: bold; 
+                       cursor: pointer; 
+                       display: flex; 
+                       align-items: center; 
+                       justify-content: center; 
+                       z-index: 1001;">×</button>
         <div class="modal-content">
-            <button class="close-modal" onclick="closeModal()">&times;</button>
             <img id="modal-img" src="" alt="" style="display: none;">
             <video id="modal-video" controls style="display: none;">
                 <source src="" type="video/mp4">
