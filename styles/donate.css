@@ -167,7 +167,7 @@ textarea {
 }
 
 .submit-btn:hover {
-    background-color: white;
+    background-color: #F1FFEF;
     color: #025836;
     scale: 105%;
 }

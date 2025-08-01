@@ -1,4 +1,6 @@
-
+.main-content {
+  margin-bottom: 50px;
+}
 .gall-bg-image {
     position: absolute;
     top: 0;

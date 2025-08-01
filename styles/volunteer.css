@@ -122,7 +122,7 @@ input[type="email"],
 input[type="tel"],
 select,
 textarea {
-    padding: 12px 16px;
+    padding: 12px 10px;
     border: 2px solid #e1e5e9;
     border-radius: 4px;
     font-size: 14px;
@@ -142,6 +142,7 @@ textarea:focus {
 input::placeholder,
 textarea::placeholder {
     color: #a0a6ac;
+    font-size: 16px;
 }
 
 select {

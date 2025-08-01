@@ -503,6 +503,10 @@ body {
     margin: 20px 0 0 0;
     border: 1px solid #004225;
 }
+.subscribe-btn:hover{ 
+    background-color: #026234;
+    color: white;
+}
 
 .featured-section {
     padding: 60px 5%;

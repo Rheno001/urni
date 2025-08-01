@@ -238,35 +238,66 @@
   </section>
     <div class="more-news-container">
         <h2 class="section-title">More Articles</h2>
-        
+
+        <!-- Initial visible articles -->
         <div class="more-news-row">
             <a href="news-events.html" class="article">
                 <img src="./assets/news1.png" alt="News 1" class="article-image" />
                 <div class="article-meta">NEWS | 30 | <i class="fa-regular fa-eye"></i> 30</div>
                 <h3 class="article-title">URNI Engages NOA on Strengthening National.</h3>
             </a>
-            
+
             <a href="news-events.html" class="article">
                 <img src="./assets/news1.png" alt="News 1" class="article-image" />
                 <div class="article-meta">NEWS | 30 | <i class="fa-regular fa-eye"></i> 30</div>
                 <h3 class="article-title">URNI Engages NOA on Strengthening National.</h3>
             </a>
-            
+
             <a href="news-events.html" class="article">
                 <img src="./assets/news1.png" alt="News 1" class="article-image" />
                 <div class="article-meta">NEWS | 30 | <i class="fa-regular fa-eye"></i> 30</div>
                 <h3 class="article-title">URNI Engages NOA on Strengthening National.</h3>
             </a>
-            
+
             <a href="news-events.html" class="article">
                 <img src="./assets/news1.png" alt="News 1" class="article-image" />
                 <div class="article-meta">NEWS | 30 | <i class="fa-regular fa-eye"></i> 30</div>
                 <h3 class="article-title">URNI Engages NOA on Strengthening National.</h3>
             </a>
         </div>
-        
+
+        <!-- Hidden articles that will show on "View More" -->
+        <div class="more-news-row hidden-articles" id="hiddenArticles">
+            <a href="news-events.html" class="article">
+                <img src="./assets/news1.png" alt="News 2" class="article-image" />
+                <div class="article-meta">NEWS | 25 | <i class="fa-regular fa-eye"></i> 25</div>
+                <h3 class="article-title">URNI Launches New Initiative for Youth Development.</h3>
+            </a>
+
+            <a href="news-events.html" class="article">
+                <img src="./assets/news1.png" alt="News 3" class="article-image" />
+                <div class="article-meta">NEWS | 40 | <i class="fa-regular fa-eye"></i> 40</div>
+                <h3 class="article-title">Community Outreach Program Reaches 1000 Beneficiaries.</h3>
+            </a>
+
+            <a href="news-events.html" class="article">
+                <img src="./assets/news1.png" alt="News 4" class="article-image" />
+                <div class="article-meta">NEWS | 35 | <i class="fa-regular fa-eye"></i> 35</div>
+                <h3 class="article-title">Partnership Agreement Signed with Local Organizations.</h3>
+            </a>
+
+            <a href="news-events.html" class="article">
+                <img src="./assets/news1.png" alt="News 5" class="article-image" />
+                <div class="article-meta">NEWS | 20 | <i class="fa-regular fa-eye"></i> 20</div>
+                <h3 class="article-title">Annual Conference Set to Hold in December.</h3>
+            </a>
+        </div>
+
         <div class="load-more-container">
-            <button class="load-more-btn">View More<img src="assets/down-arrw.png" class="load-more-arrw"></button>
+            <button class="load-more-btn" id="loadMoreBtn">
+                <span class="btn-text">View More</span>
+                <img src="assets/down-arrw.png" class="load-more-arrw" id="loadMoreArrow">
+            </button>
         </div>
     </div>
 
@@ -342,5 +373,50 @@
         </div>
     </footer>
 </body>
+
+<!--Script for load more button-->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        const btnText = document.querySelector('.btn-text');
+        const arrow = document.getElementById('loadMoreArrow');
+        const hiddenArticles = document.getElementById('hiddenArticles');
+
+        let isExpanded = false;
+
+        loadMoreBtn.addEventListener('click', function () {
+            if (!isExpanded) {
+                // Show more articles
+                hiddenArticles.classList.add('show');
+                btnText.textContent = 'Show Less';
+                arrow.classList.add('rotate');
+                isExpanded = true;
+
+                // Optional: Smooth scroll to reveal new content
+                setTimeout(() => {
+                    hiddenArticles.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }, 300);
+
+            } else {
+                // Hide articles
+                hiddenArticles.classList.remove('show');
+                btnText.textContent = 'View More';
+                arrow.classList.remove('rotate');
+                isExpanded = false;
+
+                // Scroll back to the beginning of the section
+                setTimeout(() => {
+                    document.querySelector('.more-news-container').scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }, 300);
+            }
+        });
+    });
+</script>
 
 </html>
