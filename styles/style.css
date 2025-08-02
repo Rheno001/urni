@@ -859,13 +859,14 @@ body {
 .passion-cta {
     background-color: rgba(241, 255, 239, 1);
     padding: 2.5rem 5%;
-    max-width: 1500px;
-    margin: auto;
+    gap: 1rem;
+}
+
+.passion-stuff{
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1rem;
 }
 
 .donation-text {
@@ -1264,6 +1265,11 @@ body {
     .hero {
         height: 80vh;
     }
+     .passion-stuff {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
     
     .explore-stuff {
         flex-direction: column;
@@ -1316,7 +1322,7 @@ body {
         text-align: center;
     }
     
-    .passion-cta {
+    .passion-stuff {
         flex-direction: column;
         text-align: center;
         gap: 1.5rem;
@@ -1432,6 +1438,11 @@ body {
 @media (max-width: 480px) {
     .hero {
         height: 60vh;
+    }
+     .passion-stuff {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
     }
     
     .facts-grid {
@@ -1583,6 +1594,11 @@ body {
 @media (max-width: 320px) {
     .hero {
         height: 50vh;
+    }
+     .passion-stuff {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
     }
     
     .explore-section {
