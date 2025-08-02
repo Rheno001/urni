@@ -120,13 +120,15 @@
         </div>
 
         <div class="photo-grid">
-            <div class="photo-item"
-                onclick="openModal('URNI Visit to IDP Camp, Wassa','assets/Visit to WASSSA camp.png' )">
-                <img src="assets/Visit to WASSSA camp.png" />
+            <a href="gallery-detail.html" class="photo-item">
+                <img src="assets/Visit to WASSSA camp.png" alt="Gallery Cover" />
                 <div class="photo-caption">
                     <h3>URNI Visit to IDP Camp, Wassa</h3>
                 </div>
-            </div>
+                <div class="photo-overlay">
+                    <span>40 Images</span>
+                </div>
+            </a>
 
             <div class="photo-item" onclick="openModal('URNI Launch Event', 'assets/URNI Launch event.png')">
                 <img src="assets/URNI Launch event.png" alt="URNI Launch Event">
@@ -347,37 +349,37 @@
 
 
 <script>
-   function showSection(section) {
-    const gallBgImage = document.querySelector('.gall-bg-image');
-    const pageTitle = document.querySelector('.page-title');
-    const pageDesc = document.querySelector('.page-desc');
-    const navButtons = document.querySelectorAll('.nav-btn');
-    
-    // Remove active class from all buttons
-    navButtons.forEach(btn => btn.classList.remove('active'));
-    
-    // Add active class to clicked button
-    event.target.classList.add('active');
-    
-    // Change background image, title, and description based on section
-    if (section === 'photos') {
-        gallBgImage.style.backgroundImage = "url('/assets/gallery-hero.png')";
-        pageTitle.textContent = "Photo Gallery";
-        pageDesc.textContent = "Get updates about happenings around us!";
-        
-        // Show photos section, hide videos section
-        document.getElementById('photos-section').style.display = 'block';
-        document.getElementById('videos-section').style.display = 'none';
-    } else if (section === 'videos') {
-        gallBgImage.style.backgroundImage = "url('/assets/video-hero.png')";
-        pageTitle.textContent = "Video Gallery";
-        pageDesc.textContent = "Watch our latest video content and stories!";
-        
-        // Show videos section, hide photos section
-        document.getElementById('photos-section').style.display = 'none';
-        document.getElementById('videos-section').style.display = 'block';
+    function showSection(section) {
+        const gallBgImage = document.querySelector('.gall-bg-image');
+        const pageTitle = document.querySelector('.page-title');
+        const pageDesc = document.querySelector('.page-desc');
+        const navButtons = document.querySelectorAll('.nav-btn');
+
+        // Remove active class from all buttons
+        navButtons.forEach(btn => btn.classList.remove('active'));
+
+        // Add active class to clicked button
+        event.target.classList.add('active');
+
+        // Change background image, title, and description based on section
+        if (section === 'photos') {
+            gallBgImage.style.backgroundImage = "url('/assets/gallery-hero.png')";
+            pageTitle.textContent = "Photo Gallery";
+            pageDesc.textContent = "Get updates about happenings around us!";
+
+            // Show photos section, hide videos section
+            document.getElementById('photos-section').style.display = 'block';
+            document.getElementById('videos-section').style.display = 'none';
+        } else if (section === 'videos') {
+            gallBgImage.style.backgroundImage = "url('/assets/video-hero.png')";
+            pageTitle.textContent = "Video Gallery";
+            pageDesc.textContent = "Watch our latest video content and stories!";
+
+            // Show videos section, hide photos section
+            document.getElementById('photos-section').style.display = 'none';
+            document.getElementById('videos-section').style.display = 'block';
+        }
     }
-}
 
     function openModal(title, type, src) {
         const modal = document.getElementById('modal');
